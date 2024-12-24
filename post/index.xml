@@ -7,7 +7,19 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Tue, 24 Dec 2024 13:37:25 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Dec 2024 15:10:12 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>408数据结构考点&#43;题型</title>
+        <link>https://deathofbrain.github.io/p/data-structure-key-points/</link>
+        <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://deathofbrain.github.io/p/data-structure-key-points/</guid>
+        <description>&lt;h1 id=&#34;前言&#34;&gt;前言
+&lt;/h1&gt;&lt;p&gt;对于408应试来说，最重要的环节一在于&lt;strong&gt;每个&lt;/strong&gt;知识点的掌握，二在于对&lt;strong&gt;常见题型&lt;/strong&gt;的完全掌握，对新颖题型的从容应对，才能在老头一次又一次的刁难中不败下阵来。这一系列文章就是为了能让备考408的各位，在复习知识点的同时，对常见题型能做到百发百中，对冷门考点能做到心中有数。&lt;/p&gt;
+&lt;p&gt;本文默认各位同学对408中术语的概念有一定的了解，因此本文适合已经结束一轮复习，对于计科四大件的大部分知识点都有印象，却对408针对考点的具体题型不是很了解的同学。当然，这个文章应该也能在对一轮复习的同学中起到一定的帮助。&lt;/p&gt;
+&lt;h1 id=&#34;一算法的时间复杂度和空间复杂度&#34;&gt;一、算法的时间复杂度和空间复杂度
+&lt;/h1&gt;</description>
+        </item>
+        <item>
         <title>Hugo装修历程</title>
         <link>https://deathofbrain.github.io/p/hugo-decorate/</link>
         <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
