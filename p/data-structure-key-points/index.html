@@ -10,7 +10,7 @@
 <meta property='og:description' content="（尽可能）让你复习不再迷茫">
 <meta property='og:url' content='https://deathofbrain.github.io/p/data-structure-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数据结构' /><meta property='article:published_time' content='2024-12-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-24T15:33:22&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数据结构' /><meta property='article:published_time' content='2024-12-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-24T16:28:24&#43;00:00'/>
 <meta name="twitter:title" content="408数据结构考点+题型">
 <meta name="twitter:description" content="（尽可能）让你复习不再迷茫">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -248,10 +248,10 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#前言">前言</a></li>
-    <li><a href="#一绪论">一、绪论</a>
+    <li><a href="#绪论">绪论</a>
       <ol>
-        <li><a href="#11-数据结构的基本概念">1.1 数据结构的基本概念</a></li>
-        <li><a href="#12-时间复杂度和空间复杂度-">1.2 时间复杂度和空间复杂度 (⭐)</a></li>
+        <li><a href="#数据结构的基本概念">数据结构的基本概念</a></li>
+        <li><a href="#时间复杂度和空间复杂度-">时间复杂度和空间复杂度 (⭐)</a></li>
       </ol>
     </li>
   </ol>
@@ -326,8 +326,8 @@
     <h2 id="前言">前言
 </h2><p>对于408应试来说，最重要的环节一在于<strong>每个</strong>知识点的掌握，二在于对<strong>常见题型</strong>的完全掌握，对新颖题型的从容应对，才能在老头一次又一次的刁难中不败下阵来。这一系列文章就是为了能让备考408的各位，在复习知识点的同时，对常见题型能做到百发百中，对冷门考点能做到心中有数。</p>
 <p>本文默认各位同学对408中术语的概念有一定的了解，因此本文适合已经结束一轮复习，对于计科四大件的大部分知识点都有印象，却对408针对考点的具体题型不是很了解的同学。当然，这个文章应该也能在对一轮复习的同学中起到一定的帮助。</p>
-<h2 id="一绪论">一、绪论
-</h2><h3 id="11-数据结构的基本概念">1.1 数据结构的基本概念
+<h2 id="绪论">绪论
+</h2><h3 id="数据结构的基本概念">数据结构的基本概念
 </h3><p>此为25考纲新加（25没考），笔者认为此处应仅考察数据结构三要素相关内容。</p>
 <ol>
 <li>
@@ -364,7 +364,7 @@
 <p>注意点：</p>
 <ol>
 <li>
-<p>数据的逻辑结构独立于存储结构：</p>
+<p>数据的逻辑结构独立于存储结构</p>
 <blockquote>
 <p>图的邻接表和邻接矩阵都可以表示图这种逻辑结构。</p>
 </blockquote>
@@ -375,8 +375,80 @@
 </ol>
 </li>
 </ol>
-<h3 id="12-时间复杂度和空间复杂度-">1.2 时间复杂度和空间复杂度 (⭐)
+<h3 id="时间复杂度和空间复杂度-">时间复杂度和空间复杂度 (⭐)
 </h3><p>每年必考，常见于选择题第一题和算法题第三小问。其中算法题主要是去研究<strong>你写的</strong>算法的时空复杂度，选择题则是考察<strong>一段代码</strong>的时空复杂度。</p>
+<ol>
+<li>
+<p>时空复杂度的加法规则和乘法规则</p>
+<ol>
+<li>
+<p>加法规则：$T(n) = O(max(f(n),g(n)))$</p>
+<blockquote>
+<p>两个算法串行执行时，时间复杂度取最大值</p>
+</blockquote>
+<p>例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func1</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="c1">// O(n)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="c1">// O(n^2)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="c1">// func的时间复杂度为O(n^2)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>乘法规则：$T(n) = O(f(n) \times g(n))$</p>
+<blockquote>
+<p>两个算法嵌套执行时，时间复杂度相乘</p>
+</blockquote>
+<p>例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// O(n)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">func1</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="c1">// O(n^2)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span> <span class="c1">// O(n) * O(n^2) = O(n^3)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="c1">// func2的时间复杂度为O(n^3)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+<li>
+<p>计算时间复杂度的通用办法</p>
+<ol>
+<li>单层嵌套
+1.</li>
+</ol>
+</li>
+</ol>
 
 </section>
 
@@ -609,7 +681,7 @@
   
     :root {
       --base-font-family: '字体名';
-      --code-font-family: '字体名';
+      <!-- --code-font-family: '字体名'; -->
     }
   </style>
   
