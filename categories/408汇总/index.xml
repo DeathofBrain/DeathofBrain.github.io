@@ -31,9 +31,9 @@
 &lt;p&gt;存储结构
 存储结构则是指数据对象中数据元素之间的&lt;strong&gt;存储关系&lt;/strong&gt;，即从&lt;strong&gt;物理上&lt;/strong&gt;描述数据元素之间的关系。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;白话讲就是逻辑结构是你看到的，存储结构是计算机看到的。
-存储结构分为&lt;/p&gt;
+&lt;p&gt;白话讲就是逻辑结构是你看到的，存储结构是计算机看到的。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;存储结构分为&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;顺序存储结构&lt;/strong&gt;：逻辑上相邻的元素在物理上也相邻&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;链式存储结构&lt;/strong&gt;：逻辑上相邻的元素在物理上不一定相邻&lt;/li&gt;
@@ -61,7 +61,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;12-时间复杂度和空间复杂度-&#34;&gt;1.2 时间复杂度和空间复杂度 (⭐)
-&lt;/h2&gt;&lt;p&gt;每年必考，常见于选择题第一题和算法题第三小问。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;每年必考，常见于选择题第一题和算法题第三小问。其中算法题主要是去研究&lt;strong&gt;你写的&lt;/strong&gt;算法的时空复杂度，选择题则是考察&lt;strong&gt;一段代码&lt;/strong&gt;的时空复杂度。&lt;/p&gt;
 </description>
         </item>
         
