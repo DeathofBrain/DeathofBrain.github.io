@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Tue, 24 Dec 2024 15:31:38 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Dec 2024 15:33:22 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>408数据结构考点&#43;题型</title>
         <link>https://deathofbrain.github.io/p/data-structure-key-points/</link>
         <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
@@ -21,16 +21,17 @@
 &lt;/h3&gt;&lt;p&gt;此为25考纲新加（25没考），笔者认为此处应仅考察数据结构三要素相关内容。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;逻辑结构
-逻辑结构是指数据对象中&lt;strong&gt;数据元素之间的相互关系&lt;/strong&gt;，即从&lt;strong&gt;逻辑上&lt;/strong&gt;描述数据元素之间的关系。 &lt;em&gt;注意与存储结构之间做区分&lt;/em&gt;
-逻辑结构分为&lt;strong&gt;线性结构&lt;/strong&gt;和&lt;strong&gt;非线性结构&lt;/strong&gt;，再细分为&lt;strong&gt;集合结构&lt;/strong&gt;、&lt;strong&gt;线性结构&lt;/strong&gt;、&lt;strong&gt;树形结构&lt;/strong&gt;和&lt;strong&gt;图形结构&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;逻辑结构&lt;/p&gt;
+&lt;p&gt;逻辑结构是指数据对象中&lt;strong&gt;数据元素之间的相互关系&lt;/strong&gt;，即从&lt;strong&gt;逻辑上&lt;/strong&gt;描述数据元素之间的关系。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;注意与存储结构之间做区分&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;逻辑结构分为&lt;strong&gt;线性结构&lt;/strong&gt;和&lt;strong&gt;非线性结构&lt;/strong&gt;，再细分为&lt;strong&gt;集合结构&lt;/strong&gt;、&lt;strong&gt;线性结构&lt;/strong&gt;、&lt;strong&gt;树形结构&lt;/strong&gt;和&lt;strong&gt;图形结构&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;考试中应该是让你判断一个数据结构是属于哪种逻辑结构，所以心中有数就好。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;存储结构
-存储结构则是指数据对象中数据元素之间的&lt;strong&gt;存储关系&lt;/strong&gt;，即从&lt;strong&gt;物理上&lt;/strong&gt;描述数据元素之间的关系。&lt;/p&gt;
+&lt;p&gt;存储结构&lt;/p&gt;
+&lt;p&gt;存储结构则是指数据对象中数据元素之间的&lt;strong&gt;存储关系&lt;/strong&gt;，即从&lt;strong&gt;物理上&lt;/strong&gt;描述数据元素之间的关系。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;白话讲就是逻辑结构是你看到的，存储结构是计算机看到的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -52,12 +53,15 @@
 &lt;li&gt;
 &lt;p&gt;注意点：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;数据的逻辑结构独立于存储结构：
+&lt;li&gt;
+&lt;p&gt;数据的逻辑结构独立于存储结构：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图的邻接表和邻接矩阵都可以表示图这种逻辑结构。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;在存储数据时，不仅要存储数据元素本身，还要存储数据元素之间的逻辑关系。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在存储数据时，不仅要存储数据元素本身，还要存储数据元素之间的逻辑关系。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
