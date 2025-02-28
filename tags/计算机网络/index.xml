@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>计算机网络 on DeathofBrain的小屋</title>
+        <link>https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+        <description>Recent content in 计算机网络 on DeathofBrain的小屋</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>DeathofBrain</copyright>
+        <lastBuildDate>Fri, 28 Feb 2025 12:39:48 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>408数据结构考点&#43;题型</title>
+        <link>https://deathofbrain.github.io/p/network-key-points/</link>
+        <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://deathofbrain.github.io/p/network-key-points/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;我要（被迫）二战了，给我自己准备的，到时候平板摸鱼能看
+捞干的讲&lt;/p&gt;
+&lt;h2 id=&#34;一计算机网络概述&#34;&gt;一、计算机网络概述
+&lt;/h2&gt;&lt;h3 id=&#34;基本概念&#34;&gt;基本概念
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;▲计算机网络的概念&lt;/p&gt;
+&lt;p&gt;定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的操作系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计算机网络组成&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
