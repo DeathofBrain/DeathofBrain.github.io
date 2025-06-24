@@ -16,10 +16,38 @@
 &lt;/h2&gt;&lt;p&gt;由于两年前那个教程不太适合纯零基础，故写个文字版，方便学习与查阅。&lt;/p&gt;
 &lt;h2 id=&#34;0-绪论&#34;&gt;0. 绪论
 &lt;/h2&gt;&lt;p&gt;在算法组（上位机组）中，所有C++程序都是在Ubuntu系统下进行，故在学习本教程时，推荐在安装Ubuntu 22.04或更高版本系统的虚拟机环境下进行，具体安装教程参考以下视频。&lt;/p&gt;
-&lt;iframe src=&#34;//player.bilibili.com/player.html?bvid=BV1nF411k7ou&amp;page=1&#34;
-    scrolling=&#34;no&#34; height=&#34;768px&#34; width=&#34;1024px&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34;
-    style=&#34;position:absolute; height: 100%; width: 100%;&#34;&gt;
-&lt;/iframe&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+&lt;div style=&#34;margin: 10px 0 20px 0;&#34;&gt;
+  
+  
+
+  &lt;div style=&#34;position:relative; padding-bottom:75%; width:100%; height:0&#34;&gt;
+    &lt;iframe src=&#34;//player.bilibili.com/player.html?bvid=BV1nF411k7ou&amp;page=1&#34;       
+        scrolling=&#34;no&#34; border=&#34;0&#34;
+        frameborder=&#34;no&#34; 
+        framespacing=&#34;0&#34; 
+        allowfullscreen=&#34;true&#34; 
+        style=&#34;position:absolute; height: 100%; width: 100%;&#34;&gt;
+    &lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;顺便一提，现今校园网可以绑定三大运营商的校内宽带账号，也就是无限流量（走的宽带）
