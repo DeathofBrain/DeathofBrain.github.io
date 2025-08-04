@@ -12,8 +12,13 @@
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
         
         <guid>https://deathofbrain.github.io/p/vim/</guid>
-        <description>&lt;h2 id=&#34;1-启程&#34;&gt;1. 启程
-&lt;/h2&gt;</description>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;我讨厌上没有意思的班&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-启程&#34;&gt;1. 启程
+&lt;/h2&gt;&lt;p&gt;闲来无事，突然想学Vim了。直到现在也只会基本操作，惨&lt;/p&gt;
+&lt;h3 id=&#34;11-最基本的用法&#34;&gt;1.1 最基本的用法
+&lt;/h3&gt;&lt;p&gt;Vim分为三个模式：普通模式、插入模式、ex模式&lt;/p&gt;
+</description>
         </item>
         
     </channel>
