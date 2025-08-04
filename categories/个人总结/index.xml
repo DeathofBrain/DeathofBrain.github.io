@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>个人总结 on DeathofBrain的小屋</title>
+        <link>https://deathofbrain.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</link>
+        <description>Recent content in 个人总结 on DeathofBrain的小屋</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>DeathofBrain</copyright><atom:link href="https://deathofbrain.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vim之旅</title>
+        <link>https://deathofbrain.github.io/p/vim/</link>
+        <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://deathofbrain.github.io/p/vim/</guid>
+        <description>&lt;h2 id=&#34;1-启程&#34;&gt;1. 启程
+&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
