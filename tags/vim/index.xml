@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Wed, 06 Aug 2025 15:36:03 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Aug 2025 15:36:50 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
@@ -24,15 +24,19 @@
 &lt;h3 id=&#34;vim三大模式介绍&#34;&gt;Vim三大模式介绍
 &lt;/h3&gt;&lt;p&gt;Vim分为三个模式：普通模式、插入模式、ex模式&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;普通模式：
-当按键用于执行命令时的模式，一开始进Vim时就是普通模式，通过按Esc进入。请注意，vi与Vim在普通模式时指令区分大小写
+&lt;li&gt;
+&lt;p&gt;普通模式&lt;/p&gt;
+&lt;p&gt;当按键用于执行命令时的模式，一开始进Vim时就是普通模式，通过按Esc进入。请注意，vi与Vim在普通模式时指令区分大小写&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;普通模式又称命令模式，即按键只处理命令，不直接插入到文本&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;插入模式
-通过按&lt;code&gt;i&lt;/code&gt;键进入，插入模式允许用户直接在光标处编辑文本，就像notepad一样&lt;/li&gt;
-&lt;li&gt;ex模式
-在普通模式通过输入&lt;code&gt;:&lt;/code&gt;进入，ex模式允许用户输入ex指令完成单行或跨行编辑，同样区分大小写。
+&lt;li&gt;
+&lt;p&gt;插入模式&lt;/p&gt;
+&lt;p&gt;通过按&lt;code&gt;i&lt;/code&gt;键进入，插入模式允许用户直接在光标处编辑文本，就像notepad一样&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ex模式&lt;/p&gt;
+&lt;p&gt;在普通模式通过输入&lt;code&gt;:&lt;/code&gt;进入，ex模式允许用户输入ex指令完成单行或跨行编辑，同样区分大小写。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ex命令是ex行编辑器使用的指令，ex行编辑器是古早Unix系统使用的单行终端编辑器，属于Linux底层编辑器&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
@@ -42,11 +46,11 @@
 &lt;/h3&gt;&lt;p&gt;一句话：&lt;code&gt;vim [filename]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;当然，有可能你需要先安装vim（笑）&lt;/p&gt;
 &lt;h3 id=&#34;操作模式&#34;&gt;操作模式
-&lt;/h3&gt;&lt;p&gt;第一次使用Vim时，你是否也曾敲打键盘，却没有任何字符输入？甚至莫名其妙把内容删除了？
-普通模式是这样的，当进入Vim时，默认会进入普通模式，此时键盘上每个按键都代表一个指令，而非代表内容的文本。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;第一次使用Vim时，你是否也曾敲打键盘，却没有任何字符输入？甚至莫名其妙把内容删除了？&lt;/p&gt;
+&lt;p&gt;普通模式是这样的，当进入Vim时，默认会进入普通模式，此时键盘上每个按键都代表一个指令，而非代表内容的文本。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。
-此时，若想输入文本，请确保在小写状态下，按下&lt;code&gt;i&lt;/code&gt;键，进入插入模式，此时再键入的就是文本本身了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;此时，若想输入文本，请确保在小写状态下，按下&lt;code&gt;i&lt;/code&gt;键，进入插入模式，此时再键入的就是文本本身了。&lt;/p&gt;
 &lt;h4 id=&#34;保存或者直接退出&#34;&gt;保存，或者直接退出
 &lt;/h4&gt;&lt;p&gt;恭喜你，终于用Vim成功写了一点东西，也许是代码，也许是随便乱打的，那么来到了第二个问题：我该怎么退出这沟槽的Vim？&lt;/p&gt;
 &lt;ul&gt;
