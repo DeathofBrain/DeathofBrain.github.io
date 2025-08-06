@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Wed, 06 Aug 2025 15:00:43 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Aug 2025 15:27:46 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
@@ -15,10 +15,13 @@
         <guid>https://deathofbrain.github.io/p/vim/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;我讨厌上没有意思的班&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;1-启程&#34;&gt;1. 启程
+&lt;h2 id=&#34;启程&#34;&gt;启程
 &lt;/h2&gt;&lt;p&gt;闲来无事，突然想学Vim了。直到现在也只会基本操作，惨&lt;/p&gt;
-&lt;p&gt;参考文献：《学习vi与Vim编辑器 8th Edition》&lt;/p&gt;
-&lt;h3 id=&#34;11-vim三大模式介绍&#34;&gt;1.1 Vim三大模式介绍
+&lt;p&gt;参考文献：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《学习vi与Vim编辑器 8th Edition》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vim三大模式介绍&#34;&gt;Vim三大模式介绍
 &lt;/h3&gt;&lt;p&gt;Vim分为三个模式：普通模式、插入模式、ex模式&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;普通模式：
@@ -35,15 +38,39 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;一般来说，普通模式用于快速翻阅代码或快捷更改字符或删除行等，插入模式用于普通编辑文本，ex模式则用于搜索全文，或使用高级指令完成编辑操作等。&lt;/p&gt;
-&lt;h3 id=&#34;12-打开文件&#34;&gt;1.2 打开文件
+&lt;h3 id=&#34;打开文件&#34;&gt;打开文件
 &lt;/h3&gt;&lt;p&gt;一句话：&lt;code&gt;vim [filename]&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;当然，有可能你需要先安装vim（笑）&lt;/p&gt;
-&lt;h3 id=&#34;13-操作模式&#34;&gt;1.3 操作模式
+&lt;h3 id=&#34;操作模式&#34;&gt;操作模式
 &lt;/h3&gt;&lt;p&gt;第一次使用Vim时，你是否也曾敲打键盘，却没有任何字符输入？甚至莫名其妙把内容删除了？
 普通模式是这样的，当进入Vim时，默认会进入普通模式，此时键盘上每个按键都代表一个指令，而非代表内容的文本。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。
 此时，若想输入文本，请确保在小写状态下，按下&lt;code&gt;i&lt;/code&gt;键，进入插入模式，此时再键入的就是文本本身了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;保存或者直接退出&#34;&gt;保存，或者直接退出
+&lt;/h4&gt;&lt;p&gt;恭喜你，终于用Vim成功写了一点东西，也许是代码，也许是随便乱打的，那么来到了第二个问题：我该怎么退出这沟槽的Vim？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保存退出
+在普通模式下，按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;zz&lt;/code&gt;，也就是输入两个&lt;strong&gt;大写&lt;/strong&gt;的Z，这个是&lt;em&gt;保存并退出&lt;/em&gt;指令，在一切顺利的情况下，Vim会将缓存区中的文本写入文件，并退出程序。
+&lt;blockquote&gt;
+&lt;p&gt;不知道现在是什么模式？多按几下&lt;code&gt;Esc&lt;/code&gt;，就一定处于命令模式！&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;强制退出
+有时候，因为某些原因（虽然大多数是只读问题），Vim无法保存文件，并且会提示包括&lt;code&gt;[Read only]&lt;/code&gt;的信息。别慌，Vim可以通过ex指令实现强制退出。
+还记得怎么进入ex模式吗？按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;；&lt;/code&gt;，也就是输入&lt;code&gt;:&lt;/code&gt;，此时你会看到终端最下面出现了&lt;code&gt;:&lt;/code&gt;，这代表着你成功进入了ex模式。
+紧接着，输入&lt;code&gt;q!&lt;/code&gt;，按下&lt;code&gt;Enter&lt;/code&gt;，成功退出！并且不会保存任何文件。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;!&lt;/code&gt;在ex模式中代表&lt;strong&gt;强制&lt;/strong&gt;，刚才的指令就是强制退出的意思。一般来说，如果没有修改任何文件的话，输入q就可以了。
+当然，ex指令下也可以保存退出，只需要输入&lt;code&gt;:wq&lt;/code&gt;并回车就可以了。具体指令会在后面详解。
+同时，从现在开始，将不再重复强调如何进入某种模式，也不再强调ex模式下需要用回车来执行指令。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;另存为
+ex模式下输入&lt;code&gt;w [filename]&lt;/code&gt;，即可另存为新文件。
+当然，输入&lt;code&gt;w! [filename]&lt;/code&gt;会将内容&lt;strong&gt;覆盖&lt;/strong&gt;到已存在的文件中，无法撤回！
+&lt;blockquote&gt;
+&lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         
