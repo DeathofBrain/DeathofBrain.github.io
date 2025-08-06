@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Wed, 06 Aug 2025 15:32:48 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Aug 2025 15:36:03 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
@@ -50,23 +50,27 @@
 &lt;h4 id=&#34;保存或者直接退出&#34;&gt;保存，或者直接退出
 &lt;/h4&gt;&lt;p&gt;恭喜你，终于用Vim成功写了一点东西，也许是代码，也许是随便乱打的，那么来到了第二个问题：我该怎么退出这沟槽的Vim？&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;保存退出
-在普通模式下，按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;zz&lt;/code&gt;，也就是输入两个&lt;strong&gt;大写&lt;/strong&gt;的Z，这个是&lt;em&gt;保存并退出&lt;/em&gt;指令，在一切顺利的情况下，Vim会将缓存区中的文本写入文件，并退出程序。
+&lt;li&gt;
+&lt;p&gt;保存退出&lt;/p&gt;
+&lt;p&gt;在普通模式下，按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;zz&lt;/code&gt;，也就是输入两个&lt;strong&gt;大写&lt;/strong&gt;的Z，这个是&lt;em&gt;保存并退出&lt;/em&gt;指令，在一切顺利的情况下，Vim会将缓存区中的文本写入文件，并退出程序。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不知道现在是什么模式？多按几下&lt;code&gt;Esc&lt;/code&gt;，就一定处于命令模式！&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;强制退出
-有时候，因为某些原因（虽然大多数是只读问题），Vim无法保存文件，并且会提示包括&lt;code&gt;[Read only]&lt;/code&gt;的信息。别慌，Vim可以通过ex指令实现强制退出。
-还记得怎么进入ex模式吗？按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;；&lt;/code&gt;，也就是输入&lt;code&gt;:&lt;/code&gt;，此时你会看到终端最下面出现了&lt;code&gt;:&lt;/code&gt;，这代表着你成功进入了ex模式。
-紧接着，输入&lt;code&gt;q!&lt;/code&gt;，按下&lt;code&gt;Enter&lt;/code&gt;，成功退出！并且不会保存任何文件。
+&lt;li&gt;
+&lt;p&gt;强制退出&lt;/p&gt;
+&lt;p&gt;有时候，因为某些原因（虽然大多数是只读问题），Vim无法保存文件，并且会提示包括&lt;code&gt;[Read only]&lt;/code&gt;的信息。&lt;/p&gt;
+&lt;p&gt;别慌，Vim可以通过ex指令实现强制退出。&lt;/p&gt;
+&lt;p&gt;还记得怎么进入ex模式吗？按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;；&lt;/code&gt;，也就是输入&lt;code&gt;:&lt;/code&gt;，此时你会看到终端最下面出现了&lt;code&gt;:&lt;/code&gt;，这代表着你成功进入了ex模式。&lt;/p&gt;
+&lt;p&gt;紧接着，输入&lt;code&gt;q!&lt;/code&gt;，按下&lt;code&gt;Enter&lt;/code&gt;，成功退出！并且不会保存任何文件。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;!&lt;/code&gt;在ex模式中代表&lt;strong&gt;强制&lt;/strong&gt;，刚才的指令就是强制退出的意思。一般来说，如果没有修改任何文件的话，输入q就可以了。
 当然，ex指令下也可以保存退出，只需要输入&lt;code&gt;:wq&lt;/code&gt;并回车就可以了。具体指令会在后面详解。
 同时，从现在开始，将不再重复强调如何进入某种模式，也不再强调ex模式下需要用回车来执行指令。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;另存为
-ex模式下输入&lt;code&gt;w [filename]&lt;/code&gt;，即可另存为新文件。
-当然，输入&lt;code&gt;w! [filename]&lt;/code&gt;会将内容&lt;strong&gt;覆盖&lt;/strong&gt;到已存在的文件中，无法撤回！
+&lt;li&gt;
+&lt;p&gt;另存为&lt;/p&gt;
+&lt;p&gt;ex模式下输入&lt;code&gt;w [filename]&lt;/code&gt;，即可另存为新文件。
+当然，输入&lt;code&gt;w! [filename]&lt;/code&gt;会将内容&lt;strong&gt;覆盖&lt;/strong&gt;到已存在的文件中，无法撤回！&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
