@@ -70,6 +70,9 @@ ex模式下输入&lt;code&gt;w [filename]&lt;/code&gt;，即可另存为新文�
 &lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;简单的文本编辑&#34;&gt;简单（？）的文本编辑
+&lt;/h2&gt;&lt;p&gt;一般来说，学习上面内容后，就可以使用Vim简单进行编辑了，不过，在面对几千行的代码时，若是用方向键+插入去修改的话，我猜你肯定很想砸键盘。&lt;/p&gt;
+&lt;p&gt;这部分内容主要讲述如何在上文基础上，使用简单易学的操作提高一些编辑的效率，让你砸键盘的欲望变得小一点。&lt;/p&gt;
 </description>
         </item>
         
