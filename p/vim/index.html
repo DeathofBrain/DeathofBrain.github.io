@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 我讨厌上没有意思的班\n1. 启程 闲来无事，突然想学Vim了。直到现在也只会基本操作，惨\n1.1 最基本的用法 Vim分为三个模式：普通模式、插入模式、ex模式\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 我讨厌上没有意思的班\n1. 启程 闲来无事，突然想学Vim了。直到现在也只会基本操作，惨\n参考文献：《学习vi与Vim编辑器 8th Edition》\n1.1 Vim三大模式介绍 Vim分为三个模式：普通模式、插入模式、ex模式\n">
 <title>Vim之旅</title>
 
 <link rel='canonical' href='https://deathofbrain.github.io/p/vim/'>
 
 <link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Vim之旅">
-<meta property='og:description' content=" 我讨厌上没有意思的班\n1. 启程 闲来无事，突然想学Vim了。直到现在也只会基本操作，惨\n1.1 最基本的用法 Vim分为三个模式：普通模式、插入模式、ex模式\n">
+<meta property='og:description' content=" 我讨厌上没有意思的班\n1. 启程 闲来无事，突然想学Vim了。直到现在也只会基本操作，惨\n参考文献：《学习vi与Vim编辑器 8th Edition》\n1.1 Vim三大模式介绍 Vim分为三个模式：普通模式、插入模式、ex模式\n">
 <meta property='og:url' content='https://deathofbrain.github.io/p/vim/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vim' /><meta property='article:published_time' content='2025-08-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-04T14:16:04&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vim' /><meta property='article:published_time' content='2025-08-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-06T15:00:43&#43;00:00'/>
 <meta name="twitter:title" content="Vim之旅">
-<meta name="twitter:description" content=" 我讨厌上没有意思的班\n1. 启程 闲来无事，突然想学Vim了。直到现在也只会基本操作，惨\n1.1 最基本的用法 Vim分为三个模式：普通模式、插入模式、ex模式\n">
+<meta name="twitter:description" content=" 我讨厌上没有意思的班\n1. 启程 闲来无事，突然想学Vim了。直到现在也只会基本操作，惨\n参考文献：《学习vi与Vim编辑器 8th Edition》\n1.1 Vim三大模式介绍 Vim分为三个模式：普通模式、插入模式、ex模式\n">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -249,7 +249,9 @@
   <ol>
     <li><a href="#1-启程">1. 启程</a>
       <ol>
-        <li><a href="#11-最基本的用法">1.1 最基本的用法</a></li>
+        <li><a href="#11-vim三大模式介绍">1.1 Vim三大模式介绍</a></li>
+        <li><a href="#12-打开文件">1.2 打开文件</a></li>
+        <li><a href="#13-操作模式">1.3 操作模式</a></li>
       </ol>
     </li>
   </ol>
@@ -321,8 +323,33 @@
 <p>我讨厌上没有意思的班</p></blockquote>
 <h2 id="1-启程">1. 启程
 </h2><p>闲来无事，突然想学Vim了。直到现在也只会基本操作，惨</p>
-<h3 id="11-最基本的用法">1.1 最基本的用法
+<p>参考文献：《学习vi与Vim编辑器 8th Edition》</p>
+<h3 id="11-vim三大模式介绍">1.1 Vim三大模式介绍
 </h3><p>Vim分为三个模式：普通模式、插入模式、ex模式</p>
+<ul>
+<li>普通模式：
+当按键用于执行命令时的模式，一开始进Vim时就是普通模式，通过按Esc进入。请注意，vi与Vim在普通模式时指令区分大小写
+<blockquote>
+<p>普通模式又称命令模式，即按键只处理命令，不直接插入到文本</p></blockquote>
+</li>
+<li>插入模式
+通过按<code>i</code>键进入，插入模式允许用户直接在光标处编辑文本，就像notepad一样</li>
+<li>ex模式
+在普通模式通过输入<code>:</code>进入，ex模式允许用户输入ex指令完成单行或跨行编辑，同样区分大小写。
+<blockquote>
+<p>ex命令是ex行编辑器使用的指令，ex行编辑器是古早Unix系统使用的单行终端编辑器，属于Linux底层编辑器</p></blockquote>
+</li>
+</ul>
+<p>一般来说，普通模式用于快速翻阅代码或快捷更改字符或删除行等，插入模式用于普通编辑文本，ex模式则用于搜索全文，或使用高级指令完成编辑操作等。</p>
+<h3 id="12-打开文件">1.2 打开文件
+</h3><p>一句话：<code>vim [filename]</code></p>
+<p>当然，有可能你需要先安装vim（笑）</p>
+<h3 id="13-操作模式">1.3 操作模式
+</h3><p>第一次使用Vim时，你是否也曾敲打键盘，却没有任何字符输入？甚至莫名其妙把内容删除了？
+普通模式是这样的，当进入Vim时，默认会进入普通模式，此时键盘上每个按键都代表一个指令，而非代表内容的文本。</p>
+<blockquote>
+<p>请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。
+此时，若想输入文本，请确保在小写状态下，按下<code>i</code>键，进入插入模式，此时再键入的就是文本本身了。</p></blockquote>
 
 </section>
 
@@ -346,7 +373,7 @@
 
 
         <span>
-            最后更新于 2025-08-04
+            最后更新于 2025-08-06
         </span>
     </section></footer>
 
