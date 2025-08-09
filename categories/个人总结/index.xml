@@ -13,7 +13,7 @@
         
         <guid>https://deathofbrain.github.io/p/vim/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;我讨厌上没有意思的班&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;此文档使用VSCode+Vim模拟插件进行编写&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;启程&#34;&gt;启程
 &lt;/h2&gt;&lt;p&gt;闲来无事，突然想学Vim了。直到现在也只会基本操作，惨&lt;/p&gt;
 &lt;p&gt;参考文献：&lt;/p&gt;
@@ -183,6 +183,17 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;cw&lt;/code&gt;指令取决于光标位置，若是光标在单词中间，则只会更改单词中间到结尾的字符。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h4 id=&#34;整行更改&#34;&gt;整行更改
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;cc&lt;/code&gt;对整行文本进行更改，无论光标处于该行何种位置，&lt;code&gt;cc&lt;/code&gt;都会替换掉整行文本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;C&lt;/code&gt;或&lt;code&gt;c$&lt;/code&gt;来替换从&lt;strong&gt;当前光标位置&lt;/strong&gt;到行尾的所有字符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;无论是&lt;code&gt;cc&lt;/code&gt;还是&lt;code&gt;C&lt;/code&gt;，都不用在指令末尾指定文字对象，但是可以在指令前面添加数量参数。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;单个字符更改&#34;&gt;单个字符更改
 &lt;/h4&gt;</description>
         </item>
         
