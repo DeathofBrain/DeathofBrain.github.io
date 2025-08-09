@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Wed, 06 Aug 2025 15:37:52 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Aug 2025 13:29:07 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
@@ -82,7 +82,109 @@
 &lt;h2 id=&#34;简单的文本编辑&#34;&gt;简单（？）的文本编辑
 &lt;/h2&gt;&lt;p&gt;一般来说，学习上面内容后，就可以使用Vim简单进行编辑了，不过，在面对几千行的代码时，若是用方向键+插入去修改的话，我猜你肯定很想砸键盘。&lt;/p&gt;
 &lt;p&gt;这部分内容主要讲述如何在上文基础上，使用简单易学的操作提高一些编辑的效率，让你砸键盘的欲望变得小一点。&lt;/p&gt;
-</description>
+&lt;h3 id=&#34;vi命令&#34;&gt;vi命令
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;复习：上文中，Vim有几种模式？都以什么方式进入？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Tips：可以将不同的模式想像成不同的键盘，在插入模式中，键盘功能就像平常一样。在普通模式中，每个键都有新的含义或是代表某种动作。&lt;/p&gt;
+&lt;p&gt;在你按&lt;code&gt;Esc&lt;/code&gt;之前，插入命令之后的所有按键输入都被视为文本。&lt;/p&gt;
+&lt;h3 id=&#34;移动光标&#34;&gt;移动光标
+&lt;/h3&gt;&lt;p&gt;在进行编辑工作（看代码）的时候，更多的时候都是在文件中四处移动，使用各种命令编辑现有文本。&lt;/p&gt;
+&lt;p&gt;本节首先讲述最基本的光标移动操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按上下左右四个方向将光标一次移动一个字符位置&lt;/li&gt;
+&lt;li&gt;按照文本块（单词、句子或段落）向前或向后移动光标&lt;/li&gt;
+&lt;li&gt;在文件中以&lt;strong&gt;屏&lt;/strong&gt;为单位移动光标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;单一移动&#34;&gt;单一移动
+&lt;/h4&gt;&lt;p&gt;虽然Vim支持方向键移动光标，但是更常用&lt;code&gt;h&lt;/code&gt;、&lt;code&gt;j&lt;/code&gt;、&lt;code&gt;k&lt;/code&gt;、&lt;code&gt;l&lt;/code&gt;进行光标移动。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;h&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;向左移动一个位置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;j&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;移动到下一行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;k&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;移动到上一行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;l&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;向右移动一个字符位置&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这种移动方式的好处是：你的手指可以在不离开键盘中心区域的情况下四处移动光标。&lt;/p&gt;
+&lt;p&gt;当然，移动光标前，请确保你在命令模式下使用。&lt;/p&gt;
+&lt;h4 id=&#34;数量级参数&#34;&gt;数量级参数
+&lt;/h4&gt;&lt;p&gt;在&lt;strong&gt;命令&lt;/strong&gt;前输入数字，此时这个数字被称为重复计数（repeat count）或复制因子（replication factor）&lt;/p&gt;
+&lt;p&gt;现在，在Vim试一下&lt;code&gt;4l&lt;/code&gt;吧，你会发现，光标向右移动了四个位置，也就相当于你一次输入了4个&lt;code&gt;l&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;当然，数字的输入要在命令&lt;strong&gt;之前&lt;/strong&gt;，否则Vim永远也不知道数字的输入何时结束。&lt;/p&gt;
+&lt;h4 id=&#34;行内移动&#34;&gt;行内移动
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;移动到行首：&lt;code&gt;0&lt;/code&gt;（数字0）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;移动到行尾：&lt;code&gt;$&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里的行指的是文件中实际的一行，可以通过ex命令输入&lt;code&gt;set nu&lt;/code&gt;查看文件行号。&lt;/p&gt;
+&lt;p&gt;也就是说，使用行首行尾移动时，有可能在屏幕中显示为跳转多个行，但实际上光标只在一行文本中移动。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;按文本块移动&#34;&gt;按文本块移动
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;请注意大小写&lt;/p&gt;
+&lt;p&gt;此处的文本块仅指单词，后续部分会介绍按句子，按段落等。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt;：光标向右移动一个单词（由字母数字字符组成）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请注意，此时单个符号和标点也视为一个单词。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;W&lt;/code&gt;：光标向右移动一个用空格分割的段&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt;会跳转到下一个符号或空格后第一个字符处，而&lt;code&gt;W&lt;/code&gt;仅会跳转到下一个空格后第一个字符处。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;b&lt;/code&gt;：光标向左移动一个单词&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;B&lt;/code&gt;：光标向左移动一个用空格分割的段&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;G&lt;/code&gt;：光标跳转到指定的行&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;单独的&lt;code&gt;G&lt;/code&gt;会跳转到文件末尾，在&lt;code&gt;G&lt;/code&gt;前面添加数量参数时，会跳转到文件指定的行，如&lt;code&gt;42G&lt;/code&gt;会跳转到文件42行。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上的指令都可以加入数量参数，如&lt;code&gt;2W&lt;/code&gt;会让光标向右移动两个用空格分割的段。&lt;/p&gt;
+&lt;h3 id=&#34;修改文本&#34;&gt;修改文本
+&lt;/h3&gt;&lt;h4 id=&#34;插入新文本&#34;&gt;插入新文本
+&lt;/h4&gt;&lt;p&gt;前面说过，&lt;code&gt;i&lt;/code&gt;键会进入插入模式。&lt;/p&gt;
+&lt;p&gt;当按下&lt;code&gt;i&lt;/code&gt;键时，请注意，此时插入光标（小竖线）是在光标（在字符闪烁的小块）的&lt;strong&gt;左边&lt;/strong&gt;的，万分注意。&lt;/p&gt;
+&lt;h4 id=&#34;追加文本&#34;&gt;追加文本
+&lt;/h4&gt;&lt;p&gt;追加文本，顾名思义，就是将插入光标放置在光标&lt;strong&gt;右边&lt;/strong&gt;，随后进入插入模式。&lt;/p&gt;
+&lt;p&gt;某种意义上，&lt;code&gt;a&lt;/code&gt;键也是进入插入模式的一种方式。&lt;/p&gt;
+&lt;h4 id=&#34;更改文本&#34;&gt;更改文本
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;c&lt;/code&gt;键为更改命令，需要指定范围，一般与移动命令结合使用。&lt;/p&gt;
+&lt;p&gt;一旦生效，更改命令会删除指定范围字符，并且自动进入插入模式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;还记得上面的移动指令吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;例如：&lt;code&gt;c&lt;/code&gt;可用于更改从光标位置开始的文本：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cw&lt;/code&gt;：从&lt;strong&gt;光标位置&lt;/strong&gt;到单词结尾&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c2b&lt;/code&gt;：从光标位置向左两个单词&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c$&lt;/code&gt;：从光标位置到行尾&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c0&lt;/code&gt;：从光标位置到行首&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与&lt;code&gt;i&lt;/code&gt;和&lt;code&gt;a&lt;/code&gt;一样，在按&lt;code&gt;Esc&lt;/code&gt;之前，你一直都处于插入模式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cw&lt;/code&gt;指令取决于光标位置，若是光标在单词中间，则只会更改单词中间到结尾的字符。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;整行更改&#34;&gt;整行更改
+&lt;/h4&gt;</description>
         </item>
         <item>
         <title>计算机网络</title>
