@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Sat, 09 Aug 2025 14:34:59 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 10 Aug 2025 04:13:27 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
@@ -194,8 +194,75 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;无论是&lt;code&gt;cc&lt;/code&gt;还是&lt;code&gt;C&lt;/code&gt;，都不用在指令末尾指定文字对象，但是可以在指令前面添加数量参数。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h4 id=&#34;单个字符更改&#34;&gt;单个字符更改
-&lt;/h4&gt;</description>
+&lt;h4 id=&#34;字符更改&#34;&gt;字符更改
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;r&lt;/code&gt;是另一个用于替换文本的命令，该命令使用一个字符替换另一个字符，且无需按&lt;code&gt;Esc&lt;/code&gt;就可以返回命令模式。&lt;/p&gt;
+&lt;p&gt;格式：&lt;code&gt;[数量参数] r [要替换成的字符]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：数量参数会让后面多个字符替换成同一个字符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;s&lt;/code&gt;与&lt;code&gt;r&lt;/code&gt;的作用与命令格式相同，不同的是，使用&lt;code&gt;s&lt;/code&gt;更改后，会进入到插入模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;S&lt;/code&gt;命令可以替换整行文本，且不同于&lt;code&gt;C&lt;/code&gt;命令，&lt;code&gt;S&lt;/code&gt;命令会删除整行，之后进入插入模式，光标置于行首。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在前面加上数量参数，可以实现多行删除并进入到插入模式。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt;命令比较特殊，不同于&lt;code&gt;r&lt;/code&gt;，该命令会直接进入&lt;strong&gt;改写模式&lt;/strong&gt;，此时键盘输入的字符会直接逐个替换屏幕上的文本，直到按下&lt;code&gt;Esc&lt;/code&gt;。并且，当删除替换字符时，原先字符会恢复。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当按下&lt;code&gt;Enter&lt;/code&gt;时，编辑器会插入新行。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;更改大小写英文&#34;&gt;更改大小写（英文）
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;~&lt;/code&gt;可以对光标所处字符更改大小写。同样，输入数量参数可以对多个字符更改。&lt;/p&gt;
+&lt;p&gt;若想更改多行，只能使用Unix指令，后面会讲解。&lt;/p&gt;
+&lt;h3 id=&#34;删除文本&#34;&gt;删除文本
+&lt;/h3&gt;&lt;p&gt;删除命令&lt;code&gt;d&lt;/code&gt;可用于删除文件中的任意文本。和更改命令一样，删除命令也需要文本对象。&lt;/p&gt;
+&lt;p&gt;无论哪种形式的删除命令，都要先将光标移动到待删除文本的起始位置，然后输入删除命令&lt;code&gt;d&lt;/code&gt;和文本对象。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实，文本对象指的就是像&lt;code&gt;w&lt;/code&gt;，&lt;code&gt;2w&lt;/code&gt;一类的东西，也可以是&lt;code&gt;l&lt;/code&gt;，&lt;code&gt;2l&lt;/code&gt;这种移动指令，这会向后删除两个字符。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;单词&#34;&gt;单词
+&lt;/h4&gt;&lt;p&gt;&lt;code&gt;dw&lt;/code&gt;删除从光标所在位置开始的第一个单词。注意，单词之后的空格也会被一并删除。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若想保留单词之后的空格，可以使用&lt;code&gt;de&lt;/code&gt;而不是&lt;code&gt;dw&lt;/code&gt;。若想连带后面标点符号也删除，请使用&lt;code&gt;dE&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;e&lt;/code&gt;指令为到达下一个单词末尾，而&lt;code&gt;E&lt;/code&gt;则移动到下一个空格分隔的单词尾部。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;行&#34;&gt;行
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;dd&lt;/code&gt;：删除整个行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;D&lt;/code&gt;：从光标开始删除到末尾（等同于&lt;code&gt;d$&lt;/code&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;字符&#34;&gt;字符
+&lt;/h4&gt;&lt;p&gt;往往，可能仅仅只是删除某个字符，却不需要修改。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;x&lt;/code&gt;命令仅删除光标所在的字符，同样，也可以加入数量参数，删除光标及之后的更多字符。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;X&lt;/code&gt;命令则会删除光标之前的字符，支持数量参数。&lt;/p&gt;
+&lt;p&gt;二者使用后都会保持命令模式不变。&lt;/p&gt;
+&lt;h3 id=&#34;撤回&#34;&gt;撤回
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;u&lt;/code&gt;可以撤回上一次的&lt;strong&gt;操作&lt;/strong&gt;（如&lt;code&gt;dd&lt;/code&gt;）（Undo）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;U&lt;/code&gt;可以恢复一整行文本到原先状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+r&lt;/code&gt;可以恢复上一次的撤回操作（Redo）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;.&lt;/code&gt;可以重复上一次的指令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请注意，以上操作仅限于在命令模式中删除（像&lt;code&gt;x&lt;/code&gt;、&lt;code&gt;dd&lt;/code&gt;）的情况，在插入模式中删除时，仅靠&lt;code&gt;u&lt;/code&gt;并不能实现，保持插入模式之后&lt;code&gt;Ctrl+Z&lt;/code&gt;就可以了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;移动文本&#34;&gt;移动文本
+&lt;/h3&gt;&lt;p&gt;每次删除一个文本块，被删除的内容就会被保存在一个特殊的无名区域，称为&lt;strong&gt;删除寄存器&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;那么，在Vim中，剪切文本的操作就是删除-&amp;gt;选取位置-&amp;gt;用放置命令&lt;code&gt;p&lt;/code&gt;这样的流程实现的。&lt;/p&gt;
+</description>
         </item>
         
     </channel>
