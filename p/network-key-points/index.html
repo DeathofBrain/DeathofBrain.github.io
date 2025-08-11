@@ -10,7 +10,7 @@
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/network-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-11T15:33:16&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-11T15:54:44&#43;00:00'/>
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -587,7 +587,8 @@
 </h4><blockquote>
 <p>这个不会就真埋了吧</p></blockquote>
 <ul>
-<li>速率：节点在数字信道上传送数据的速率，也称<em>数据传输速率</em>、<em>数据率</em>或<em>比特率</em>。
+<li>
+<p>速率：节点在数字信道上传送数据的速率，也称<em>数据传输速率</em>、<em>数据率</em>或<em>比特率</em>。</p>
 <ul>
 <li>单位：<code>b/s</code>或<code>bit/s</code></li>
 <li>数据率较高时，可用<code>Kb/s</code>、<code>Mb/s</code>、<code>Gb/s</code>等。</li>
@@ -595,12 +596,103 @@
 <blockquote>
 <ol>
 <li>
-<p>放到常见情形，可以对应上下载速率或上传速率</p>
+<p>放到常见情形，可以对应下载速率或上传速率</p>
 </li>
 <li>
 <p>在计网中，K=10^3，M=10^6，G=10^9，幂数每一级+3</p>
 </li>
 </ol></blockquote>
+</li>
+<li>
+<p>带宽：在计网中，表示网络等通信线路所能传送数据的能力。</p>
+<blockquote>
+<p>也就是<strong>最高</strong>数据传输速率</p></blockquote>
+<ul>
+<li>单位：<code>bit/s</code></li>
+</ul>
+</li>
+<li>
+<p>吞吐量：单位时间内通过某个网络（或信道、接口）的实际数据量。</p>
+<ul>
+<li>常用于对实际网络的测量，以便获知有多少数据量能够通过网络。</li>
+</ul>
+</li>
+<li>
+<p>🌟时延：指数据从网络的一段传送到另一段所需的总时间。由四部分组成：<strong>发送时延</strong>、<strong>传播时延</strong>、<strong>处理时延</strong>和<strong>排队时延</strong>。</p>
+<ul>
+<li>发送时延：又称<strong>传输时延</strong>，节点将分组的所有比特推向链路所花的时间。
+<blockquote>
+<p>即从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所花的时间。</p></blockquote>
+<ul>
+<li>公式：<code>发送时延 = 分组长度 / 发送速率</code></li>
+</ul>
+</li>
+<li>传播时延：电磁波在信道中传播一定距离所花时间，即一个比特从<strong>链路的一端</strong>到<strong>另一段</strong>所需时间。
+<ul>
+<li>公式：<code>传播时延 = 信道长度 / 电磁波在信道上的传播速率</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>传输时延和传播时延一定要区分开，不然没分了</p></blockquote>
+<ul>
+<li>处理时延：分组在交换节点为存储转发而进行的一些必要处理所花的时间。</li>
+<li>排队时延：分组在路由器的输入队列或输出队列中排队等待所花时间。</li>
+</ul>
+<blockquote>
+<p>处理时延与排队时延一般忽略不计，或者题目直接给出时间。
+因此，<code>总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延</code></p></blockquote>
+</li>
+<li>
+<p>时延带宽积：指发送端发送的第一个比特即将到达终点时，发送端已经发送了多少比特。</p>
+<ul>
+<li>
+<p><code>时延带宽积 = 传播时延 x 信道带宽</code></p>
+</li>
+<li>
+<p>想象成圆柱形管道，长度为传播时延，横截面积表示链路带宽，则时延带宽积表示<strong>该管道可以容纳的比特数量</strong>。</p>
+<p><img src="/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93.png"
+	width="872"
+	height="212"
+	srcset="/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_c57d9d92aa3b7754.png 480w, /p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_f04528a20c3241eb.png 1024w"
+	loading="lazy"
+	
+		alt="管道"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="411"
+		data-flex-basis="987px"
+	
+></p>
+</li>
+</ul>
+</li>
+<li>
+<p>🌟往返时延（<strong>RTT</strong>）：指从发送端发出一个短分组，到发送端收到<strong>来自接收端的确认</strong>（接收端收到数据后立刻发送确认）总共经历的时间。</p>
+<blockquote>
+<p>RTT包括各中间节点的处理时延、排队时延以及转发数据时的发送时延。</p></blockquote>
+<p><img src="/p/network-key-points/images/RTT.png"
+	width="1969"
+	height="1141"
+	srcset="/p/network-key-points/images/RTT_hu_22cbac0eb0121898.png 480w, /p/network-key-points/images/RTT_hu_ece94b1afc84e8c3.png 1024w"
+	loading="lazy"
+	
+		alt="RTT"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="414px"
+	
+></p>
+</li>
+<li>
+<p>信道利用率：指出信道有数据通过时间占总时间的百分比</p>
+<ul>
+<li><code>信道利用率 = 有数据通过时间 / （有数据通过时间 + 无数据通过时间）</code></li>
+<li>信道利用率<strong>并非越高越好</strong>，太低会浪费资源，太高会<strong>造成拥堵</strong>。</li>
+</ul>
 </li>
 </ul>
 

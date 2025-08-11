@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Mon, 11 Aug 2025 15:33:16 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Aug 2025 15:54:44 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
@@ -527,7 +527,8 @@
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;这个不会就真埋了吧&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;速率：节点在数字信道上传送数据的速率，也称&lt;em&gt;数据传输速率&lt;/em&gt;、&lt;em&gt;数据率&lt;/em&gt;或&lt;em&gt;比特率&lt;/em&gt;。
+&lt;li&gt;
+&lt;p&gt;速率：节点在数字信道上传送数据的速率，也称&lt;em&gt;数据传输速率&lt;/em&gt;、&lt;em&gt;数据率&lt;/em&gt;或&lt;em&gt;比特率&lt;/em&gt;。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;单位：&lt;code&gt;b/s&lt;/code&gt;或&lt;code&gt;bit/s&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;数据率较高时，可用&lt;code&gt;Kb/s&lt;/code&gt;、&lt;code&gt;Mb/s&lt;/code&gt;、&lt;code&gt;Gb/s&lt;/code&gt;等。&lt;/li&gt;
@@ -535,12 +536,103 @@
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;放到常见情形，可以对应上下载速率或上传速率&lt;/p&gt;
+&lt;p&gt;放到常见情形，可以对应下载速率或上传速率&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在计网中，K=10^3，M=10^6，G=10^9，幂数每一级+3&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;带宽：在计网中，表示网络等通信线路所能传送数据的能力。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;也就是&lt;strong&gt;最高&lt;/strong&gt;数据传输速率&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;单位：&lt;code&gt;bit/s&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;吞吐量：单位时间内通过某个网络（或信道、接口）的实际数据量。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常用于对实际网络的测量，以便获知有多少数据量能够通过网络。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌟时延：指数据从网络的一段传送到另一段所需的总时间。由四部分组成：&lt;strong&gt;发送时延&lt;/strong&gt;、&lt;strong&gt;传播时延&lt;/strong&gt;、&lt;strong&gt;处理时延&lt;/strong&gt;和&lt;strong&gt;排队时延&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发送时延：又称&lt;strong&gt;传输时延&lt;/strong&gt;，节点将分组的所有比特推向链路所花的时间。
+&lt;blockquote&gt;
+&lt;p&gt;即从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所花的时间。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;公式：&lt;code&gt;发送时延 = 分组长度 / 发送速率&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;传播时延：电磁波在信道中传播一定距离所花时间，即一个比特从&lt;strong&gt;链路的一端&lt;/strong&gt;到&lt;strong&gt;另一段&lt;/strong&gt;所需时间。
+&lt;ul&gt;
+&lt;li&gt;公式：&lt;code&gt;传播时延 = 信道长度 / 电磁波在信道上的传播速率&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;传输时延和传播时延一定要区分开，不然没分了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;处理时延：分组在交换节点为存储转发而进行的一些必要处理所花的时间。&lt;/li&gt;
+&lt;li&gt;排队时延：分组在路由器的输入队列或输出队列中排队等待所花时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;处理时延与排队时延一般忽略不计，或者题目直接给出时间。
+因此，&lt;code&gt;总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时延带宽积：指发送端发送的第一个比特即将到达终点时，发送端已经发送了多少比特。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;时延带宽积 = 传播时延 x 信道带宽&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;想象成圆柱形管道，长度为传播时延，横截面积表示链路带宽，则时延带宽积表示&lt;strong&gt;该管道可以容纳的比特数量&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93.png&#34;
+	width=&#34;872&#34;
+	height=&#34;212&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_c57d9d92aa3b7754.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_f04528a20c3241eb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;管道&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;411&#34;
+		data-flex-basis=&#34;987px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌟往返时延（&lt;strong&gt;RTT&lt;/strong&gt;）：指从发送端发出一个短分组，到发送端收到&lt;strong&gt;来自接收端的确认&lt;/strong&gt;（接收端收到数据后立刻发送确认）总共经历的时间。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;RTT包括各中间节点的处理时延、排队时延以及转发数据时的发送时延。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/RTT.png&#34;
+	width=&#34;1969&#34;
+	height=&#34;1141&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/RTT_hu_22cbac0eb0121898.png 480w, https://deathofbrain.github.io/p/network-key-points/images/RTT_hu_ece94b1afc84e8c3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;RTT&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信道利用率：指出信道有数据通过时间占总时间的百分比&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;信道利用率 = 有数据通过时间 / （有数据通过时间 + 无数据通过时间）&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;信道利用率&lt;strong&gt;并非越高越好&lt;/strong&gt;，太低会浪费资源，太高会&lt;strong&gt;造成拥堵&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
