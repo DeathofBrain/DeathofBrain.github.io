@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Mon, 11 Aug 2025 14:34:22 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Aug 2025 14:38:03 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机网络</title>
         <link>https://deathofbrain.github.io/p/network-key-points/</link>
         <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
@@ -18,23 +18,39 @@
 &lt;p&gt;本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;计算机网络概述&#34;&gt;▲计算机网络概述
 &lt;/h3&gt;&lt;h4 id=&#34;计算机网络的概念&#34;&gt;▲计算机网络的概念
-&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现**资源共享**和信息传递的操作系统。
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/h4&gt;&lt;p&gt;定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的操作系统。&lt;/p&gt;
 &lt;h4 id=&#34;计算机网络组成&#34;&gt;计算机网络组成
-&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;gt; 需要知道哪些东西是哪个部分的就可以了
-- 从组成部分看，计算机网络主要由**硬件**、**软件**、**协议**三大部分组成。
-  - 硬件：由主机、通信链路、交换设备和网卡等组成
-  - 软件：包括email程序、ftp程序等
-  - **协议**：计算机网络的核心，规定了网络传输数据时所遵循的规范。
-- 从工作方式看，可分为**边缘部分**和**核心部分**
-  - 边缘部分：由所有连接到互联网上的供用户直接使用的主机构成，进行通信和资源共享。
-  - 核心部分：大量网络和连接着的路由器组成。
-- 从功能组成看，可分为**通信子网**和**资源子网**。
-  - 通信子网：各种传输介质、通信设备和相应网络协议组成。
-    - 使网络具有数据传输、交换、控制和存储的能力，实现数据通信。
-  - 资源子网：实现资源共享的设备及其软件的集合
-    - 向网络用户提供共享其他计算机上的硬件资源、软件资源、数据资源的服务。
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;需要知道哪些东西是哪个部分的就可以了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;从组成部分看，计算机网络主要由&lt;strong&gt;硬件&lt;/strong&gt;、&lt;strong&gt;软件&lt;/strong&gt;、&lt;strong&gt;协议&lt;/strong&gt;三大部分组成。
+&lt;ul&gt;
+&lt;li&gt;硬件：由主机、通信链路、交换设备和网卡等组成&lt;/li&gt;
+&lt;li&gt;软件：包括email程序、ftp程序等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;协议&lt;/strong&gt;：计算机网络的核心，规定了网络传输数据时所遵循的规范。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;从工作方式看，可分为&lt;strong&gt;边缘部分&lt;/strong&gt;和&lt;strong&gt;核心部分&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;边缘部分：由所有连接到互联网上的供用户直接使用的主机构成，进行通信和资源共享。&lt;/li&gt;
+&lt;li&gt;核心部分：大量网络和连接着的路由器组成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;从功能组成看，可分为&lt;strong&gt;通信子网&lt;/strong&gt;和&lt;strong&gt;资源子网&lt;/strong&gt;。
+&lt;ul&gt;
+&lt;li&gt;通信子网：各种传输介质、通信设备和相应网络协议组成。
+&lt;ul&gt;
+&lt;li&gt;使网络具有数据传输、交换、控制和存储的能力，实现数据通信。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;资源子网：实现资源共享的设备及其软件的集合
+&lt;ul&gt;
+&lt;li&gt;向网络用户提供共享其他计算机上的硬件资源、软件资源、数据资源的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&#34;计算机网络功能&#34;&gt;计算机网络功能
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;数据通信&lt;/strong&gt;：最基本和最重要的功能，实现联网计算机之间信息的传输。&lt;/li&gt;
