@@ -273,9 +273,9 @@
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;计算机网络概述&#34;&gt;▲计算机网络概述
-&lt;/h3&gt;&lt;h4 id=&#34;计算机网络的概念&#34;&gt;▲计算机网络的概念
+&lt;/h3&gt;&lt;h4 id=&#34;概念&#34;&gt;▲概念
 &lt;/h4&gt;&lt;p&gt;定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的操作系统。&lt;/p&gt;
-&lt;h4 id=&#34;计算机网络组成&#34;&gt;计算机网络组成
+&lt;h4 id=&#34;组成&#34;&gt;组成
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;需要知道哪些东西是哪个部分的就可以了&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
@@ -307,7 +307,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;计算机网络功能&#34;&gt;计算机网络功能
+&lt;h4 id=&#34;功能&#34;&gt;功能
 &lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;数据通信&lt;/strong&gt;：最基本和最重要的功能，实现联网计算机之间信息的传输。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;资源共享&lt;/strong&gt;：共享软件、硬件、数据，让网络中资源互通有无。&lt;/li&gt;
@@ -315,7 +315,7 @@
 &lt;li&gt;&lt;strong&gt;提高可靠性&lt;/strong&gt;：网络中的各台计算机可以互为替代机。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;负载均衡&lt;/strong&gt;：将工作任务均衡地分配给网络中各台计算机。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;电路交换报文交换和分组交换&#34;&gt;🌟🌟电路交换、报文交换和分组交换
+&lt;h4 id=&#34;电路交换报文交换和分组交换&#34;&gt;🌟电路交换、报文交换和分组交换
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;计网计算题重点，可结合到多种题型&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;路由器&lt;/strong&gt;这个&lt;strong&gt;网络层&lt;/strong&gt;设备在网络核心部分起到重要作用。它对收到的分组进行&lt;strong&gt;存储转发&lt;/strong&gt;实现&lt;strong&gt;分组交换&lt;/strong&gt;。分组交换是现代网络最常用的交换方式。&lt;/p&gt;
@@ -406,6 +406,140 @@
 &lt;p&gt;交换节点要把报文都存储完才能查找转发表转发到下一节点，若是报文太大，缓存开销也大，并且一旦丢包，重传代价也大。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分组交换，就是在报文交换&lt;strong&gt;存储转发&lt;/strong&gt;的基础上，将报文划分成若干较小&lt;strong&gt;等长&lt;/strong&gt;数据段，每个数据段前面添加一些由控制信息组成的&lt;strong&gt;首部&lt;/strong&gt;，构成&lt;strong&gt;分组（Packet）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84.png&#34;
+	width=&#34;1070&#34;
+	height=&#34;384&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_fcdb989a9ab245d8.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_a6569516edf2d64d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;构成分组&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;278&#34;
+		data-flex-basis=&#34;668px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;分组交换&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;流程&lt;/p&gt;
+&lt;p&gt;源主机发送分组，分组交换网中的交换机收到分组后，先缓存，然后从首部提取目的地址，借由转发表，发送给下一个交换机，周而复始，直到到达目的主机。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本质上和报文交换一样&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优点：存储转发开销小、传输效率高、减少出错概率与代价。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分组是逐个传输的，可以使后一个分组的存储操作与前一个分组的转发操作并行，形成&lt;strong&gt;流水线&lt;/strong&gt;，后面的图会详细表达。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缺点：存在存储转发时延、需要传输额外信息、可能出现失序、丢失或重复分组的情况。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;失序丢包等问题是借由上层，或使用虚电路服务解决的，先不必深究。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三种交换方式的比较&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当要连续传输大量的数据，并且传送时间远大于连接建立时间时，采用电路交换更合适。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;然而，现时代，数据的传送时间肯定小于连接建立时间。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从提高整个网络的信道利用率看，报文交换和分组交换更合适&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其中，分组交换比报文交换时延更小，更加灵活，尤其适合突发式数据传送。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三种传输时序图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE.png&#34;
+	width=&#34;1156&#34;
+	height=&#34;798&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_315c74c69a76b267.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_27fbf94784fabc84.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;传输时序图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这东西不会画就可以埋了，做计算题必须要画的图&lt;/p&gt;
+&lt;p&gt;为什么是斜的：电磁波在信道中传播需要花费时间（即使非常短），这部分时间也叫传播时延。有些题明确指出传播时延忽略不计时，那就必须要画平了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;分类&#34;&gt;分类
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;记一下拓扑结构就好了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;分布范围：广域网、城域网、局域网、个人区域网&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传输技术：广播式网络、点对点网络&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拓扑规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;总线型：优点是建网容易、增删节点方便、节省线路；缺点是重负载时通信效率不高，总线任意一处对故障敏感。&lt;/li&gt;
+&lt;li&gt;星形网络：优点是便于集中控制和管理；缺点是成本高、中央设备对故障敏感。&lt;/li&gt;
+&lt;li&gt;环形网络：典型例子是令牌环局域网。&lt;/li&gt;
+&lt;li&gt;网状网络：每个节点至少有两条路径与其他节点相连，常用于广域网。优点是可靠性高，缺点是控制复杂、线路成本高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C.png&#34;
+	width=&#34;1386&#34;
+	height=&#34;308&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_2e5744d571e60a2f.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_775c8e69fdfc46b7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;四种拓扑网络&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;450&#34;
+		data-flex-basis=&#34;1080px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用者：公用网、专用网&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传输介质：有线网络、无线网络。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;性能指标&#34;&gt;🌟性能指标
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;这个不会就真埋了吧&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;速率：节点在数字信道上传送数据的速率，也称&lt;em&gt;数据传输速率&lt;/em&gt;、&lt;em&gt;数据率&lt;/em&gt;或&lt;em&gt;比特率&lt;/em&gt;。
+&lt;ul&gt;
+&lt;li&gt;单位：&lt;code&gt;b/s&lt;/code&gt;或&lt;code&gt;bit/s&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;数据率较高时，可用&lt;code&gt;Kb/s&lt;/code&gt;、&lt;code&gt;Mb/s&lt;/code&gt;、&lt;code&gt;Gb/s&lt;/code&gt;等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;放到常见情形，可以对应上下载速率或上传速率&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在计网中，K=10^3，M=10^6，G=10^9，幂数每一级+3&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
