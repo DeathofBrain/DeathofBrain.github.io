@@ -297,6 +297,7 @@
 &lt;p&gt;吞吐量：单位时间内通过某个网络（或信道、接口）的实际数据量。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;常用于对实际网络的测量，以便获知有多少数据量能够通过网络。&lt;/li&gt;
+&lt;li&gt;一条由多端链路组成的信道，其带宽取决于&lt;strong&gt;带宽最小&lt;/strong&gt;的那段链路。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
