@@ -10,7 +10,7 @@
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/network-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-11T15:56:08&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-12T15:04:52&#43;00:00'/>
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -249,7 +249,7 @@
   <ol>
     <li><a href="#计算机网络体系结构">计算机网络体系结构</a>
       <ol>
-        <li><a href="#计算机网络概述">▲计算机网络概述</a>
+        <li><a href="#概述">▲概述</a>
           <ol>
             <li><a href="#概念">▲概念</a></li>
             <li><a href="#组成">组成</a></li>
@@ -259,6 +259,26 @@
             <li><a href="#性能指标">🌟性能指标</a></li>
           </ol>
         </li>
+        <li><a href="#体系结构分层模型">🌟体系结构、分层模型</a>
+          <ol>
+            <li><a href="#概念-1">概念</a></li>
+            <li><a href="#分层">分层</a></li>
+            <li><a href="#实体">实体</a></li>
+            <li><a href="#数据单元">数据单元</a></li>
+            <li><a href="#层次结构的含义">层次结构的含义</a></li>
+          </ol>
+        </li>
+        <li><a href="#协议接口服务的概念">🌟协议、接口、服务的概念</a>
+          <ol>
+            <li><a href="#协议">🌟协议</a></li>
+            <li><a href="#接口">接口</a></li>
+            <li><a href="#服务">服务</a></li>
+            <li><a href="#协议与服务区别">协议与服务区别</a></li>
+            <li><a href="#协议接口服务三者之间的关系">协议、接口、服务三者之间的关系</a></li>
+            <li><a href="#计网提供的服务">计网提供的服务</a></li>
+          </ol>
+        </li>
+        <li><a href="#isoosi模型和tcpip模型">🌟ISO/OSI模型和TCP/IP模型</a></li>
       </ol>
     </li>
   </ol>
@@ -333,7 +353,7 @@
     <h2 id="计算机网络体系结构">计算机网络体系结构
 </h2><blockquote>
 <p>本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）</p></blockquote>
-<h3 id="计算机网络概述">▲计算机网络概述
+<h3 id="概述">▲概述
 </h3><h4 id="概念">▲概念
 </h4><p>定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现<strong>资源共享</strong>和信息传递的操作系统。</p>
 <h4 id="组成">组成
@@ -696,6 +716,204 @@
 </ul>
 </li>
 </ul>
+<h3 id="体系结构分层模型">🌟体系结构、分层模型
+</h3><h4 id="概念-1">概念
+</h4><p>计算机网络的各层及其协议的集合称为网络的<strong>体系结构</strong>。</p>
+<blockquote>
+<p>换言之，计算机网络的体系结构就是这个计算机网络及其所应完成的功能的精确定义。</p></blockquote>
+<p>要注意，这些功能如何实现，是体系结构的<strong>实现</strong>问题。体系结构是<strong>抽象</strong>的，它不在乎如何去实现，实现问题是<strong>具体</strong>的。</p>
+<h4 id="分层">分层
+</h4><p>计网体系结构通常都是可分层的，它将复杂的大系统分成若干较容易实现的层次。</p>
+<p>分层的基本原则：</p>
+<ul>
+<li>每层都实现一种相对独立的功能</li>
+<li>各层之间接口清晰、易于理解、相互交流尽可能少</li>
+<li>各层功能的精确定义<strong>独立于</strong>具体实现</li>
+<li>保持下层对上层的独立性，<strong>上层单向使用下层提供的服务</strong></li>
+<li>整个分层结构应能促进标准化</li>
+</ul>
+<h4 id="实体">实体
+</h4><p>实体，指任何可发送或接收信息的硬件或软件进程，通常是某个特定的软件模块。</p>
+<p>在网络分层结构中，第n层的活动元素通常称为<strong>第n层实体</strong>。</p>
+<p>不同终端的同一层称为<strong>对等层</strong>，同一层的实体称为<strong>对等实体</strong>。</p>
+<p>🌟<strong>第n层向第n+1层提供服务，这些服务也包括第n层及以下各层提供的服务。</strong></p>
+<blockquote>
+<p>就这一句话值得去背</p></blockquote>
+<p>第n层的实体称为<strong>服务提供者</strong>，服务提供者上一层的实体称为<strong>服务用户</strong>。</p>
+<h4 id="数据单元">数据单元
+</h4><ul>
+<li>协议数据单元（<strong>PDU</strong>）：<strong>对等层</strong>之间传送的数据单位，第n层的PDU称为n-PDU
+<ul>
+<li>各层的PDU都分为服务数据单元和协议控制信息两个部分</li>
+</ul>
+</li>
+<li>服务数据单元（<strong>SDU</strong>）：<strong>层与层</strong>之间交换的数据单位，第n层的SDU称为n-SDU</li>
+<li>协议控制信息（<strong>PCI</strong>）：<strong>控制协议操作</strong>的信息。第n层的PCI称为n-PCI</li>
+</ul>
+<p>具体三者的关系如图。</p>
+<p><img src="/p/network-key-points/images/pdu_sdu_pci.png"
+	width="195"
+	height="115"
+	srcset="/p/network-key-points/images/pdu_sdu_pci_hu_8f0ada956b3bd3b0.png 480w, /p/network-key-points/images/pdu_sdu_pci_hu_8de95bf00d5ea091.png 1024w"
+	loading="lazy"
+	
+		alt="三种数据单元关系"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="169"
+		data-flex-basis="406px"
+	
+></p>
+<p>各层之间数据单元的联系如图。请注意，数据链路层（第2层）的PDU中有两个PCI。</p>
+<p><img src="/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB.png"
+	width="1570"
+	height="946"
+	srcset="/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_631addc6284644e2.png 480w, /p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_6feed396f1432bb.png 1024w"
+	loading="lazy"
+	
+		alt="各层数据单元的关系"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="165"
+		data-flex-basis="398px"
+	
+></p>
+<blockquote>
+<p>横向上来看，各层之间在逻辑上有一个直接信道，表现为能直接将该层PDU传送给对方</p>
+<p>纵向上来看，发送端高层PDU作为底层SDU不断封装，到接收端自底向上不断解包。</p></blockquote>
+<h4 id="层次结构的含义">层次结构的含义
+</h4><ul>
+<li>第n层实体不仅要使用下面一层（n-1层）的<strong>服务</strong>来实现自身定义的功能，还要向上面一层（n+1层）提供本层的服务，并且该服务是<strong>第n层及其下面各层提供的服务总和</strong>。</li>
+<li>最低层（物理层）<strong>只提供服务</strong>，是整个层次结构的基础</li>
+<li>最高层（应用层）<strong>向用户提供服务</strong></li>
+<li>上一层只能通过<strong>相邻层间接口</strong>使用下一层的服务，而不能调用其他层的服务。</li>
+</ul>
+<h3 id="协议接口服务的概念">🌟协议、接口、服务的概念
+</h3><h4 id="协议">🌟协议
+</h4><blockquote>
+<p>这个不会可以埋了</p></blockquote>
+<p>网络协议：为了在网络中进行数据交换而建立的通信规则、标准或约定，是控制在<strong>对等实体</strong>之间进行通信规则的集合，是<strong>水平</strong>的。</p>
+<blockquote>
+<p>自然，不对等实体之间是没有协议的。就像A的网络层和B的传输层之间就没有协议这一说法。</p></blockquote>
+<p>🌟<strong>协议三要素：语法、语义、时序</strong></p>
+<ul>
+<li>语法：数据与控制信息的格式</li>
+<li>语义：定义需要发出什么控制信息、完成什么动作、做出什么回答</li>
+<li>时序：事件实现顺序的详细说明，即执行各种操作的条件、时序关系等</li>
+</ul>
+<h4 id="接口">接口
+</h4><p>同一节点内 相邻两层间 实体交换信息的逻辑接口称为<strong>服务访问点（SAP）</strong>。</p>
+<p>当然，每一层只能在紧邻层之间定义接口，而不能跨层定义接口。</p>
+<p>请注意：<strong>服务是通过SAP提供给上层使用的</strong>，也就是说，第n层的SAP就是第n+1层可以访问第n层服务的地方。</p>
+<h4 id="服务">服务
+</h4><p>服务是指下层为紧邻上层提供的功能调用，是<strong>垂直</strong>的。</p>
+<p>对等实体在协议的控制下，使得本层能为上层提供服务，但要实现本层协议，还需要使用下层提供的服务。</p>
+<p>注意：并非在一层内完成的全部功能都称为服务，只有那些能够被高一层实体<strong>调用</strong>的功能才称为服务。</p>
+<h4 id="协议与服务区别">协议与服务区别
+</h4><ul>
+<li>协议是<strong>水平</strong>的，服务是<strong>垂直</strong>的</li>
+<li>只有本层协议的实现才能保证向上一层提供服务</li>
+<li>下面的协议对上层的服务用户是<strong>透明</strong>的，仅提供服务。</li>
+</ul>
+<h4 id="协议接口服务三者之间的关系">协议、接口、服务三者之间的关系
+</h4><p><img src="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1.png"
+	width="1160"
+	height="390"
+	srcset="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_1678192e015098b6.png 480w, /p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_a4792bfa9b1ecd13.png 1024w"
+	loading="lazy"
+	
+		alt="三者关系"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="297"
+		data-flex-basis="713px"
+	
+></p>
+<h4 id="计网提供的服务">计网提供的服务
+</h4><ul>
+<li>面向连接服务与无连接服务
+<ul>
+<li>面向连接服务：通信双方<strong>必须建立连接（TCP由传输层负责）</strong>，分配资源，传输结束后释放连接和占用资源。
+<ul>
+<li>代表协议：<strong>TCP（传输层）</strong></li>
+</ul>
+</li>
+<li>无连接服务：通信双方<strong>不需要</strong>建立连接，需要发送数据可直接发送，将每个带有目的地址的包传送到线路上，由系统选定路线进行传输
+<ul>
+<li>常被描述为<strong>尽最大努力交付</strong>，是不可靠的服务</li>
+<li>代表协议：<strong>IP（网络层）</strong>、<strong>UDP（传输层）</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>可靠服务与不可靠服务
+<ul>
+<li>可靠服务：网络具有纠错检错、应答机制，保证数据正确、可靠地传送到目的地。</li>
+<li>不可靠服务：网络<strong>尽量</strong>让数据正确、可靠地传送到目的地，尽力而为。
+<ul>
+<li>可以由更高层来保障网络的正确与可靠</li>
+</ul>
+<blockquote>
+<p>IP就是不可靠的网络层协议，但是TCP作为传输层的协议，可以借助这个不可靠的服务，向上层提供可靠的服务。</p></blockquote>
+</li>
+</ul>
+</li>
+<li>有应答服务和无应答服务
+<ul>
+<li>有应答服务：接收方在收到数据时，向发送方发送应答
+<ul>
+<li>应答可以是肯定应答，也可以是否定应答。接收的数据有错误时，即发送否定应答，以此让发送者重发</li>
+<li>这个应答由系统内部自动实现，而不需要用户实现</li>
+</ul>
+</li>
+<li>无应答服务：接收方在收到数据时，不发送应答
+<ul>
+<li>若需要应答，则需要高层实现</li>
+</ul>
+<blockquote>
+<p>WWW服务，客户端收到服务器发送的页面文件后，不给出回答</p></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="isoosi模型和tcpip模型">🌟ISO/OSI模型和TCP/IP模型
+</h3><p>ISO提出的网络体系结构模型，称为OSI模型，有七层，自底向上依次为：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
+<blockquote>
+<p>七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来</p></blockquote>
+<p><img src="/p/network-key-points/images/OSI.png"
+	width="1642"
+	height="694"
+	srcset="/p/network-key-points/images/OSI_hu_21bf7207732a1fc3.png 480w, /p/network-key-points/images/OSI_hu_89b26122dc994c9a.png 1024w"
+	loading="lazy"
+	
+		alt="OSI模型"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="236"
+		data-flex-basis="567px"
+	
+></p>
+<blockquote>
+<p>接下来的各层，在后续章节基本都要讲述，这里只是简单介绍</p></blockquote>
+<ul>
+<li>
+<p>物理层</p>
+<p>物理层的传输单位是<strong>比特</strong>，功能是在物理介质上为数据端设备<strong>透明</strong>地传输原始比特流。</p>
+<ul>
+<li>通信链路与通信节点的连接需要一些电路接口，物理层规定了这些接口的一些参数，如机械形状尺寸、引脚数量和排列等。</li>
+<li>物理层规定了通信链路上所传输的信号的意义和电气特征。</li>
+</ul>
+<blockquote>
+<p>物理介质并不在物理层协议之中</p></blockquote>
+</li>
+<li>
+<p>数据链路层</p>
+</li>
+</ul>
 
 </section>
 
@@ -719,7 +937,7 @@
 
 
         <span>
-            最后更新于 2025-08-11
+            最后更新于 2025-08-12
         </span>
     </section></footer>
 

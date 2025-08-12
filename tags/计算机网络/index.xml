@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Mon, 11 Aug 2025 15:56:08 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 12 Aug 2025 15:04:52 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机网络</title>
         <link>https://deathofbrain.github.io/p/network-key-points/</link>
         <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
@@ -16,7 +16,7 @@
         <description>&lt;h2 id=&#34;计算机网络体系结构&#34;&gt;计算机网络体系结构
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3 id=&#34;计算机网络概述&#34;&gt;▲计算机网络概述
+&lt;h3 id=&#34;概述&#34;&gt;▲概述
 &lt;/h3&gt;&lt;h4 id=&#34;概念&#34;&gt;▲概念
 &lt;/h4&gt;&lt;p&gt;定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的操作系统。&lt;/p&gt;
 &lt;h4 id=&#34;组成&#34;&gt;组成
@@ -377,6 +377,204 @@
 &lt;li&gt;&lt;code&gt;信道利用率 = 有数据通过时间 / （有数据通过时间 + 无数据通过时间）&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;信道利用率&lt;strong&gt;并非越高越好&lt;/strong&gt;，太低会浪费资源，太高会&lt;strong&gt;造成拥堵&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;体系结构分层模型&#34;&gt;🌟体系结构、分层模型
+&lt;/h3&gt;&lt;h4 id=&#34;概念-1&#34;&gt;概念
+&lt;/h4&gt;&lt;p&gt;计算机网络的各层及其协议的集合称为网络的&lt;strong&gt;体系结构&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;换言之，计算机网络的体系结构就是这个计算机网络及其所应完成的功能的精确定义。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;要注意，这些功能如何实现，是体系结构的&lt;strong&gt;实现&lt;/strong&gt;问题。体系结构是&lt;strong&gt;抽象&lt;/strong&gt;的，它不在乎如何去实现，实现问题是&lt;strong&gt;具体&lt;/strong&gt;的。&lt;/p&gt;
+&lt;h4 id=&#34;分层&#34;&gt;分层
+&lt;/h4&gt;&lt;p&gt;计网体系结构通常都是可分层的，它将复杂的大系统分成若干较容易实现的层次。&lt;/p&gt;
+&lt;p&gt;分层的基本原则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每层都实现一种相对独立的功能&lt;/li&gt;
+&lt;li&gt;各层之间接口清晰、易于理解、相互交流尽可能少&lt;/li&gt;
+&lt;li&gt;各层功能的精确定义&lt;strong&gt;独立于&lt;/strong&gt;具体实现&lt;/li&gt;
+&lt;li&gt;保持下层对上层的独立性，&lt;strong&gt;上层单向使用下层提供的服务&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;整个分层结构应能促进标准化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;实体&#34;&gt;实体
+&lt;/h4&gt;&lt;p&gt;实体，指任何可发送或接收信息的硬件或软件进程，通常是某个特定的软件模块。&lt;/p&gt;
+&lt;p&gt;在网络分层结构中，第n层的活动元素通常称为&lt;strong&gt;第n层实体&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;不同终端的同一层称为&lt;strong&gt;对等层&lt;/strong&gt;，同一层的实体称为&lt;strong&gt;对等实体&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;🌟&lt;strong&gt;第n层向第n+1层提供服务，这些服务也包括第n层及以下各层提供的服务。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;就这一句话值得去背&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;第n层的实体称为&lt;strong&gt;服务提供者&lt;/strong&gt;，服务提供者上一层的实体称为&lt;strong&gt;服务用户&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;数据单元&#34;&gt;数据单元
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;协议数据单元（&lt;strong&gt;PDU&lt;/strong&gt;）：&lt;strong&gt;对等层&lt;/strong&gt;之间传送的数据单位，第n层的PDU称为n-PDU
+&lt;ul&gt;
+&lt;li&gt;各层的PDU都分为服务数据单元和协议控制信息两个部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务数据单元（&lt;strong&gt;SDU&lt;/strong&gt;）：&lt;strong&gt;层与层&lt;/strong&gt;之间交换的数据单位，第n层的SDU称为n-SDU&lt;/li&gt;
+&lt;li&gt;协议控制信息（&lt;strong&gt;PCI&lt;/strong&gt;）：&lt;strong&gt;控制协议操作&lt;/strong&gt;的信息。第n层的PCI称为n-PCI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体三者的关系如图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci.png&#34;
+	width=&#34;195&#34;
+	height=&#34;115&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci_hu_8f0ada956b3bd3b0.png 480w, https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci_hu_8de95bf00d5ea091.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;三种数据单元关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;各层之间数据单元的联系如图。请注意，数据链路层（第2层）的PDU中有两个PCI。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB.png&#34;
+	width=&#34;1570&#34;
+	height=&#34;946&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_631addc6284644e2.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_6feed396f1432bb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;各层数据单元的关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;398px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;横向上来看，各层之间在逻辑上有一个直接信道，表现为能直接将该层PDU传送给对方&lt;/p&gt;
+&lt;p&gt;纵向上来看，发送端高层PDU作为底层SDU不断封装，到接收端自底向上不断解包。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;层次结构的含义&#34;&gt;层次结构的含义
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;第n层实体不仅要使用下面一层（n-1层）的&lt;strong&gt;服务&lt;/strong&gt;来实现自身定义的功能，还要向上面一层（n+1层）提供本层的服务，并且该服务是&lt;strong&gt;第n层及其下面各层提供的服务总和&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;最低层（物理层）&lt;strong&gt;只提供服务&lt;/strong&gt;，是整个层次结构的基础&lt;/li&gt;
+&lt;li&gt;最高层（应用层）&lt;strong&gt;向用户提供服务&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;上一层只能通过&lt;strong&gt;相邻层间接口&lt;/strong&gt;使用下一层的服务，而不能调用其他层的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;协议接口服务的概念&#34;&gt;🌟协议、接口、服务的概念
+&lt;/h3&gt;&lt;h4 id=&#34;协议&#34;&gt;🌟协议
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;这个不会可以埋了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;网络协议：为了在网络中进行数据交换而建立的通信规则、标准或约定，是控制在&lt;strong&gt;对等实体&lt;/strong&gt;之间进行通信规则的集合，是&lt;strong&gt;水平&lt;/strong&gt;的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自然，不对等实体之间是没有协议的。就像A的网络层和B的传输层之间就没有协议这一说法。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;🌟&lt;strong&gt;协议三要素：语法、语义、时序&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：数据与控制信息的格式&lt;/li&gt;
+&lt;li&gt;语义：定义需要发出什么控制信息、完成什么动作、做出什么回答&lt;/li&gt;
+&lt;li&gt;时序：事件实现顺序的详细说明，即执行各种操作的条件、时序关系等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;接口&#34;&gt;接口
+&lt;/h4&gt;&lt;p&gt;同一节点内 相邻两层间 实体交换信息的逻辑接口称为&lt;strong&gt;服务访问点（SAP）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当然，每一层只能在紧邻层之间定义接口，而不能跨层定义接口。&lt;/p&gt;
+&lt;p&gt;请注意：&lt;strong&gt;服务是通过SAP提供给上层使用的&lt;/strong&gt;，也就是说，第n层的SAP就是第n+1层可以访问第n层服务的地方。&lt;/p&gt;
+&lt;h4 id=&#34;服务&#34;&gt;服务
+&lt;/h4&gt;&lt;p&gt;服务是指下层为紧邻上层提供的功能调用，是&lt;strong&gt;垂直&lt;/strong&gt;的。&lt;/p&gt;
+&lt;p&gt;对等实体在协议的控制下，使得本层能为上层提供服务，但要实现本层协议，还需要使用下层提供的服务。&lt;/p&gt;
+&lt;p&gt;注意：并非在一层内完成的全部功能都称为服务，只有那些能够被高一层实体&lt;strong&gt;调用&lt;/strong&gt;的功能才称为服务。&lt;/p&gt;
+&lt;h4 id=&#34;协议与服务区别&#34;&gt;协议与服务区别
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;协议是&lt;strong&gt;水平&lt;/strong&gt;的，服务是&lt;strong&gt;垂直&lt;/strong&gt;的&lt;/li&gt;
+&lt;li&gt;只有本层协议的实现才能保证向上一层提供服务&lt;/li&gt;
+&lt;li&gt;下面的协议对上层的服务用户是&lt;strong&gt;透明&lt;/strong&gt;的，仅提供服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;协议接口服务三者之间的关系&#34;&gt;协议、接口、服务三者之间的关系
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1.png&#34;
+	width=&#34;1160&#34;
+	height=&#34;390&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_1678192e015098b6.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_a4792bfa9b1ecd13.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;三者关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;297&#34;
+		data-flex-basis=&#34;713px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;计网提供的服务&#34;&gt;计网提供的服务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;面向连接服务与无连接服务
+&lt;ul&gt;
+&lt;li&gt;面向连接服务：通信双方&lt;strong&gt;必须建立连接（TCP由传输层负责）&lt;/strong&gt;，分配资源，传输结束后释放连接和占用资源。
+&lt;ul&gt;
+&lt;li&gt;代表协议：&lt;strong&gt;TCP（传输层）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;无连接服务：通信双方&lt;strong&gt;不需要&lt;/strong&gt;建立连接，需要发送数据可直接发送，将每个带有目的地址的包传送到线路上，由系统选定路线进行传输
+&lt;ul&gt;
+&lt;li&gt;常被描述为&lt;strong&gt;尽最大努力交付&lt;/strong&gt;，是不可靠的服务&lt;/li&gt;
+&lt;li&gt;代表协议：&lt;strong&gt;IP（网络层）&lt;/strong&gt;、&lt;strong&gt;UDP（传输层）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可靠服务与不可靠服务
+&lt;ul&gt;
+&lt;li&gt;可靠服务：网络具有纠错检错、应答机制，保证数据正确、可靠地传送到目的地。&lt;/li&gt;
+&lt;li&gt;不可靠服务：网络&lt;strong&gt;尽量&lt;/strong&gt;让数据正确、可靠地传送到目的地，尽力而为。
+&lt;ul&gt;
+&lt;li&gt;可以由更高层来保障网络的正确与可靠&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IP就是不可靠的网络层协议，但是TCP作为传输层的协议，可以借助这个不可靠的服务，向上层提供可靠的服务。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有应答服务和无应答服务
+&lt;ul&gt;
+&lt;li&gt;有应答服务：接收方在收到数据时，向发送方发送应答
+&lt;ul&gt;
+&lt;li&gt;应答可以是肯定应答，也可以是否定应答。接收的数据有错误时，即发送否定应答，以此让发送者重发&lt;/li&gt;
+&lt;li&gt;这个应答由系统内部自动实现，而不需要用户实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;无应答服务：接收方在收到数据时，不发送应答
+&lt;ul&gt;
+&lt;li&gt;若需要应答，则需要高层实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WWW服务，客户端收到服务器发送的页面文件后，不给出回答&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;isoosi模型和tcpip模型&#34;&gt;🌟ISO/OSI模型和TCP/IP模型
+&lt;/h3&gt;&lt;p&gt;ISO提出的网络体系结构模型，称为OSI模型，有七层，自底向上依次为：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/OSI.png&#34;
+	width=&#34;1642&#34;
+	height=&#34;694&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/OSI_hu_21bf7207732a1fc3.png 480w, https://deathofbrain.github.io/p/network-key-points/images/OSI_hu_89b26122dc994c9a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OSI模型&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;236&#34;
+		data-flex-basis=&#34;567px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;接下来的各层，在后续章节基本都要讲述，这里只是简单介绍&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理层&lt;/p&gt;
+&lt;p&gt;物理层的传输单位是&lt;strong&gt;比特&lt;/strong&gt;，功能是在物理介质上为数据端设备&lt;strong&gt;透明&lt;/strong&gt;地传输原始比特流。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通信链路与通信节点的连接需要一些电路接口，物理层规定了这些接口的一些参数，如机械形状尺寸、引脚数量和排列等。&lt;/li&gt;
+&lt;li&gt;物理层规定了通信链路上所传输的信号的意义和电气特征。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;物理介质并不在物理层协议之中&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据链路层&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
