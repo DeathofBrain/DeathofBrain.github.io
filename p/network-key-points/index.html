@@ -10,7 +10,7 @@
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/network-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-13T14:45:55&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-13T15:39:07&#43;00:00'/>
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -278,7 +278,23 @@
             <li><a href="#计网提供的服务">计网提供的服务</a></li>
           </ol>
         </li>
-        <li><a href="#isoosi模型和tcpip模型">🌟ISO/OSI模型和TCP/IP模型</a></li>
+        <li><a href="#isoosi模型和tcpip模型">🌟ISO/OSI模型和TCP/IP模型</a>
+          <ol>
+            <li><a href="#osi模型">OSI模型</a></li>
+            <li><a href="#tcpip模型">TCP/IP模型</a></li>
+            <li><a href="#两种模型比较">🌟两种模型比较</a></li>
+            <li><a href="#协议栈数据传输过程">协议栈数据传输过程</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#物理层">物理层</a>
+      <ol>
+        <li><a href="#通信基础">通信基础</a>
+          <ol>
+            <li><a href="#基本概念">基本概念</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -880,7 +896,8 @@
 </li>
 </ul>
 <h3 id="isoosi模型和tcpip模型">🌟ISO/OSI模型和TCP/IP模型
-</h3><p>ISO提出的网络体系结构模型，称为OSI模型，有七层，自底向上依次为：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
+</h3><h4 id="osi模型">OSI模型
+</h4><p>ISO提出的网络体系结构模型，称为OSI模型，有七层，自底向上依次为：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
 <blockquote>
 <p>七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来</p></blockquote>
 <p><img src="/p/network-key-points/images/OSI.png"
@@ -934,9 +951,197 @@
 <ul>
 <li>网络层的传输单位是<strong>数据报</strong>。这层关心的是通信子网的运行控制，主要任务是将网络层的PDU（分组）从源主机到目的主机，为分组交换网上不同主机提供通信服务。</li>
 <li>关键问题：<strong>对分组进行路由选择</strong>。</li>
-<li></li>
+<li>实现功能：流量控制、拥塞控制、差错控制、网际互联等。
+<blockquote>
+<p>当有多条可选择的路由线路时，网络层会根据网络情况，利用相应路由算法计算出一条合适的路径，使这个分组可以顺利地到达目标节点，如图。</p>
+<p><img src="/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE.png"
+	width="650"
+	height="304"
+	srcset="/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_26e9115f74d0fa4f.png 480w, /p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_1c11027b3bf3d857.png 1024w"
+	loading="lazy"
+	
+		alt="某网络结构图"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="213"
+		data-flex-basis="513px"
+	
+></p>
+<p>拥塞控制：当上图的节点都来不及接收分组，会导致大量分组丢失，网络处于拥塞状态。此时网络层要采取措施来缓解这种拥塞，这就是拥塞控制。</p></blockquote>
+</li>
+<li>在OSI中，网络层提供<strong>有连接可靠的虚电路服务</strong>，也提供<strong>无连接不可靠的数据报服务</strong>。
+<blockquote>
+<p>请注意，在TCP/IP模型中，网络层仅提供<strong>无连接不可靠的数据报服务</strong>。</p></blockquote>
+</li>
 </ul>
 </li>
+<li>
+<p>传输层</p>
+<ul>
+<li>负责相互通信的主机中两个<strong>进程</strong>之间的通信，提供的是<strong>端到端</strong>服务，如流量控制、差错控制、连接建立与释放、可靠传输管理等服务。</li>
+<li>在OSI模型中，传输层<strong>只提供有连接可靠的服务</strong>。
+<blockquote>
+<p>同样，在TCP/IP模型中，传输层提供有连接可靠服务（TCP），也提供无连接不可靠服务（UDP）。</p></blockquote>
+</li>
+<li>点到点：主机和主机之间。</li>
+<li>端到端：运行在不同主机之间<strong>两个进程</strong>之间的通信，一个进程用<strong>一个端口</strong>来标识。</li>
+<li>通过传输层的屏蔽，高层用户看不到通信子网的交替和变化。因为一台主机可同时运行多个进程，故传送层具有<strong>复用和分用</strong>的功能。
+<ul>
+<li>复用：多个应用层进程可同时运行多个进程</li>
+<li>分用：传送层将收到的信息分别交付给应用层中对应的进程。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>会话层</p>
+<ul>
+<li>作用：为表示层实体或用户进程建立连接，在连接上有序传输数据。</li>
+<li>负责管理主机间会话进程，包括建立、管理、终止进程间会话。</li>
+<li>🌟该层包含一种<strong>检查点</strong>机制，当断网又恢复时，通信会话会从检查点<strong>继续通信</strong>，也就是断点下载的原理。</li>
+</ul>
+</li>
+<li>
+<p>表示层</p>
+<ul>
+<li>主要处理不同主机中交换信息的<strong>表示方式</strong></li>
+<li>🌟不同机器的编码和表示方法可能不同，要做到互相交换，就要由表示层<strong>采用抽象方法</strong>定义数据结构，采用<strong>标准编码形式</strong>传输，使其能相互交换信息。</li>
+<li>🌟<strong>数据压缩</strong>、<strong>加密解密</strong>也是表示层的功能。</li>
+</ul>
+<blockquote>
+<p>全书的会话层和表示层就这三个考点</p></blockquote>
+</li>
+<li>
+<p>应用层</p>
+<ul>
+<li>是OSI模型的最高层，是用户与网络的接口。</li>
+<li>采用不同应用协议，满足不同类型的应用要求，因此这一层最复杂，协议也最多。</li>
+</ul>
+</li>
+</ul>
+<h4 id="tcpip模型">TCP/IP模型
+</h4><p>自底向上分为<strong>网络接口层</strong>、<strong>网际层</strong>、<strong>传输层</strong>、<strong>应用层</strong>。</p>
+<p>其中，网络接口层对应OSI中的物理层和数据链路层，应用层对应OSI中的会话层、表示层和应用层。</p>
+<p><img src="/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B.png"
+	width="934"
+	height="522"
+	srcset="/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_57457a11c8573536.png 480w, /p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_29544304d5d88a8a.png 1024w"
+	loading="lazy"
+	
+		alt="TCP/IP模型"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="429px"
+	
+></p>
+<ul>
+<li>网络接口层
+<ul>
+<li>作用：从主机或节点接收IP分组，并发送到指定物理网络上。</li>
+<li>TCP/IP没有指出网络接口层的功能和协议，仅指出主机必须使用某种协议与网络连接。</li>
+</ul>
+</li>
+<li>网际层
+<ul>
+<li>TCP/IP模型的关键部分</li>
+<li>与OSI模型中网络层非常相似，将分组发到网络，并选择合适路由。</li>
+<li>传输单位：<strong>IP数据报</strong></li>
+<li><strong>仅提供无连接不可靠的服务（IPv4、IPv6）</strong></li>
+</ul>
+</li>
+<li>传输层
+<ul>
+<li>与OSI中传输层类似</li>
+<li>提供两种服务：<strong>TCP</strong>、<strong>UDP</strong></li>
+</ul>
+<blockquote>
+<p>这一点与OSI不同，OSI传输层仅提供可靠服务，TCP/IP两种都提供</p></blockquote>
+<ul>
+<li>TCP是<strong>面向连接的可靠服务</strong>，要首先建立连接，传输单位是<strong>报文段</strong></li>
+<li>UDP是<strong>无连接的不可靠服务</strong>，尽最大努力交付，传输单位是<strong>数据报</strong></li>
+</ul>
+</li>
+<li>应用层
+<ul>
+<li>包含所有的高层协议（Telnet、FTP、DNS、SMTP、HTTP……）</li>
+</ul>
+</li>
+</ul>
+<h4 id="两种模型比较">🌟两种模型比较
+</h4><p><img src="/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83.png"
+	width="1122"
+	height="502"
+	srcset="/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_64eee923f26d59fe.png 480w, /p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_4ac2a8b6744fb6d1.png 1024w"
+	loading="lazy"
+	
+		alt="两种模型比较"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="223"
+		data-flex-basis="536px"
+	
+></p>
+<ul>
+<li>相同点
+<ul>
+<li>都采用分层的体系结构，分层功能大体相似</li>
+<li>基于独立的协议栈的概念</li>
+<li>都可解决异构网络的互联</li>
+</ul>
+</li>
+<li>🌟不同点
+<ul>
+<li>OSI精确定义了服务、协议和接口，TCP/IP没有做到</li>
+<li>层数不一样，OSI更精细</li>
+<li>OSI先有模型，后有协议规范，TCP/IP正好反过来，因此TCP/IP模型不适合其它非TCP/IP网络。</li>
+<li>🌟OSI模型在网络层支持<strong>无连接</strong>和<strong>面向连接</strong>的通信，但在传输层仅有<strong>面向连接</strong>的通信</li>
+<li>🌟TCP/IP模型认为可靠性是端到端的问题，因此在网际层仅提供<strong>无连接</strong>通信，但传输层支持<strong>面向连接</strong>和<strong>无连接</strong>通信。</li>
+</ul>
+</li>
+</ul>
+<p>那么隆重介绍：特供学习用折中方案：五层协议体系结构模型</p>
+<p><img src="/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png"
+	width="1122"
+	height="502"
+	srcset="/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_80f2c2cf5fb62e42.png 480w, /p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_4b44750cc2631853.png 1024w"
+	loading="lazy"
+	
+		alt="五层协议体系结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="223"
+		data-flex-basis="536px"
+	
+></p>
+<blockquote>
+<p>其实就是把OSI的物理层和数据链路层搬过来，上面全是TCP/IP的层</p></blockquote>
+<h4 id="协议栈数据传输过程">协议栈数据传输过程
+</h4><p>一句话：上层PDU被每一层封装，传输过去再自底向上解包。</p>
+<p><img src="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png"
+	width="1376"
+	height="660"
+	srcset="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_5a8181a99daaf705.png 480w, /p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_4307917b8417e00c.png 1024w"
+	loading="lazy"
+	
+		alt="协议栈通信过程"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="208"
+		data-flex-basis="500px"
+	
+></p>
+<p>具体的内容参考PDU那一部分。</p>
+<h2 id="物理层">物理层
+</h2><h3 id="通信基础">通信基础
+</h3><h4 id="基本概念">基本概念
+</h4><ul>
+<li>数据、信号和码元</li>
 </ul>
 
 </section>
