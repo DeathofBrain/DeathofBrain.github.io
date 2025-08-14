@@ -10,7 +10,7 @@
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/network-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-14T14:33:39&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-14T15:24:12&#43;00:00'/>
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -293,7 +293,8 @@
         <li><a href="#通信基础">通信基础</a>
           <ol>
             <li><a href="#基本概念">基本概念</a></li>
-            <li><a href="#信道的极限容量">信道的极限容量</a></li>
+            <li><a href="#信道的极限容量">🌟信道的极限容量</a></li>
+            <li><a href="#编码与调制">🌟编码与调制</a></li>
           </ol>
         </li>
       </ol>
@@ -1140,7 +1141,7 @@
 <p>具体的内容参考PDU那一部分。</p>
 <h2 id="物理层">物理层
 </h2><blockquote>
-<p>主要考点：码元换算，香农定理，奈菲斯特定理，几种常见数字数据编码。</p></blockquote>
+<p>主要考点：码元换算，香农定理，奈奎斯特定理，几种常见数字数据编码。</p></blockquote>
 <h3 id="通信基础">通信基础
 </h3><h4 id="基本概念">基本概念
 </h4><ul>
@@ -1229,7 +1230,59 @@
 </ul>
 </li>
 </ul>
-<h4 id="信道的极限容量">信道的极限容量
+<h4 id="信道的极限容量">🌟信道的极限容量
+</h4><p>任何信道都有噪音，虽然接收端能够从失真信号波形中识别出原来信号，但波特率越高，或信号传输距离越远，或传输介质质量越差，接收端波形失真越严重，直到无法读取。</p>
+<ul>
+<li>奈奎斯特定理：理想信道的最大<strong>波特率</strong>
+<ul>
+<li>🌟在<strong>理想低通信道</strong>中（没有噪音、带宽有限），为了避免码间串扰，<strong>极限波特率</strong>为<strong>2W波特</strong>，其中<code>W</code>是信道的频率带宽（单位Hz）
+<blockquote>
+<p>码间串扰：具体的信道所能通过的频率范围往往是有限的，信号中许多高频分量往往不能通过信道，否则在传输过程中就会衰减，导致接收端收到的信号波形失去码元之间的清晰界限，即发生码间串扰。</p></blockquote>
+</li>
+<li>若此时有<code>V</code>种不同码元，则<strong>极限数据传输速率</strong>为$2Wlog_2V$<code>b/s</code>
+<blockquote>
+<p>注意单位区分</p></blockquote>
+</li>
+<li>结论：
+<ol>
+<li>在任何信道中，码元传输速率<strong>有上限</strong>，若超过这个上限，则会出现严重的码间串扰。</li>
+<li>信道带宽越大，传输码元能力越强</li>
+<li>奈奎斯特定理给出了波特率的限制，但<strong>没有限制码元可以携带多少比特</strong></li>
+</ol>
+<blockquote>
+<p>若要提高数据传输速率，就要设法使每个码元携带更多比特信息量，此时需要采用多元制的调制方法。</p>
+<p>事实上，香农定理表明，一个码元可以携带的比特数也是有限的，只是奈奎斯特定理没有体现出来。</p></blockquote>
+</li>
+</ul>
+</li>
+<li>香农定理：<strong>带宽受限，且有高斯噪声干扰的信道</strong>的极限<strong>数据传输速率</strong>
+<ul>
+<li>若<code>W</code>为信道频率带宽（Hz），<code>S</code>为信道内所传输信号的平均功率，<code>N</code>为信道内高斯噪声的功率，那么信道的<strong>极限数据传输速率</strong>为$Wlog_2(1+S/N)$<code>b/s</code>。
+<ul>
+<li><code>S/N</code>为信噪比，有两种表示方式：无单位与分贝记法（dB）。</li>
+<li>换算：若$n$为无单位信噪比，则分贝记法为$10log_{10}(n)$<code>dB</code>。香农定理中<code>S/N</code>采用无单位记法，需要学会互相换算。</li>
+</ul>
+</li>
+<li>结论：
+<ol>
+<li>信道的带宽或信道中的信噪比越大，极限传输速率越高</li>
+<li>对一定带宽与信噪比，信息传输速率的上限是固定的</li>
+<li>只要信息传输速率低于信道极限传输速率，就能找到某种方法实现无差错的传输。</li>
+<li>香农定理得出的是极限信息传输速率，实际信道能达到的传输速率要比它低不少。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>二者对比
+<ul>
+<li>奈奎斯特定理只考虑了带宽与极限码元传输速率之间的关系，而香农定理不仅考虑了带宽，还考虑了信噪比。</li>
+<li>从另一个角度来看，**一个码元可以携带的比特数是有限的</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚠️当给定条件要求计算信道最大传输速率时，即使给出信噪比，两个公式也要同时用，并且奈奎斯特定理还要根据码元信号种数换算成极限传输速率，最后两个值比较，<strong>谁最小谁就是极限传输速率</strong>。</p></blockquote>
+<h4 id="编码与调制">🌟编码与调制
 </h4>
 </section>
 
