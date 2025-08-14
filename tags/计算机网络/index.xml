@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Thu, 14 Aug 2025 15:24:12 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Aug 2025 15:24:39 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机网络</title>
         <link>https://deathofbrain.github.io/p/network-key-points/</link>
         <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
@@ -921,7 +921,7 @@
 &lt;li&gt;二者对比
 &lt;ul&gt;
 &lt;li&gt;奈奎斯特定理只考虑了带宽与极限码元传输速率之间的关系，而香农定理不仅考虑了带宽，还考虑了信噪比。&lt;/li&gt;
-&lt;li&gt;从另一个角度来看，**一个码元可以携带的比特数是有限的&lt;/li&gt;
+&lt;li&gt;从另一个角度来看，&lt;strong&gt;一个码元可以携带的比特数是有限的&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

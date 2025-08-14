@@ -920,7 +920,7 @@
 &lt;li&gt;二者对比
 &lt;ul&gt;
 &lt;li&gt;奈奎斯特定理只考虑了带宽与极限码元传输速率之间的关系，而香农定理不仅考虑了带宽，还考虑了信噪比。&lt;/li&gt;
-&lt;li&gt;从另一个角度来看，**一个码元可以携带的比特数是有限的&lt;/li&gt;
+&lt;li&gt;从另一个角度来看，&lt;strong&gt;一个码元可以携带的比特数是有限的&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
