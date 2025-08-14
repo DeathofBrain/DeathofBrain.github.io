@@ -10,7 +10,7 @@
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/network-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-13T15:39:07&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-14T14:28:25&#43;00:00'/>
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -293,6 +293,7 @@
         <li><a href="#通信基础">通信基础</a>
           <ol>
             <li><a href="#基本概念">基本概念</a></li>
+            <li><a href="#信道的极限容量">信道的极限容量</a></li>
           </ol>
         </li>
       </ol>
@@ -1138,12 +1139,98 @@
 ></p>
 <p>具体的内容参考PDU那一部分。</p>
 <h2 id="物理层">物理层
-</h2><h3 id="通信基础">通信基础
+</h2><blockquote>
+<p>主要考点：码元换算，香农定理，奈菲斯特定理，几种常见数字数据编码。</p></blockquote>
+<h3 id="通信基础">通信基础
 </h3><h4 id="基本概念">基本概念
 </h4><ul>
-<li>数据、信号和码元</li>
+<li>数据、信号、码元
+<ul>
+<li>数据：传送信息的实体</li>
+<li>信号：数据的电气或电磁表现，是数据在传输过程中的存在形式
+<ul>
+<li>模拟数据（模拟信号）的取值是连续的，数字数据（数字信号）的取值是离散的。</li>
 </ul>
-
+</li>
+<li>🌟在通信系统中，常用一个固定时长的信号波形表示一个k进制数，这个时长内的信号称为<strong>码元</strong>（也叫<strong>k进制码元</strong>）
+<ul>
+<li>这个时长也叫码元宽度（信号周期）</li>
+<li>一码元可携带若干比特的信息量，体现在一个信号周期内出现k种信号，则该信号对应一个k进制数（$log_2(k)$bit）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>信源、信道、信宿
+<ul>
+<li>信源：发送数据的源头</li>
+<li>信宿：接收数据的终点</li>
+<li>信道：信号的传输介质
+<ul>
+<li>按传输信号形式区分：模拟信道、数字信道</li>
+<li>按传输介质区分：无线信道、有线信道
+<img src="/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F.png"
+	width="1376"
+	height="660"
+	srcset="/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_5a8181a99daaf705.png 480w, /p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_4307917b8417e00c.png 1024w"
+	loading="lazy"
+	
+		alt="单向通信系统"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="208"
+		data-flex-basis="500px"
+	
+></li>
+</ul>
+<blockquote>
+<p>图中的噪声源是信道上的噪声及分散在通信系统其它各处噪声的集中表示。</p></blockquote>
+</li>
+<li>传输信号区分
+<ul>
+<li>基带传输：在信道中直接传送基带信号</li>
+<li>宽带传输：将基带信号进行调制后，形成频分复用模拟信号，然后在信道上运输</li>
+</ul>
+<blockquote>
+<p>基带信号：由信源发出的未经过调制的原始电信号</p></blockquote>
+</li>
+<li>传输方式区分
+<ul>
+<li>串行传输：逐个比特按序进行传输，适合长距离通信</li>
+<li>并行传输：若干比特通过多个通信信道同时传输，适合短距离通信（CPU与主存）</li>
+</ul>
+</li>
+<li>交互方式区分
+<ul>
+<li>单向通信：只有一个方向的通信，如广播等</li>
+<li>半双工通信：通信双方都可发送或接收，但任何一方都不能同时发送和接收消息（对讲机通话）</li>
+<li>全双工通信：通信双方都可同时发送或接收消息（以太网）</li>
+</ul>
+<blockquote>
+<p>单向通信只需一个信道；半双工和全双工都需要两个信道，每个方向一个信道。</p></blockquote>
+</li>
+</ul>
+</li>
+<li>速率、波特、带宽
+<ul>
+<li>速率：数据传输速率，有两种描述形式
+<ul>
+<li>码元传输速率：又叫<strong>波特率</strong>或调制速率，单位为<strong>波特（Baud）</strong>。码元速率与进制<strong>无关</strong>。</li>
+<li>信息传输速率：又叫<strong>比特率</strong>。</li>
+</ul>
+<blockquote>
+<p>波特和比特完全不同，但波特率和比特率在数量上有关系。</p>
+<p>若一个码元携带n比特信息，则<code>M Baud = Mn b/s</code></p></blockquote>
+</li>
+<li>带宽（频率带宽）表示某个信道所能传输信号的频率范围，即最高频率与最低频率之差。单位为赫兹（Hz）。
+<blockquote>
+<p>在计网中，带宽更常见用来描述网络通信线路所能传输数据的能力，即最高数据率，此时带宽的单位为<code>b/s</code></p></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="信道的极限容量">信道的极限容量
+</h4>
 </section>
 
 
@@ -1166,7 +1253,7 @@
 
 
         <span>
-            最后更新于 2025-08-13
+            最后更新于 2025-08-14
         </span>
     </section></footer>
 
