@@ -10,7 +10,7 @@
 <meta property='og:description' content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
 <meta property='og:url' content='https://deathofbrain.github.io/p/algorithm/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T12:40:49&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T12:43:39&#43;00:00'/>
 <meta name="twitter:title" content="LeetCode Top100总结">
 <meta name="twitter:description" content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -599,7 +599,7 @@
 </blockquote>
 </li>
 <li>
-<p>若要实现<code>O(n)</code>的复杂度，我们需要想，可不可以只遍历“1”次数组（即每个for循环都不是嵌套for循环）。</p>
+<p>若要实现<code>O(n)</code>的复杂度，我们需要想，可不可以只遍历“1”次数组（即每次遍历数组时要<strong>从头到尾</strong>，不能回溯）。</p>
 </li>
 <li>
 <p>并且，题目中不要求序列元素在原数组中连续，可以想到，只需要<strong>统计每个数字是否出现</strong>，并确定<strong>每个子序列的头</strong>，向下寻找，直到当前序列结束，统计该序列长度，最后对所有序列选取最大值即可。</p>
@@ -678,8 +678,8 @@
 </span></span><span class="line"><span class="cl">                <span class="p">}</span>
 </span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">currentStr</span> <span class="o">&gt;</span> <span class="n">max_n</span><span class="p">)</span> <span class="n">max_n</span> <span class="o">=</span> <span class="n">currentStr</span><span class="p">;</span> <span class="c1">// 记录最大的子序列长度
 </span></span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">max_n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="c1">// 总体来看，这个for循环虽然是嵌套的，但是并没有回溯遍历，因此总的来说仍然是O(n)
+</span></span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">max_n</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
