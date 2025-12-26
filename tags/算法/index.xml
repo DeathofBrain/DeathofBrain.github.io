@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Fri, 26 Dec 2025 14:36:54 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 26 Dec 2025 14:39:47 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LeetCode Top100总结</title>
         <link>https://deathofbrain.github.io/p/algorithm/</link>
         <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
@@ -362,7 +362,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;双指针&#34;&gt;双指针
-&lt;/h2&gt;&lt;p&gt;双指针，指利用两个指针（常见形式为&lt;strong&gt;下标/寄存器&lt;/strong&gt;）在同一数据结构（如数组、链表、字符串等）上协同移动，以降低复杂度。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;双指针，指利用两个指针（常见形式为&lt;strong&gt;下标/迭代器&lt;/strong&gt;）在同一数据结构（如数组、链表、字符串等）上协同移动，以降低复杂度。&lt;/p&gt;
 &lt;h3 id=&#34;常见形式&#34;&gt;常见形式
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;对撞指针&lt;/li&gt;
