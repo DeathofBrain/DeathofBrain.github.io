@@ -10,7 +10,7 @@
 <meta property='og:description' content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
 <meta property='og:url' content='https://deathofbrain.github.io/p/algorithm/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T05:38:34&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T09:23:21&#43;00:00'/>
 <meta name="twitter:title" content="LeetCode Top100总结">
 <meta name="twitter:description" content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -345,10 +345,31 @@
 </div></li>
 <li>
 <p>set</p>
-<p>集合，</p>
+<p>集合，按序或无序存放内容，提供高效的查找、插入、删除等操作。</p>
+<blockquote>
+<p>集合与数组的顺序存储结构不同，数据存放位置与插入次序、元素值等无关，且只能查询其中有无此种元素，以及增删。</p>
+</blockquote>
+<p><code>std::set</code>：以红黑树实现的集合，元素有序，数值不可重复、不可更改其中元素值，查询效率与增删效率都为<code>O(log n)</code>。</p>
+<p><code>std::multiset</code>：以红黑树实现的集合，元素有序，数值可以重复、不可更改其中元素值，查询效率与增删效率都为<code>O(log n)</code>。</p>
+<blockquote>
+<p>通过count(x)返回多重集合中x出现的次数。</p>
+</blockquote>
+<p><code>std::unordered_set</code>：基于哈希表的集合，数据无序存放，数值不可重复、不可修改。查询效率与增删效率都为<code>O(1)</code>。</p>
 </li>
 <li>
 <p>map</p>
+<p>映射，也称为字典，常见形式为<code>&lt;key, value&gt;</code>，即一个关键字对应一个值，关键字不可修改，但其对应值可修改。</p>
+<ul>
+<li>
+<p><code>std::map</code>：基于红黑树实现，关键字不可重复、不可修改、按序存放，查询效率与增删效率均为<code>O(log n)</code>。</p>
+</li>
+<li>
+<p><code>std::multimap</code>：基于红黑树实现，关键字可重复、不可修改、按序存放，查询效率与增删效率均为<code>O(log n)</code>。</p>
+</li>
+<li>
+<p><code>std::unordered_map</code>：基于散列表实现，关键字不可重复、不可修改、乱序存放，查询效率与增删效率均为<code>O(1)</code>。</p>
+</li>
+</ul>
 </li>
 </ul>
 

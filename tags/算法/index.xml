@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Fri, 26 Dec 2025 05:38:34 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 26 Dec 2025 09:23:21 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LeetCode Top100总结</title>
         <link>https://deathofbrain.github.io/p/algorithm/</link>
         <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
@@ -41,10 +41,31 @@
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;set&lt;/p&gt;
-&lt;p&gt;集合，&lt;/p&gt;
+&lt;p&gt;集合，按序或无序存放内容，提供高效的查找、插入、删除等操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;集合与数组的顺序存储结构不同，数据存放位置与插入次序、元素值等无关，且只能查询其中有无此种元素，以及增删。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;std::set&lt;/code&gt;：以红黑树实现的集合，元素有序，数值不可重复、不可更改其中元素值，查询效率与增删效率都为&lt;code&gt;O(log n)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;std::multiset&lt;/code&gt;：以红黑树实现的集合，元素有序，数值可以重复、不可更改其中元素值，查询效率与增删效率都为&lt;code&gt;O(log n)&lt;/code&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过count(x)返回多重集合中x出现的次数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;std::unordered_set&lt;/code&gt;：基于哈希表的集合，数据无序存放，数值不可重复、不可修改。查询效率与增删效率都为&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;map&lt;/p&gt;
+&lt;p&gt;映射，也称为字典，常见形式为&lt;code&gt;&amp;lt;key, value&amp;gt;&lt;/code&gt;，即一个关键字对应一个值，关键字不可修改，但其对应值可修改。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;std::map&lt;/code&gt;：基于红黑树实现，关键字不可重复、不可修改、按序存放，查询效率与增删效率均为&lt;code&gt;O(log n)&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;std::multimap&lt;/code&gt;：基于红黑树实现，关键字可重复、不可修改、按序存放，查询效率与增删效率均为&lt;code&gt;O(log n)&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;std::unordered_map&lt;/code&gt;：基于散列表实现，关键字不可重复、不可修改、乱序存放，查询效率与增删效率均为&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
