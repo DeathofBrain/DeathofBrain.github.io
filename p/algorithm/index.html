@@ -10,7 +10,7 @@
 <meta property='og:description' content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
 <meta property='og:url' content='https://deathofbrain.github.io/p/algorithm/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T12:15:30&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T12:39:02&#43;00:00'/>
 <meta name="twitter:title" content="LeetCode Top100总结">
 <meta name="twitter:description" content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -261,6 +261,12 @@
           <ol>
             <li><a href="#思路-1">思路</a></li>
             <li><a href="#代码-1">代码</a></li>
+          </ol>
+        </li>
+        <li><a href="#128-最长连续序列">128. 最长连续序列</a>
+          <ol>
+            <li><a href="#思路-2">思路</a></li>
+            <li><a href="#代码-2">代码</a></li>
           </ol>
         </li>
       </ol>
@@ -542,6 +548,122 @@
 </span></span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="128-最长连续序列">128. 最长连续序列
+</h3><p>给定一个未排序的整数数组<code>nums</code>，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。</p>
+<p>请你设计并实现时间复杂度为<code>O(n)</code>的算法解决此问题。</p>
+<p>示例 1：</p>
+<blockquote>
+<p>输入：nums = [100,4,200,1,3,2]
+输出：4
+解释：最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>输入：nums = [0,3,7,2,5,8,4,6,0,1]
+输出：9</p>
+</blockquote>
+<p>示例 3：</p>
+<blockquote>
+<p>输入：nums = [1,0,1,2]
+输出：3</p>
+</blockquote>
+<h4 id="思路-2">思路
+</h4><ol>
+<li>
+<p>输入为<code>int[]</code>，输出为<code>int</code>。</p>
+</li>
+<li>
+<p>常规思路：排序（<code>O(n²)</code>），再遍历去找最长连续序列（<code>O(n)</code>）。</p>
+<blockquote>
+<p>此时时间复杂度变为<code>O(n²)</code>，不符合题意。</p>
+</blockquote>
+</li>
+<li>
+<p>若要实现<code>O(n)</code>的复杂度，我们需要想，可不可以只遍历“1”次数组（即每个for循环都不是嵌套for循环）。</p>
+</li>
+<li>
+<p>并且，题目中不要求序列元素在原数组中连续，可以想到，只需要<strong>统计每个数字是否出现</strong>，并确定<strong>每个子序列的头</strong>，向下寻找，直到当前序列结束，统计该序列长度，最后对所有序列选取最大值即可。</p>
+</li>
+<li>
+<p>由此，则可以利用<code>std::unordered_set</code>进行操作，在将数组元素全部放进集合后，对集合遍历。</p>
+<ul>
+<li>
+<p>若<code>set.count(i-1) == 1</code>，则意味着此时的<code>i</code>不是某个序列头，继续遍历集合。</p>
+</li>
+<li>
+<p>若<code>set.count(i-1) == 0</code>，意味着此时的<code>i</code>是某个序列的第一个数字，此时循环查询集合中是否有<code>i+k</code>（k = 1,2,3&hellip;），并统计长度，直到某一次的查询失败为止。</p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>为什么不用<code>std::set</code>？因为set每一次插入时间复杂度为<code>O(logn)</code>，此时整体的时间复杂度就会来到<code>O(n logn)</code>，与题意不符。</p>
+</blockquote>
+<h4 id="代码-2">代码
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">longestConsecutive</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sets</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span> <span class="c1">// 数组元素放入集合中
+</span></span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sets</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  <span class="c1">// 哈希集合插入时间复杂度为O(1)
+</span></span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">max_n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">sets</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">sets</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">                <span class="k">continue</span><span class="p">;</span> <span class="c1">// 代表着此时的i不是子序列的头
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="p">{</span><span class="c1">// 此为序列打头
+</span></span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">currentStr</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">i</span><span class="p">;;</span><span class="n">index</span><span class="o">++</span><span class="p">){</span>  <span class="c1">// 不断执行i+k，直到到达序列末尾
+</span></span></span><span class="line"><span class="cl">                    <span class="k">if</span><span class="p">(</span><span class="n">sets</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl">                        <span class="o">++</span><span class="n">currentStr</span><span class="p">;</span> <span class="c1">// 有下一个数，就++
+</span></span></span><span class="line"><span class="cl">                    <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">currentStr</span> <span class="o">&gt;</span> <span class="n">max_n</span><span class="p">)</span> <span class="n">max_n</span> <span class="o">=</span> <span class="n">currentStr</span><span class="p">;</span> <span class="c1">// 记录最大的子序列长度
+</span></span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">max_n</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
