@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright>
-        <lastBuildDate>Fri, 26 Dec 2025 09:23:21 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 26 Dec 2025 11:10:01 +0000</lastBuildDate><atom:link href="https://deathofbrain.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LeetCode Top100总结</title>
         <link>https://deathofbrain.github.io/p/algorithm/</link>
         <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
@@ -68,7 +68,38 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
+&lt;h3 id=&#34;集合与字典通用api&#34;&gt;集合与字典通用api
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;size()&lt;/code&gt;;          //返回容器中元素的数目&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;empty()&lt;/code&gt;;         //判断容器是否为空&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;swap(st)&lt;/code&gt;;        //交换两个同类型集合容器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;insert(elem)&lt;/code&gt;;    //在容器中插入元素。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clear()&lt;/code&gt;;         //清除所有元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;erase(pos)&lt;/code&gt;;      //删除pos迭代器所指的元素，返回下一个元素的迭代器。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;erase(beg, end)&lt;/code&gt;; //删除区间&lt;code&gt;[beg,end)&lt;/code&gt;的所有元素 ，返回下一个元素的迭代器。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;erase(elem)&lt;/code&gt;;     //删除容器中值为elem的元素。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find(key)&lt;/code&gt;;       //查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回&lt;code&gt;set/map.end()&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;count(key)&lt;/code&gt;;      //统计key的元素个数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;1-两数之和&#34;&gt;1. 两数之和
+&lt;/h3&gt;&lt;p&gt;给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。
+你可以按任意顺序返回答案。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;示例 1：
+输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+示例 2：&lt;/p&gt;
+&lt;p&gt;输入：nums = [3,2,4], target = 6
+输出：[1,2]
+示例 3：&lt;/p&gt;
+&lt;p&gt;输入：nums = [3,3], target = 6
+输出：[0,1]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本体常规做法略过（时间复杂度&lt;code&gt;O(n²)&lt;/code&gt;）。利用哈希表可以以&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度解决问题。&lt;/p&gt;
+&lt;h4 id=&#34;思路&#34;&gt;思路
+&lt;/h4&gt;</description>
         </item>
         <item>
         <title>Vim之旅</title>
