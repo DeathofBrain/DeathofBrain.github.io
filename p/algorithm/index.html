@@ -10,7 +10,7 @@
 <meta property='og:description' content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
 <meta property='og:url' content='https://deathofbrain.github.io/p/algorithm/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T12:43:39&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2025-12-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T14:03:58&#43;00:00'/>
 <meta name="twitter:title" content="LeetCode Top100总结">
 <meta name="twitter:description" content="哈希表 用于快速判断一个元素是否在集合内。\n通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过hashCode()函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。\n">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -269,6 +269,11 @@
             <li><a href="#代码-2">代码</a></li>
           </ol>
         </li>
+      </ol>
+    </li>
+    <li><a href="#双指针">双指针</a>
+      <ol>
+        <li><a href="#常见形式">常见形式</a></li>
       </ol>
     </li>
   </ol>
@@ -684,7 +689,69 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="双指针">双指针
+</h2><p>双指针，指利用两个指针（常见形式为<strong>下标/寄存器</strong>）在同一数据结构（如数组、链表、字符串等）上协同移动，以降低复杂度。</p>
+<h3 id="常见形式">常见形式
+</h3><ul>
+<li>对撞指针</li>
+</ul>
+<p>一个指针从左向右，一个指针从右向左，二者向中间“对撞”。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">L → → →     ← ← ← R
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>典型问题：反转字符串、判断回文串、接雨水问题</p>
+<p>模板：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">right</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="err">条件满足</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//业务逻辑...
+</span></span></span><span class="line"><span class="cl">        <span class="o">++</span><span class="n">left</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">--</span><span class="n">right</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="err">需要增大</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//业务逻辑...
+</span></span></span><span class="line"><span class="cl">        <span class="o">++</span><span class="n">left</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span> <span class="c1">// 需要减小
+</span></span></span><span class="line"><span class="cl">        <span class="c1">//...
+</span></span></span><span class="line"><span class="cl">        <span class="o">--</span><span class="n">right</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>快慢指针</li>
+</ul>
+
 </section>
 
 
