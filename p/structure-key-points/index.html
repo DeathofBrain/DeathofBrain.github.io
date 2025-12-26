@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://deathofbrain.github.io/p/structure-key-points/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="数据结构">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="数据结构">
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/structure-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数据结构' /><meta property='article:published_time' content='2024-12-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-14T15:24:38&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数据结构' /><meta property='article:published_time' content='2024-12-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T05:38:34&#43;00:00'/>
 <meta name="twitter:title" content="数据结构">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_545d2443546c39bd.png" width="300"
+                        <img src="/img/avatar_hu_202cd6462835a2d6.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -331,13 +331,15 @@
 <p><em>注意与存储结构之间做区分</em></p>
 <p>逻辑结构分为<strong>线性结构</strong>和<strong>非线性结构</strong>，再细分为<strong>集合结构</strong>、<strong>线性结构</strong>、<strong>树形结构</strong>和<strong>图形结构</strong>。</p>
 <blockquote>
-<p>基本上是判断一个数据结构是属于哪种逻辑结构，所以心中有数就好。</p></blockquote>
+<p>基本上是判断一个数据结构是属于哪种逻辑结构，所以心中有数就好。</p>
+</blockquote>
 </li>
 <li>
 <p>存储结构</p>
 <p>存储结构则是指数据对象中数据元素之间的<strong>存储关系</strong>，即从<strong>物理上</strong>描述数据元素之间的关系。</p>
 <blockquote>
-<p>逻辑结构是你看到的，存储结构是计算机看到的。</p></blockquote>
+<p>逻辑结构是你看到的，存储结构是计算机看到的。</p>
+</blockquote>
 <p>存储结构分为</p>
 <ul>
 <li><strong>顺序存储结构</strong>：逻辑上相邻的元素在物理上也相邻</li>
@@ -350,7 +352,8 @@
 <p>数据的运算
 数据的运算是指对数据对象进行的操作，包括<strong>运算的定义</strong>和<strong>运算的实现</strong>两个方面。</p>
 <blockquote>
-<p>注意：运算的定义是针对逻辑结构的（如树的遍历等），运算的实现是针对存储结构的（对树的遍历来说，顺序存储和链式存储算法实现一定不同）。</p></blockquote>
+<p>注意：运算的定义是针对逻辑结构的（如树的遍历等），运算的实现是针对存储结构的（对树的遍历来说，顺序存储和链式存储算法实现一定不同）。</p>
+</blockquote>
 </li>
 <li>
 <p>注意点：</p>
@@ -358,7 +361,8 @@
 <li>
 <p>数据的逻辑结构独立于存储结构</p>
 <blockquote>
-<p>图的邻接表和邻接矩阵都可以表示图这种逻辑结构。</p></blockquote>
+<p>图的邻接表和邻接矩阵都可以表示图这种逻辑结构。</p>
+</blockquote>
 </li>
 <li>
 <p>在存储数据时，不仅要存储数据元素本身，还要存储数据元素之间的逻辑关系。</p>
@@ -375,7 +379,8 @@
 <li>
 <p>加法规则：$T(n) = O(max(f(n),g(n)))$</p>
 <blockquote>
-<p>两个算法串行执行时，时间复杂度取最大值</p></blockquote>
+<p>两个算法串行执行时，时间复杂度取最大值</p>
+</blockquote>
 <p>例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -396,20 +401,21 @@
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="c1">// O(n)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="c1">// O(n^2)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="c1">// func的时间复杂度为O(n^2)
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="c1">// func的时间复杂度为O(n^2)
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p>乘法规则：$T(n) = O(f(n) \times g(n))$</p>
 <blockquote>
-<p>两个算法嵌套执行时，时间复杂度相乘</p></blockquote>
+<p>两个算法嵌套执行时，时间复杂度相乘</p>
+</blockquote>
 <p>例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -422,9 +428,9 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// O(n)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">func1</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="c1">// O(n^2)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span> <span class="c1">// O(n) * O(n^2) = O(n^3)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="c1">// func2的时间复杂度为O(n^3)
+</span></span></span><span class="line"><span class="cl">        <span class="n">func1</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="c1">// O(n^2)
+</span></span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="c1">// O(n) * O(n^2) = O(n^3)
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="c1">// func2的时间复杂度为O(n^3)
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -436,7 +442,8 @@
 <li>单层嵌套</li>
 </ol>
 <blockquote>
-<p>待续……</p></blockquote>
+<p>待续……</p>
+</blockquote>
 </li>
 </ol>
 
@@ -462,7 +469,7 @@
 
 
         <span>
-            最后更新于 2025-08-14
+            最后更新于 2025-12-26
         </span>
     </section></footer>
 

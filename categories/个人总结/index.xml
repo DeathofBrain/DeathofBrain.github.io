@@ -7,13 +7,56 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright><atom:link href="https://deathofbrain.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>LeetCode Top100总结</title>
+        <link>https://deathofbrain.github.io/p/algorithm/</link>
+        <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://deathofbrain.github.io/p/algorithm/</guid>
+        <description>&lt;h2 id=&#34;哈希表&#34;&gt;哈希表
+&lt;/h2&gt;&lt;p&gt;用于快速判断一个元素是否在集合内。&lt;/p&gt;
+&lt;p&gt;通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过&lt;code&gt;hashCode()&lt;/code&gt;函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。&lt;/p&gt;
+&lt;p&gt;常用于：统计频率，判断元素是否出现过等。&lt;/p&gt;
+&lt;h3 id=&#34;三种哈希结构&#34;&gt;三种哈希结构
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数组&lt;/p&gt;
+&lt;p&gt;相对简单，常见于统计字符串中元素的出现次数。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 统计频率
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 对record[]进行操作……
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;set&lt;/p&gt;
+&lt;p&gt;集合，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;map&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
         
         <guid>https://deathofbrain.github.io/p/vim/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;此文档使用VSCode+Vim模拟插件进行编写&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;此文档使用VSCode+Vim模拟插件进行编写&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;启程&#34;&gt;启程
 &lt;/h2&gt;&lt;p&gt;闲来无事，突然想学Vim了。直到现在也只会基本操作，惨&lt;/p&gt;
 &lt;p&gt;参考文献：&lt;/p&gt;
@@ -27,7 +70,8 @@
 &lt;p&gt;普通模式&lt;/p&gt;
 &lt;p&gt;当按键用于执行命令时的模式，一开始进Vim时就是普通模式，通过按Esc进入。请注意，vi与Vim在普通模式时指令区分大小写&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;普通模式又称命令模式，即按键只处理命令，不直接插入到文本&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;普通模式又称命令模式，即按键只处理命令，不直接插入到文本&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;插入模式&lt;/p&gt;
@@ -37,7 +81,8 @@
 &lt;p&gt;ex模式&lt;/p&gt;
 &lt;p&gt;在普通模式通过输入&lt;code&gt;:&lt;/code&gt;进入，ex模式允许用户输入ex指令完成单行或跨行编辑，同样区分大小写。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ex命令是ex行编辑器使用的指令，ex行编辑器是古早Unix系统使用的单行终端编辑器，属于Linux底层编辑器&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;ex命令是ex行编辑器使用的指令，ex行编辑器是古早Unix系统使用的单行终端编辑器，属于Linux底层编辑器&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;一般来说，普通模式用于快速翻阅代码或快捷更改字符或删除行等，插入模式用于普通编辑文本，ex模式则用于搜索全文，或使用高级指令完成编辑操作等。&lt;/p&gt;
@@ -48,7 +93,8 @@
 &lt;/h3&gt;&lt;p&gt;第一次使用Vim时，你是否也曾敲打键盘，却没有任何字符输入？甚至莫名其妙把内容删除了？&lt;/p&gt;
 &lt;p&gt;普通模式是这样的，当进入Vim时，默认会进入普通模式，此时键盘上每个按键都代表一个指令，而非代表内容的文本。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;此时，若想输入文本，请确保在小写状态下，按下&lt;code&gt;i&lt;/code&gt;键，进入插入模式，此时再键入的就是文本本身了。&lt;/p&gt;
 &lt;h4 id=&#34;保存或者直接退出&#34;&gt;保存，或者直接退出
 &lt;/h4&gt;&lt;p&gt;恭喜你，终于用Vim成功写了一点东西，也许是代码，也许是随便乱打的，那么来到了第二个问题：我该怎么退出这沟槽的Vim？&lt;/p&gt;
@@ -57,7 +103,8 @@
 &lt;p&gt;保存退出&lt;/p&gt;
 &lt;p&gt;在普通模式下，按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;zz&lt;/code&gt;，也就是输入两个&lt;strong&gt;大写&lt;/strong&gt;的Z，这个是&lt;em&gt;保存并退出&lt;/em&gt;指令，在一切顺利的情况下，Vim会将缓存区中的文本写入文件，并退出程序。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;不知道现在是什么模式？多按几下&lt;code&gt;Esc&lt;/code&gt;，就一定处于命令模式！&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;不知道现在是什么模式？多按几下&lt;code&gt;Esc&lt;/code&gt;，就一定处于命令模式！&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;强制退出&lt;/p&gt;
@@ -68,14 +115,16 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;!&lt;/code&gt;在ex模式中代表&lt;strong&gt;强制&lt;/strong&gt;，刚才的指令就是强制退出的意思。一般来说，如果没有修改任何文件的话，输入q就可以了。&lt;/p&gt;
 &lt;p&gt;当然，ex指令下也可以保存退出，只需要输入&lt;code&gt;:wq&lt;/code&gt;并回车就可以了。具体指令会在后面详解。&lt;/p&gt;
-&lt;p&gt;同时，从现在开始，将不再重复强调如何进入某种模式，也不再强调ex模式下需要用回车来执行指令。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;同时，从现在开始，将不再重复强调如何进入某种模式，也不再强调ex模式下需要用回车来执行指令。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;另存为&lt;/p&gt;
 &lt;p&gt;ex模式下输入&lt;code&gt;w [filename]&lt;/code&gt;，即可另存为新文件。
 当然，输入&lt;code&gt;w! [filename]&lt;/code&gt;会将内容&lt;strong&gt;覆盖&lt;/strong&gt;到已存在的文件中，无法撤回！&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;简单的文本编辑&#34;&gt;简单（？）的文本编辑
@@ -83,7 +132,8 @@
 &lt;p&gt;这部分内容主要讲述如何在上文基础上，使用简单易学的操作提高一些编辑的效率，让你砸键盘的欲望变得小一点。&lt;/p&gt;
 &lt;h3 id=&#34;vi命令&#34;&gt;vi命令
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;复习：上文中，Vim有几种模式？都以什么方式进入？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;复习：上文中，Vim有几种模式？都以什么方式进入？&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Tips：可以将不同的模式想像成不同的键盘，在插入模式中，键盘功能就像平常一样。在普通模式中，每个键都有新的含义或是代表某种动作。&lt;/p&gt;
 &lt;p&gt;在你按&lt;code&gt;Esc&lt;/code&gt;之前，插入命令之后的所有按键输入都被视为文本。&lt;/p&gt;
 &lt;h3 id=&#34;移动光标&#34;&gt;移动光标
@@ -131,21 +181,25 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里的行指的是文件中实际的一行，可以通过ex命令输入&lt;code&gt;set nu&lt;/code&gt;查看文件行号。&lt;/p&gt;
-&lt;p&gt;也就是说，使用行首行尾移动时，有可能在屏幕中显示为跳转多个行，但实际上光标只在一行文本中移动。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;也就是说，使用行首行尾移动时，有可能在屏幕中显示为跳转多个行，但实际上光标只在一行文本中移动。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;按文本块移动&#34;&gt;按文本块移动
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;请注意大小写&lt;/p&gt;
-&lt;p&gt;此处的文本块仅指单词，后续部分会介绍按句子，按段落等。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;此处的文本块仅指单词，后续部分会介绍按句子，按段落等。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;w&lt;/code&gt;：光标向右移动一个单词（由字母数字字符组成）&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，此时单个符号和标点也视为一个单词。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，此时单个符号和标点也视为一个单词。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;W&lt;/code&gt;：光标向右移动一个用空格分割的段&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;w&lt;/code&gt;会跳转到下一个符号或空格后第一个字符处，而&lt;code&gt;W&lt;/code&gt;仅会跳转到下一个空格后第一个字符处。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt;会跳转到下一个符号或空格后第一个字符处，而&lt;code&gt;W&lt;/code&gt;仅会跳转到下一个空格后第一个字符处。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;b&lt;/code&gt;：光标向左移动一个单词&lt;/p&gt;
@@ -156,7 +210,8 @@
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;G&lt;/code&gt;：光标跳转到指定的行&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;单独的&lt;code&gt;G&lt;/code&gt;会跳转到文件末尾，在&lt;code&gt;G&lt;/code&gt;前面添加数量参数时，会跳转到文件指定的行，如&lt;code&gt;42G&lt;/code&gt;会跳转到文件42行。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;单独的&lt;code&gt;G&lt;/code&gt;会跳转到文件末尾，在&lt;code&gt;G&lt;/code&gt;前面添加数量参数时，会跳转到文件指定的行，如&lt;code&gt;42G&lt;/code&gt;会跳转到文件42行。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以上的指令都可以加入数量参数，如&lt;code&gt;2W&lt;/code&gt;会让光标向右移动两个用空格分割的段。&lt;/p&gt;
@@ -171,7 +226,8 @@
 &lt;/h4&gt;&lt;p&gt;&lt;code&gt;c&lt;/code&gt;键为更改命令，需要指定范围，一般与移动命令结合使用。&lt;/p&gt;
 &lt;p&gt;一旦生效，更改命令会删除指定范围字符，并且自动进入插入模式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;还记得上面的移动指令吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;还记得上面的移动指令吗？&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;例如：&lt;code&gt;c&lt;/code&gt;可用于更改从光标位置开始的文本：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;cw&lt;/code&gt;：从&lt;strong&gt;光标位置&lt;/strong&gt;到单词结尾&lt;/li&gt;
@@ -181,7 +237,8 @@
 &lt;/ul&gt;
 &lt;p&gt;与&lt;code&gt;i&lt;/code&gt;和&lt;code&gt;a&lt;/code&gt;一样，在按&lt;code&gt;Esc&lt;/code&gt;之前，你一直都处于插入模式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;cw&lt;/code&gt;指令取决于光标位置，若是光标在单词中间，则只会更改单词中间到结尾的字符。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;cw&lt;/code&gt;指令取决于光标位置，若是光标在单词中间，则只会更改单词中间到结尾的字符。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;整行更改&#34;&gt;整行更改
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -192,7 +249,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无论是&lt;code&gt;cc&lt;/code&gt;还是&lt;code&gt;C&lt;/code&gt;，都不用在指令末尾指定文字对象，但是可以在指令前面添加数量参数。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;无论是&lt;code&gt;cc&lt;/code&gt;还是&lt;code&gt;C&lt;/code&gt;，都不用在指令末尾指定文字对象，但是可以在指令前面添加数量参数。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;字符更改&#34;&gt;字符更改
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -206,12 +264,14 @@
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;S&lt;/code&gt;命令可以替换整行文本，且不同于&lt;code&gt;C&lt;/code&gt;命令，&lt;code&gt;S&lt;/code&gt;命令会删除整行，之后进入插入模式，光标置于行首。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在前面加上数量参数，可以实现多行删除并进入到插入模式。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;在前面加上数量参数，可以实现多行删除并进入到插入模式。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;R&lt;/code&gt;命令比较特殊，不同于&lt;code&gt;r&lt;/code&gt;，该命令会直接进入&lt;strong&gt;改写模式&lt;/strong&gt;，此时键盘输入的字符会直接逐个替换屏幕上的文本，直到按下&lt;code&gt;Esc&lt;/code&gt;。并且，当删除替换字符时，原先字符会恢复。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;当按下&lt;code&gt;Enter&lt;/code&gt;时，编辑器会插入新行。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;当按下&lt;code&gt;Enter&lt;/code&gt;时，编辑器会插入新行。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;更改大小写英文&#34;&gt;更改大小写（英文）
@@ -221,12 +281,14 @@
 &lt;/h3&gt;&lt;p&gt;删除命令&lt;code&gt;d&lt;/code&gt;可用于删除文件中的任意文本。和更改命令一样，删除命令也需要文本对象。&lt;/p&gt;
 &lt;p&gt;无论哪种形式的删除命令，都要先将光标移动到待删除文本的起始位置，然后输入删除命令&lt;code&gt;d&lt;/code&gt;和文本对象。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其实，文本对象指的就是像&lt;code&gt;w&lt;/code&gt;，&lt;code&gt;2w&lt;/code&gt;一类的东西，也可以是&lt;code&gt;l&lt;/code&gt;，&lt;code&gt;2l&lt;/code&gt;这种移动指令，这会向后删除两个字符。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;其实，文本对象指的就是像&lt;code&gt;w&lt;/code&gt;，&lt;code&gt;2w&lt;/code&gt;一类的东西，也可以是&lt;code&gt;l&lt;/code&gt;，&lt;code&gt;2l&lt;/code&gt;这种移动指令，这会向后删除两个字符。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;单词&#34;&gt;单词
 &lt;/h4&gt;&lt;p&gt;&lt;code&gt;dw&lt;/code&gt;删除从光标所在位置开始的第一个单词。注意，单词之后的空格也会被一并删除。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;若想保留单词之后的空格，可以使用&lt;code&gt;de&lt;/code&gt;而不是&lt;code&gt;dw&lt;/code&gt;。若想连带后面标点符号也删除，请使用&lt;code&gt;dE&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;e&lt;/code&gt;指令为到达下一个单词末尾，而&lt;code&gt;E&lt;/code&gt;则移动到下一个空格分隔的单词尾部。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;e&lt;/code&gt;指令为到达下一个单词末尾，而&lt;code&gt;E&lt;/code&gt;则移动到下一个空格分隔的单词尾部。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;行&#34;&gt;行
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -257,7 +319,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，以上操作仅限于在命令模式中删除（像&lt;code&gt;x&lt;/code&gt;、&lt;code&gt;dd&lt;/code&gt;）的情况，在插入模式中删除时，仅靠&lt;code&gt;u&lt;/code&gt;并不能实现，保持插入模式之后&lt;code&gt;Ctrl+Z&lt;/code&gt;就可以了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，以上操作仅限于在命令模式中删除（像&lt;code&gt;x&lt;/code&gt;、&lt;code&gt;dd&lt;/code&gt;）的情况，在插入模式中删除时，仅靠&lt;code&gt;u&lt;/code&gt;并不能实现，保持插入模式之后&lt;code&gt;Ctrl+Z&lt;/code&gt;就可以了。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;移动文本&#34;&gt;移动文本
 &lt;/h3&gt;&lt;p&gt;每次删除一个文本块，被删除的内容就会被保存在一个特殊的无名区域，称为&lt;strong&gt;删除寄存器&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;那么，在Vim中，剪切文本的操作就是删除-&amp;gt;选取位置-&amp;gt;用放置命令&lt;code&gt;p&lt;/code&gt;这样的流程实现的。&lt;/p&gt;

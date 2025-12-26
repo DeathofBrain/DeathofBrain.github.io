@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://deathofbrain.github.io/p/network-key-points/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="计算机网络">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="计算机网络">
 <meta property='og:description' content="给自己准备的">
 <meta property='og:url' content='https://deathofbrain.github.io/p/network-key-points/'>
 <meta property='og:site_name' content='DeathofBrain的小屋'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-14T15:24:39&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='计算机网络' /><meta property='article:published_time' content='2025-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-12-26T05:38:34&#43;00:00'/>
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="给自己准备的">
     <link rel="shortcut icon" href="/favicon.png" />
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_545d2443546c39bd.png" width="300"
+                        <img src="/img/avatar_hu_202cd6462835a2d6.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -370,13 +370,15 @@
     
     <h2 id="计算机网络体系结构">计算机网络体系结构
 </h2><blockquote>
-<p>本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）</p></blockquote>
+<p>本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）</p>
+</blockquote>
 <h3 id="概述">▲概述
 </h3><h4 id="概念">▲概念
 </h4><p>定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现<strong>资源共享</strong>和信息传递的操作系统。</p>
 <h4 id="组成">组成
 </h4><blockquote>
-<p>需要知道哪些东西是哪个部分的就可以了</p></blockquote>
+<p>需要知道哪些东西是哪个部分的就可以了</p>
+</blockquote>
 <ul>
 <li>从组成部分看，计算机网络主要由<strong>硬件</strong>、<strong>软件</strong>、<strong>协议</strong>三大部分组成。
 <ul>
@@ -416,10 +418,12 @@
 </ol>
 <h4 id="电路交换报文交换和分组交换">🌟电路交换、报文交换和分组交换
 </h4><blockquote>
-<p>计网计算题重点，可结合到多种题型</p></blockquote>
+<p>计网计算题重点，可结合到多种题型</p>
+</blockquote>
 <p><strong>路由器</strong>这个<strong>网络层</strong>设备在网络核心部分起到重要作用。它对收到的分组进行<strong>存储转发</strong>实现<strong>分组交换</strong>。分组交换是现代网络最常用的交换方式。</p>
 <blockquote>
-<p>从通信资源分配的角度看，交换就是按照某种方式动态地分配传输线路的资源。</p></blockquote>
+<p>从通信资源分配的角度看，交换就是按照某种方式动态地分配传输线路的资源。</p>
+</blockquote>
 <p>分组交换由电路交换与报文交换发展而来。</p>
 <ul>
 <li>电路交换（典型：电话网）
@@ -435,7 +439,7 @@
 <p><img src="/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2.png"
 	width="1070"
 	height="300"
-	srcset="/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_24dc96a343a3143.png 480w, /p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_e500daeb0be2b7b3.png 1024w"
+	srcset="/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_538e06808c7d603b.png 480w, /p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_e0d72aa5adea2d5.png 1024w"
 	loading="lazy"
 	
 		alt="电路交换"
@@ -450,7 +454,8 @@
 <li>
 <p>整条电路上任何节点都不进行存储，直接转发，<strong>不存在存储转发所耗费的时间</strong>。</p>
 <blockquote>
-<p>这一点需要记住。</p></blockquote>
+<p>这一点需要记住。</p>
+</blockquote>
 </li>
 <li>
 <p>优点：通信时延小、有序传输、没有冲突、实时性强。</p>
@@ -459,7 +464,8 @@
 <p>缺点：建立连接时间长、线路利用率低、灵活性差、难以实现差错控制。</p>
 <blockquote>
 <p>灵活性差：物理通路中，任何一点出现故障，就必须重新建立连接。</p>
-<p>难以实现差错控制：中间节点不具备存储和检验数据的能力，无法发现并纠正错误。</p></blockquote>
+<p>难以实现差错控制：中间节点不具备存储和检验数据的能力，无法发现并纠正错误。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -475,14 +481,15 @@
 <li>
 <p>采用<strong>存储转发</strong>技术，整个报文先传送到相邻的节点，<strong>全部存储</strong>后查找转发表，转发到下一个节点，如此反复，直到报文到达目的节点。</p>
 <blockquote>
-<p>全部存储——报文交换被淘汰的原因</p></blockquote>
+<p>全部存储——报文交换被淘汰的原因</p>
+</blockquote>
 </li>
 <li>
 <p>不同于电路交换，每个报文都可单独选择到达目的端的路径。示例图如下：</p>
 <p><img src="/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2.png"
 	width="474"
 	height="159"
-	srcset="/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_be782a12be3cef81.png 480w, /p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_529dea2db951d3c8.png 1024w"
+	srcset="/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_d0d5b789dcdbe646.png 480w, /p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_47397e86a17e6fc8.png 1024w"
 	loading="lazy"
 	
 		alt="报文交换"
@@ -497,12 +504,14 @@
 <li>
 <p>优点：无建立连接时延、灵活分配线路、线路利用率高、支持差错控制。</p>
 <blockquote>
-<p>这些也是存储转发本身的优点。</p></blockquote>
+<p>这些也是存储转发本身的优点。</p>
+</blockquote>
 </li>
 <li>
 <p>缺点：转发时延高、缓存开销大、错误处理低效。</p>
 <blockquote>
-<p>交换节点要把报文都存储完才能查找转发表转发到下一节点，若是报文太大，缓存开销也大，并且一旦丢包，重传代价也大。</p></blockquote>
+<p>交换节点要把报文都存储完才能查找转发表转发到下一节点，若是报文太大，缓存开销也大，并且一旦丢包，重传代价也大。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -511,7 +520,7 @@
 <p><img src="/p/network-key-points/images/%E5%88%86%E7%BB%84.png"
 	width="1070"
 	height="384"
-	srcset="/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_fcdb989a9ab245d8.png 480w, /p/network-key-points/images/%E5%88%86%E7%BB%84_hu_a6569516edf2d64d.png 1024w"
+	srcset="/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_5b9cbb43f3a62318.png 480w, /p/network-key-points/images/%E5%88%86%E7%BB%84_hu_e7b2481367b2da0d.png 1024w"
 	loading="lazy"
 	
 		alt="构成分组"
@@ -530,17 +539,20 @@
 <p>流程</p>
 <p>源主机发送分组，分组交换网中的交换机收到分组后，先缓存，然后从首部提取目的地址，借由转发表，发送给下一个交换机，周而复始，直到到达目的主机。</p>
 <blockquote>
-<p>本质上和报文交换一样</p></blockquote>
+<p>本质上和报文交换一样</p>
+</blockquote>
 </li>
 <li>
 <p>优点：存储转发开销小、传输效率高、减少出错概率与代价。</p>
 <blockquote>
-<p>分组是逐个传输的，可以使后一个分组的存储操作与前一个分组的转发操作并行，形成<strong>流水线</strong>，后面的图会详细表达。</p></blockquote>
+<p>分组是逐个传输的，可以使后一个分组的存储操作与前一个分组的转发操作并行，形成<strong>流水线</strong>，后面的图会详细表达。</p>
+</blockquote>
 </li>
 <li>
 <p>缺点：存在存储转发时延、需要传输额外信息、可能出现失序、丢失或重复分组的情况。</p>
 <blockquote>
-<p>失序丢包等问题是借由上层，或使用虚电路服务解决的，先不必深究。</p></blockquote>
+<p>失序丢包等问题是借由上层，或使用虚电路服务解决的，先不必深究。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -550,7 +562,8 @@
 <li>
 <p>当要连续传输大量的数据，并且传送时间远大于连接建立时间时，采用电路交换更合适。</p>
 <blockquote>
-<p>然而，现时代，数据的传送时间肯定小于连接建立时间。</p></blockquote>
+<p>然而，现时代，数据的传送时间肯定小于连接建立时间。</p>
+</blockquote>
 </li>
 <li>
 <p>从提高整个网络的信道利用率看，报文交换和分组交换更合适</p>
@@ -563,7 +576,7 @@
 <p><img src="/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE.png"
 	width="1156"
 	height="798"
-	srcset="/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_315c74c69a76b267.png 480w, /p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_27fbf94784fabc84.png 1024w"
+	srcset="/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_83c1ffd99a2296b4.png 480w, /p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_84df9c09eafbb288.png 1024w"
 	loading="lazy"
 	
 		alt="传输时序图"
@@ -576,14 +589,16 @@
 ></p>
 <blockquote>
 <p>这东西不会画就可以埋了，做计算题必须要画的图</p>
-<p>为什么是斜的：电磁波在信道中传播需要花费时间（即使非常短），这部分时间也叫传播时延。有些题明确指出传播时延忽略不计时，那就必须要画平了。</p></blockquote>
+<p>为什么是斜的：电磁波在信道中传播需要花费时间（即使非常短），这部分时间也叫传播时延。有些题明确指出传播时延忽略不计时，那就必须要画平了。</p>
+</blockquote>
 </li>
 </ul>
 </li>
 </ul>
 <h4 id="分类">分类
 </h4><blockquote>
-<p>记一下拓扑结构就好了</p></blockquote>
+<p>记一下拓扑结构就好了</p>
+</blockquote>
 <ul>
 <li>
 <p>分布范围：广域网、城域网、局域网、个人区域网</p>
@@ -602,7 +617,7 @@
 <p><img src="/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C.png"
 	width="1386"
 	height="308"
-	srcset="/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_2e5744d571e60a2f.png 480w, /p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_775c8e69fdfc46b7.png 1024w"
+	srcset="/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_445f39328296c354.png 480w, /p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_e568a98a65dd84f3.png 1024w"
 	loading="lazy"
 	
 		alt="四种拓扑网络"
@@ -623,7 +638,8 @@
 </ul>
 <h4 id="性能指标">🌟性能指标
 </h4><blockquote>
-<p>这个不会就真埋了吧</p></blockquote>
+<p>这个不会就真埋了吧</p>
+</blockquote>
 <ul>
 <li>
 <p>速率：节点在数字信道上传送数据的速率，也称<em>数据传输速率</em>、<em>数据率</em>或<em>比特率</em>。</p>
@@ -639,12 +655,14 @@
 <li>
 <p>在计网中，K=10^3，M=10^6，G=10^9，幂数每一级+3</p>
 </li>
-</ol></blockquote>
+</ol>
+</blockquote>
 </li>
 <li>
 <p>带宽：在计网中，表示网络等通信线路所能传送数据的能力。</p>
 <blockquote>
-<p>也就是<strong>最高</strong>数据传输速率</p></blockquote>
+<p>也就是<strong>最高</strong>数据传输速率</p>
+</blockquote>
 <ul>
 <li>单位：<code>bit/s</code></li>
 </ul>
@@ -661,7 +679,8 @@
 <ul>
 <li>发送时延：又称<strong>传输时延</strong>，节点将分组的所有比特推向链路所花的时间。
 <blockquote>
-<p>即从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所花的时间。</p></blockquote>
+<p>即从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所花的时间。</p>
+</blockquote>
 <ul>
 <li>公式：<code>发送时延 = 分组长度 / 发送速率</code></li>
 </ul>
@@ -673,14 +692,16 @@
 </li>
 </ul>
 <blockquote>
-<p>传输时延和传播时延一定要区分开，不然没分了</p></blockquote>
+<p>传输时延和传播时延一定要区分开，不然没分了</p>
+</blockquote>
 <ul>
 <li>处理时延：分组在交换节点为存储转发而进行的一些必要处理所花的时间。</li>
 <li>排队时延：分组在路由器的输入队列或输出队列中排队等待所花时间。</li>
 </ul>
 <blockquote>
 <p>处理时延与排队时延一般忽略不计，或者题目直接给出时间。
-因此，<code>总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延</code></p></blockquote>
+因此，<code>总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延</code></p>
+</blockquote>
 </li>
 <li>
 <p>时延带宽积：指发送端发送的第一个比特即将到达终点时，发送端已经发送了多少比特。</p>
@@ -693,7 +714,7 @@
 <p><img src="/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93.png"
 	width="872"
 	height="212"
-	srcset="/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_c57d9d92aa3b7754.png 480w, /p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_f04528a20c3241eb.png 1024w"
+	srcset="/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_21e15c454d585ef6.png 480w, /p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_1393b5a86a4288e8.png 1024w"
 	loading="lazy"
 	
 		alt="管道"
@@ -710,11 +731,12 @@
 <li>
 <p>🌟往返时延（<strong>RTT</strong>）：指从发送端发出一个短分组，到发送端收到<strong>来自接收端的确认</strong>（接收端收到数据后立刻发送确认）总共经历的时间。</p>
 <blockquote>
-<p>RTT包括各中间节点的处理时延、排队时延以及转发数据时的发送时延。</p></blockquote>
+<p>RTT包括各中间节点的处理时延、排队时延以及转发数据时的发送时延。</p>
+</blockquote>
 <p><img src="/p/network-key-points/images/RTT.png"
 	width="1969"
 	height="1141"
-	srcset="/p/network-key-points/images/RTT_hu_22cbac0eb0121898.png 480w, /p/network-key-points/images/RTT_hu_ece94b1afc84e8c3.png 1024w"
+	srcset="/p/network-key-points/images/RTT_hu_168b40db59a5ffcc.png 480w, /p/network-key-points/images/RTT_hu_956dc57406b6640a.png 1024w"
 	loading="lazy"
 	
 		alt="RTT"
@@ -738,7 +760,8 @@
 </h3><h4 id="概念-1">概念
 </h4><p>计算机网络的各层及其协议的集合称为网络的<strong>体系结构</strong>。</p>
 <blockquote>
-<p>换言之，计算机网络的体系结构就是这个计算机网络及其所应完成的功能的精确定义。</p></blockquote>
+<p>换言之，计算机网络的体系结构就是这个计算机网络及其所应完成的功能的精确定义。</p>
+</blockquote>
 <p>要注意，这些功能如何实现，是体系结构的<strong>实现</strong>问题。体系结构是<strong>抽象</strong>的，它不在乎如何去实现，实现问题是<strong>具体</strong>的。</p>
 <h4 id="分层">分层
 </h4><p>计网体系结构通常都是可分层的，它将复杂的大系统分成若干较容易实现的层次。</p>
@@ -756,7 +779,8 @@
 <p>不同终端的同一层称为<strong>对等层</strong>，同一层的实体称为<strong>对等实体</strong>。</p>
 <p>🌟<strong>第n层向第n+1层提供服务，这些服务也包括第n层及以下各层提供的服务。</strong></p>
 <blockquote>
-<p>就这一句话值得去背</p></blockquote>
+<p>就这一句话值得去背</p>
+</blockquote>
 <p>第n层的实体称为<strong>服务提供者</strong>，服务提供者上一层的实体称为<strong>服务用户</strong>。</p>
 <h4 id="数据单元">数据单元
 </h4><ul>
@@ -772,7 +796,7 @@
 <p><img src="/p/network-key-points/images/pdu_sdu_pci.png"
 	width="195"
 	height="115"
-	srcset="/p/network-key-points/images/pdu_sdu_pci_hu_8f0ada956b3bd3b0.png 480w, /p/network-key-points/images/pdu_sdu_pci_hu_8de95bf00d5ea091.png 1024w"
+	srcset="/p/network-key-points/images/pdu_sdu_pci_hu_aa7ef8ae742dfe88.png 480w, /p/network-key-points/images/pdu_sdu_pci_hu_7115cb7ada287d40.png 1024w"
 	loading="lazy"
 	
 		alt="三种数据单元关系"
@@ -787,7 +811,7 @@
 <p><img src="/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB.png"
 	width="1570"
 	height="946"
-	srcset="/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_631addc6284644e2.png 480w, /p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_6feed396f1432bb.png 1024w"
+	srcset="/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_872c64a6a7ef19b8.png 480w, /p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_cabba95534771c7c.png 1024w"
 	loading="lazy"
 	
 		alt="各层数据单元的关系"
@@ -800,7 +824,8 @@
 ></p>
 <blockquote>
 <p>横向上来看，各层之间在逻辑上有一个直接信道，表现为能直接将该层PDU传送给对方</p>
-<p>纵向上来看，发送端高层PDU作为底层SDU不断封装，到接收端自底向上不断解包。</p></blockquote>
+<p>纵向上来看，发送端高层PDU作为底层SDU不断封装，到接收端自底向上不断解包。</p>
+</blockquote>
 <h4 id="层次结构的含义">层次结构的含义
 </h4><ul>
 <li>第n层实体不仅要使用下面一层（n-1层）的<strong>服务</strong>来实现自身定义的功能，还要向上面一层（n+1层）提供本层的服务，并且该服务是<strong>第n层及其下面各层提供的服务总和</strong>。</li>
@@ -811,10 +836,12 @@
 <h3 id="协议接口服务的概念">🌟协议、接口、服务的概念
 </h3><h4 id="协议">🌟协议
 </h4><blockquote>
-<p>这个不会可以埋了</p></blockquote>
+<p>这个不会可以埋了</p>
+</blockquote>
 <p>网络协议：为了在网络中进行数据交换而建立的通信规则、标准或约定，是控制在<strong>对等实体</strong>之间进行通信规则的集合，是<strong>水平</strong>的。</p>
 <blockquote>
-<p>自然，不对等实体之间是没有协议的。就像A的网络层和B的传输层之间就没有协议这一说法。</p></blockquote>
+<p>自然，不对等实体之间是没有协议的。就像A的网络层和B的传输层之间就没有协议这一说法。</p>
+</blockquote>
 <p>🌟<strong>协议三要素：语法、语义、时序</strong></p>
 <ul>
 <li>语法：数据与控制信息的格式</li>
@@ -839,7 +866,7 @@
 </h4><p><img src="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1.png"
 	width="1160"
 	height="390"
-	srcset="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_1678192e015098b6.png 480w, /p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_a4792bfa9b1ecd13.png 1024w"
+	srcset="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_6f89a792347c7b63.png 480w, /p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_dd6725d1a33220fe.png 1024w"
 	loading="lazy"
 	
 		alt="三者关系"
@@ -875,7 +902,8 @@
 <li>可以由更高层来保障网络的正确与可靠</li>
 </ul>
 <blockquote>
-<p>IP就是不可靠的网络层协议，但是TCP作为传输层的协议，可以借助这个不可靠的服务，向上层提供可靠的服务。</p></blockquote>
+<p>IP就是不可靠的网络层协议，但是TCP作为传输层的协议，可以借助这个不可靠的服务，向上层提供可靠的服务。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -892,7 +920,8 @@
 <li>若需要应答，则需要高层实现</li>
 </ul>
 <blockquote>
-<p>WWW服务，客户端收到服务器发送的页面文件后，不给出回答</p></blockquote>
+<p>WWW服务，客户端收到服务器发送的页面文件后，不给出回答</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -901,11 +930,12 @@
 </h3><h4 id="osi模型">OSI模型
 </h4><p>ISO提出的网络体系结构模型，称为OSI模型，有七层，自底向上依次为：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
 <blockquote>
-<p>七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来</p></blockquote>
+<p>七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来</p>
+</blockquote>
 <p><img src="/p/network-key-points/images/OSI.png"
 	width="1642"
 	height="694"
-	srcset="/p/network-key-points/images/OSI_hu_21bf7207732a1fc3.png 480w, /p/network-key-points/images/OSI_hu_89b26122dc994c9a.png 1024w"
+	srcset="/p/network-key-points/images/OSI_hu_1116d9c9ddeebe97.png 480w, /p/network-key-points/images/OSI_hu_c1e119941968e174.png 1024w"
 	loading="lazy"
 	
 		alt="OSI模型"
@@ -917,7 +947,8 @@
 	
 ></p>
 <blockquote>
-<p>接下来的各层，在后续章节基本都要讲述，这里只是简单介绍</p></blockquote>
+<p>接下来的各层，在后续章节基本都要讲述，这里只是简单介绍</p>
+</blockquote>
 <ul>
 <li>
 <p>物理层</p>
@@ -927,7 +958,8 @@
 <li>物理层规定了通信链路上所传输的信号的意义和电气特征。</li>
 </ul>
 <blockquote>
-<p>物理介质并不在物理层协议之中</p></blockquote>
+<p>物理介质并不在物理层协议之中</p>
+</blockquote>
 </li>
 <li>
 <p>数据链路层</p>
@@ -935,16 +967,19 @@
 <li>数据链路层的传输单位是<strong>帧</strong></li>
 <li>两台主机之间的数据传输总是在一段一段的链路上进行的，使用专门的链路层协议。
 <blockquote>
-<p>加强物理层功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路。</p></blockquote>
+<p>加强物理层功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路。</p>
+</blockquote>
 </li>
 <li>数据链路层将网络层交付的IP分组封装成帧，可靠地传输到相邻节点的网络层，实现节点间<strong>差错控制</strong>、<strong>流量控制</strong>的功能。
 <blockquote>
 <p>差错控制：物理层传输时，可能会发生比特位翻转错误等。差错控制可以检测出这些差错（CRC算法等），将收到的错误信息丢弃。</p>
-<p>流量控制：假设A的网速是千兆，B的网速是百兆，若不加以控制，则B会丢失许多来不及接收的数据，造成传输线路效率下降。流量控制可以协调两个节点的速率，使A与B之间的发送速率对上。当然，最终线路肯定是取决于速率低的一方。</p></blockquote>
+<p>流量控制：假设A的网速是千兆，B的网速是百兆，若不加以控制，则B会丢失许多来不及接收的数据，造成传输线路效率下降。流量控制可以协调两个节点的速率，使A与B之间的发送速率对上。当然，最终线路肯定是取决于速率低的一方。</p>
+</blockquote>
 </li>
 <li>广播式网络（例如Wi-Fi）在这一层还要处理诸如控制对共享信道的访问等新的问题。
 <blockquote>
-<p>后面有讲的，哈哈，还考呢</p></blockquote>
+<p>后面有讲的，哈哈，还考呢</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -959,7 +994,7 @@
 <p><img src="/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE.png"
 	width="650"
 	height="304"
-	srcset="/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_26e9115f74d0fa4f.png 480w, /p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_1c11027b3bf3d857.png 1024w"
+	srcset="/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_b4a42e652536fb1f.png 480w, /p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_386403c5c5314c92.png 1024w"
 	loading="lazy"
 	
 		alt="某网络结构图"
@@ -970,11 +1005,13 @@
 		data-flex-basis="513px"
 	
 ></p>
-<p>拥塞控制：当上图的节点都来不及接收分组，会导致大量分组丢失，网络处于拥塞状态。此时网络层要采取措施来缓解这种拥塞，这就是拥塞控制。</p></blockquote>
+<p>拥塞控制：当上图的节点都来不及接收分组，会导致大量分组丢失，网络处于拥塞状态。此时网络层要采取措施来缓解这种拥塞，这就是拥塞控制。</p>
+</blockquote>
 </li>
 <li>在OSI中，网络层提供<strong>有连接可靠的虚电路服务</strong>，也提供<strong>无连接不可靠的数据报服务</strong>。
 <blockquote>
-<p>请注意，在TCP/IP模型中，网络层仅提供<strong>无连接不可靠的数据报服务</strong>。</p></blockquote>
+<p>请注意，在TCP/IP模型中，网络层仅提供<strong>无连接不可靠的数据报服务</strong>。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -984,7 +1021,8 @@
 <li>负责相互通信的主机中两个<strong>进程</strong>之间的通信，提供的是<strong>端到端</strong>服务，如流量控制、差错控制、连接建立与释放、可靠传输管理等服务。</li>
 <li>在OSI模型中，传输层<strong>只提供有连接可靠的服务</strong>。
 <blockquote>
-<p>同样，在TCP/IP模型中，传输层提供有连接可靠服务（TCP），也提供无连接不可靠服务（UDP）。</p></blockquote>
+<p>同样，在TCP/IP模型中，传输层提供有连接可靠服务（TCP），也提供无连接不可靠服务（UDP）。</p>
+</blockquote>
 </li>
 <li>点到点：主机和主机之间。</li>
 <li>端到端：运行在不同主机之间<strong>两个进程</strong>之间的通信，一个进程用<strong>一个端口</strong>来标识。</li>
@@ -1012,7 +1050,8 @@
 <li>🌟<strong>数据压缩</strong>、<strong>加密解密</strong>也是表示层的功能。</li>
 </ul>
 <blockquote>
-<p>全书的会话层和表示层就这三个考点</p></blockquote>
+<p>全书的会话层和表示层就这三个考点</p>
+</blockquote>
 </li>
 <li>
 <p>应用层</p>
@@ -1028,7 +1067,7 @@
 <p><img src="/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B.png"
 	width="934"
 	height="522"
-	srcset="/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_57457a11c8573536.png 480w, /p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_29544304d5d88a8a.png 1024w"
+	srcset="/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_8b9704c407feb2e5.png 480w, /p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_e732b945c362f59c.png 1024w"
 	loading="lazy"
 	
 		alt="TCP/IP模型"
@@ -1060,7 +1099,8 @@
 <li>提供两种服务：<strong>TCP</strong>、<strong>UDP</strong></li>
 </ul>
 <blockquote>
-<p>这一点与OSI不同，OSI传输层仅提供可靠服务，TCP/IP两种都提供</p></blockquote>
+<p>这一点与OSI不同，OSI传输层仅提供可靠服务，TCP/IP两种都提供</p>
+</blockquote>
 <ul>
 <li>TCP是<strong>面向连接的可靠服务</strong>，要首先建立连接，传输单位是<strong>报文段</strong></li>
 <li>UDP是<strong>无连接的不可靠服务</strong>，尽最大努力交付，传输单位是<strong>数据报</strong></li>
@@ -1076,7 +1116,7 @@
 </h4><p><img src="/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83.png"
 	width="1122"
 	height="502"
-	srcset="/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_64eee923f26d59fe.png 480w, /p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_4ac2a8b6744fb6d1.png 1024w"
+	srcset="/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_113769b7136fa560.png 480w, /p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_7db3339a4fb841cd.png 1024w"
 	loading="lazy"
 	
 		alt="两种模型比较"
@@ -1109,7 +1149,7 @@
 <p><img src="/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png"
 	width="1122"
 	height="502"
-	srcset="/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_80f2c2cf5fb62e42.png 480w, /p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_4b44750cc2631853.png 1024w"
+	srcset="/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_ac092f8c5d0ada02.png 480w, /p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_e6fc2651c1bb455f.png 1024w"
 	loading="lazy"
 	
 		alt="五层协议体系结构"
@@ -1121,13 +1161,14 @@
 	
 ></p>
 <blockquote>
-<p>其实就是把OSI的物理层和数据链路层搬过来，上面全是TCP/IP的层</p></blockquote>
+<p>其实就是把OSI的物理层和数据链路层搬过来，上面全是TCP/IP的层</p>
+</blockquote>
 <h4 id="协议栈数据传输过程">协议栈数据传输过程
 </h4><p>一句话：上层PDU被每一层封装，传输过去再自底向上解包。</p>
 <p><img src="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png"
 	width="1376"
 	height="660"
-	srcset="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_5a8181a99daaf705.png 480w, /p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_4307917b8417e00c.png 1024w"
+	srcset="/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_43994fcde5f4409b.png 480w, /p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_5d2f4c5cf66ee318.png 1024w"
 	loading="lazy"
 	
 		alt="协议栈通信过程"
@@ -1141,7 +1182,8 @@
 <p>具体的内容参考PDU那一部分。</p>
 <h2 id="物理层">物理层
 </h2><blockquote>
-<p>主要考点：码元换算，香农定理，奈奎斯特定理，几种常见数字数据编码。</p></blockquote>
+<p>主要考点：码元换算，香农定理，奈奎斯特定理，几种常见数字数据编码。</p>
+</blockquote>
 <h3 id="通信基础">通信基础
 </h3><h4 id="基本概念">基本概念
 </h4><ul>
@@ -1172,7 +1214,7 @@
 <img src="/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F.png"
 	width="1376"
 	height="254"
-	srcset="/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_633118d1cfeff399.png 480w, /p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_e7dfc0d79ab4f4b3.png 1024w"
+	srcset="/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_27573f82b54936f2.png 480w, /p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_5a3304117b7f966a.png 1024w"
 	loading="lazy"
 	
 		alt="单向通信系统"
@@ -1185,7 +1227,8 @@
 ></li>
 </ul>
 <blockquote>
-<p>图中的噪声源是信道上的噪声及分散在通信系统其它各处噪声的集中表示。</p></blockquote>
+<p>图中的噪声源是信道上的噪声及分散在通信系统其它各处噪声的集中表示。</p>
+</blockquote>
 </li>
 <li>传输信号区分
 <ul>
@@ -1193,7 +1236,8 @@
 <li>宽带传输：将基带信号进行调制后，形成频分复用模拟信号，然后在信道上运输</li>
 </ul>
 <blockquote>
-<p>基带信号：由信源发出的未经过调制的原始电信号</p></blockquote>
+<p>基带信号：由信源发出的未经过调制的原始电信号</p>
+</blockquote>
 </li>
 <li>传输方式区分
 <ul>
@@ -1208,7 +1252,8 @@
 <li>全双工通信：通信双方都可同时发送或接收消息（以太网）</li>
 </ul>
 <blockquote>
-<p>单向通信只需一个信道；半双工和全双工都需要两个信道，每个方向一个信道。</p></blockquote>
+<p>单向通信只需一个信道；半双工和全双工都需要两个信道，每个方向一个信道。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -1221,11 +1266,13 @@
 </ul>
 <blockquote>
 <p>波特和比特完全不同，但波特率和比特率在数量上有关系。</p>
-<p>若一个码元携带n比特信息，则<code>M Baud = Mn b/s</code></p></blockquote>
+<p>若一个码元携带n比特信息，则<code>M Baud = Mn b/s</code></p>
+</blockquote>
 </li>
 <li>带宽（频率带宽）表示某个信道所能传输信号的频率范围，即最高频率与最低频率之差。单位为赫兹（Hz）。
 <blockquote>
-<p>在计网中，带宽更常见用来描述网络通信线路所能传输数据的能力，即最高数据率，此时带宽的单位为<code>b/s</code></p></blockquote>
+<p>在计网中，带宽更常见用来描述网络通信线路所能传输数据的能力，即最高数据率，此时带宽的单位为<code>b/s</code></p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -1237,11 +1284,13 @@
 <ul>
 <li>🌟在<strong>理想低通信道</strong>中（没有噪音、带宽有限），为了避免码间串扰，<strong>极限波特率</strong>为<strong>2W波特</strong>，其中<code>W</code>是信道的频率带宽（单位Hz）
 <blockquote>
-<p>码间串扰：具体的信道所能通过的频率范围往往是有限的，信号中许多高频分量往往不能通过信道，否则在传输过程中就会衰减，导致接收端收到的信号波形失去码元之间的清晰界限，即发生码间串扰。</p></blockquote>
+<p>码间串扰：具体的信道所能通过的频率范围往往是有限的，信号中许多高频分量往往不能通过信道，否则在传输过程中就会衰减，导致接收端收到的信号波形失去码元之间的清晰界限，即发生码间串扰。</p>
+</blockquote>
 </li>
 <li>若此时有<code>V</code>种不同码元，则<strong>极限数据传输速率</strong>为$2Wlog_2V$<code>b/s</code>
 <blockquote>
-<p>注意单位区分</p></blockquote>
+<p>注意单位区分</p>
+</blockquote>
 </li>
 <li>结论：
 <ol>
@@ -1251,7 +1300,8 @@
 </ol>
 <blockquote>
 <p>若要提高数据传输速率，就要设法使每个码元携带更多比特信息量，此时需要采用多元制的调制方法。</p>
-<p>事实上，香农定理表明，一个码元可以携带的比特数也是有限的，只是奈奎斯特定理没有体现出来。</p></blockquote>
+<p>事实上，香农定理表明，一个码元可以携带的比特数也是有限的，只是奈奎斯特定理没有体现出来。</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -1281,7 +1331,8 @@
 </li>
 </ul>
 <blockquote>
-<p>⚠️当给定条件要求计算信道最大传输速率时，即使给出信噪比，两个公式也要同时用，并且奈奎斯特定理还要根据码元信号种数换算成极限传输速率，最后两个值比较，<strong>谁最小谁就是极限传输速率</strong>。</p></blockquote>
+<p>⚠️当给定条件要求计算信道最大传输速率时，即使给出信噪比，两个公式也要同时用，并且奈奎斯特定理还要根据码元信号种数换算成极限传输速率，最后两个值比较，<strong>谁最小谁就是极限传输速率</strong>。</p>
+</blockquote>
 <h4 id="编码与调制">🌟编码与调制
 </h4>
 </section>
@@ -1306,7 +1357,7 @@
 
 
         <span>
-            最后更新于 2025-08-14
+            最后更新于 2025-12-26
         </span>
     </section></footer>
 

@@ -7,13 +7,56 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>DeathofBrain</copyright><atom:link href="https://deathofbrain.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>LeetCode Top100总结</title>
+        <link>https://deathofbrain.github.io/p/algorithm/</link>
+        <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://deathofbrain.github.io/p/algorithm/</guid>
+        <description>&lt;h2 id=&#34;哈希表&#34;&gt;哈希表
+&lt;/h2&gt;&lt;p&gt;用于快速判断一个元素是否在集合内。&lt;/p&gt;
+&lt;p&gt;通过牺牲空间提高时间效率，查找时间复杂度为O(1)，通过&lt;code&gt;hashCode()&lt;/code&gt;函数将元素名称转化为特定的key进行映射，对于重名映射，会使用不同的再散列算法防止冲突。&lt;/p&gt;
+&lt;p&gt;常用于：统计频率，判断元素是否出现过等。&lt;/p&gt;
+&lt;h3 id=&#34;三种哈希结构&#34;&gt;三种哈希结构
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数组&lt;/p&gt;
+&lt;p&gt;相对简单，常见于统计字符串中元素的出现次数。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;record&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;// 统计频率
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 对record[]进行操作……
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;set&lt;/p&gt;
+&lt;p&gt;集合，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;map&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Vim之旅</title>
         <link>https://deathofbrain.github.io/p/vim/</link>
         <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
         
         <guid>https://deathofbrain.github.io/p/vim/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;此文档使用VSCode+Vim模拟插件进行编写&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;此文档使用VSCode+Vim模拟插件进行编写&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;启程&#34;&gt;启程
 &lt;/h2&gt;&lt;p&gt;闲来无事，突然想学Vim了。直到现在也只会基本操作，惨&lt;/p&gt;
 &lt;p&gt;参考文献：&lt;/p&gt;
@@ -27,7 +70,8 @@
 &lt;p&gt;普通模式&lt;/p&gt;
 &lt;p&gt;当按键用于执行命令时的模式，一开始进Vim时就是普通模式，通过按Esc进入。请注意，vi与Vim在普通模式时指令区分大小写&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;普通模式又称命令模式，即按键只处理命令，不直接插入到文本&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;普通模式又称命令模式，即按键只处理命令，不直接插入到文本&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;插入模式&lt;/p&gt;
@@ -37,7 +81,8 @@
 &lt;p&gt;ex模式&lt;/p&gt;
 &lt;p&gt;在普通模式通过输入&lt;code&gt;:&lt;/code&gt;进入，ex模式允许用户输入ex指令完成单行或跨行编辑，同样区分大小写。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ex命令是ex行编辑器使用的指令，ex行编辑器是古早Unix系统使用的单行终端编辑器，属于Linux底层编辑器&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;ex命令是ex行编辑器使用的指令，ex行编辑器是古早Unix系统使用的单行终端编辑器，属于Linux底层编辑器&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;一般来说，普通模式用于快速翻阅代码或快捷更改字符或删除行等，插入模式用于普通编辑文本，ex模式则用于搜索全文，或使用高级指令完成编辑操作等。&lt;/p&gt;
@@ -48,7 +93,8 @@
 &lt;/h3&gt;&lt;p&gt;第一次使用Vim时，你是否也曾敲打键盘，却没有任何字符输入？甚至莫名其妙把内容删除了？&lt;/p&gt;
 &lt;p&gt;普通模式是这样的，当进入Vim时，默认会进入普通模式，此时键盘上每个按键都代表一个指令，而非代表内容的文本。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，并非所有按键都有对应的命令，而是说在普通模式中，Vim认为接收到的按键代表的是“命令”。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;此时，若想输入文本，请确保在小写状态下，按下&lt;code&gt;i&lt;/code&gt;键，进入插入模式，此时再键入的就是文本本身了。&lt;/p&gt;
 &lt;h4 id=&#34;保存或者直接退出&#34;&gt;保存，或者直接退出
 &lt;/h4&gt;&lt;p&gt;恭喜你，终于用Vim成功写了一点东西，也许是代码，也许是随便乱打的，那么来到了第二个问题：我该怎么退出这沟槽的Vim？&lt;/p&gt;
@@ -57,7 +103,8 @@
 &lt;p&gt;保存退出&lt;/p&gt;
 &lt;p&gt;在普通模式下，按下&lt;code&gt;Shift&lt;/code&gt;+&lt;code&gt;zz&lt;/code&gt;，也就是输入两个&lt;strong&gt;大写&lt;/strong&gt;的Z，这个是&lt;em&gt;保存并退出&lt;/em&gt;指令，在一切顺利的情况下，Vim会将缓存区中的文本写入文件，并退出程序。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;不知道现在是什么模式？多按几下&lt;code&gt;Esc&lt;/code&gt;，就一定处于命令模式！&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;不知道现在是什么模式？多按几下&lt;code&gt;Esc&lt;/code&gt;，就一定处于命令模式！&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;强制退出&lt;/p&gt;
@@ -68,14 +115,16 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;!&lt;/code&gt;在ex模式中代表&lt;strong&gt;强制&lt;/strong&gt;，刚才的指令就是强制退出的意思。一般来说，如果没有修改任何文件的话，输入q就可以了。&lt;/p&gt;
 &lt;p&gt;当然，ex指令下也可以保存退出，只需要输入&lt;code&gt;:wq&lt;/code&gt;并回车就可以了。具体指令会在后面详解。&lt;/p&gt;
-&lt;p&gt;同时，从现在开始，将不再重复强调如何进入某种模式，也不再强调ex模式下需要用回车来执行指令。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;同时，从现在开始，将不再重复强调如何进入某种模式，也不再强调ex模式下需要用回车来执行指令。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;另存为&lt;/p&gt;
 &lt;p&gt;ex模式下输入&lt;code&gt;w [filename]&lt;/code&gt;，即可另存为新文件。
 当然，输入&lt;code&gt;w! [filename]&lt;/code&gt;会将内容&lt;strong&gt;覆盖&lt;/strong&gt;到已存在的文件中，无法撤回！&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;使用&lt;code&gt;!&lt;/code&gt;时还请三思。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;简单的文本编辑&#34;&gt;简单（？）的文本编辑
@@ -83,7 +132,8 @@
 &lt;p&gt;这部分内容主要讲述如何在上文基础上，使用简单易学的操作提高一些编辑的效率，让你砸键盘的欲望变得小一点。&lt;/p&gt;
 &lt;h3 id=&#34;vi命令&#34;&gt;vi命令
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;复习：上文中，Vim有几种模式？都以什么方式进入？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;复习：上文中，Vim有几种模式？都以什么方式进入？&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Tips：可以将不同的模式想像成不同的键盘，在插入模式中，键盘功能就像平常一样。在普通模式中，每个键都有新的含义或是代表某种动作。&lt;/p&gt;
 &lt;p&gt;在你按&lt;code&gt;Esc&lt;/code&gt;之前，插入命令之后的所有按键输入都被视为文本。&lt;/p&gt;
 &lt;h3 id=&#34;移动光标&#34;&gt;移动光标
@@ -131,21 +181,25 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里的行指的是文件中实际的一行，可以通过ex命令输入&lt;code&gt;set nu&lt;/code&gt;查看文件行号。&lt;/p&gt;
-&lt;p&gt;也就是说，使用行首行尾移动时，有可能在屏幕中显示为跳转多个行，但实际上光标只在一行文本中移动。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;也就是说，使用行首行尾移动时，有可能在屏幕中显示为跳转多个行，但实际上光标只在一行文本中移动。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;按文本块移动&#34;&gt;按文本块移动
 &lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;请注意大小写&lt;/p&gt;
-&lt;p&gt;此处的文本块仅指单词，后续部分会介绍按句子，按段落等。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;此处的文本块仅指单词，后续部分会介绍按句子，按段落等。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;w&lt;/code&gt;：光标向右移动一个单词（由字母数字字符组成）&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，此时单个符号和标点也视为一个单词。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，此时单个符号和标点也视为一个单词。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;W&lt;/code&gt;：光标向右移动一个用空格分割的段&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;w&lt;/code&gt;会跳转到下一个符号或空格后第一个字符处，而&lt;code&gt;W&lt;/code&gt;仅会跳转到下一个空格后第一个字符处。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt;会跳转到下一个符号或空格后第一个字符处，而&lt;code&gt;W&lt;/code&gt;仅会跳转到下一个空格后第一个字符处。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;b&lt;/code&gt;：光标向左移动一个单词&lt;/p&gt;
@@ -156,7 +210,8 @@
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;G&lt;/code&gt;：光标跳转到指定的行&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;单独的&lt;code&gt;G&lt;/code&gt;会跳转到文件末尾，在&lt;code&gt;G&lt;/code&gt;前面添加数量参数时，会跳转到文件指定的行，如&lt;code&gt;42G&lt;/code&gt;会跳转到文件42行。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;单独的&lt;code&gt;G&lt;/code&gt;会跳转到文件末尾，在&lt;code&gt;G&lt;/code&gt;前面添加数量参数时，会跳转到文件指定的行，如&lt;code&gt;42G&lt;/code&gt;会跳转到文件42行。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以上的指令都可以加入数量参数，如&lt;code&gt;2W&lt;/code&gt;会让光标向右移动两个用空格分割的段。&lt;/p&gt;
@@ -171,7 +226,8 @@
 &lt;/h4&gt;&lt;p&gt;&lt;code&gt;c&lt;/code&gt;键为更改命令，需要指定范围，一般与移动命令结合使用。&lt;/p&gt;
 &lt;p&gt;一旦生效，更改命令会删除指定范围字符，并且自动进入插入模式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;还记得上面的移动指令吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;还记得上面的移动指令吗？&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;例如：&lt;code&gt;c&lt;/code&gt;可用于更改从光标位置开始的文本：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;cw&lt;/code&gt;：从&lt;strong&gt;光标位置&lt;/strong&gt;到单词结尾&lt;/li&gt;
@@ -181,7 +237,8 @@
 &lt;/ul&gt;
 &lt;p&gt;与&lt;code&gt;i&lt;/code&gt;和&lt;code&gt;a&lt;/code&gt;一样，在按&lt;code&gt;Esc&lt;/code&gt;之前，你一直都处于插入模式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;cw&lt;/code&gt;指令取决于光标位置，若是光标在单词中间，则只会更改单词中间到结尾的字符。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;cw&lt;/code&gt;指令取决于光标位置，若是光标在单词中间，则只会更改单词中间到结尾的字符。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;整行更改&#34;&gt;整行更改
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -192,7 +249,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;无论是&lt;code&gt;cc&lt;/code&gt;还是&lt;code&gt;C&lt;/code&gt;，都不用在指令末尾指定文字对象，但是可以在指令前面添加数量参数。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;无论是&lt;code&gt;cc&lt;/code&gt;还是&lt;code&gt;C&lt;/code&gt;，都不用在指令末尾指定文字对象，但是可以在指令前面添加数量参数。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;字符更改&#34;&gt;字符更改
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -206,12 +264,14 @@
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;S&lt;/code&gt;命令可以替换整行文本，且不同于&lt;code&gt;C&lt;/code&gt;命令，&lt;code&gt;S&lt;/code&gt;命令会删除整行，之后进入插入模式，光标置于行首。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在前面加上数量参数，可以实现多行删除并进入到插入模式。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;在前面加上数量参数，可以实现多行删除并进入到插入模式。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;R&lt;/code&gt;命令比较特殊，不同于&lt;code&gt;r&lt;/code&gt;，该命令会直接进入&lt;strong&gt;改写模式&lt;/strong&gt;，此时键盘输入的字符会直接逐个替换屏幕上的文本，直到按下&lt;code&gt;Esc&lt;/code&gt;。并且，当删除替换字符时，原先字符会恢复。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;当按下&lt;code&gt;Enter&lt;/code&gt;时，编辑器会插入新行。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;当按下&lt;code&gt;Enter&lt;/code&gt;时，编辑器会插入新行。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;更改大小写英文&#34;&gt;更改大小写（英文）
@@ -221,12 +281,14 @@
 &lt;/h3&gt;&lt;p&gt;删除命令&lt;code&gt;d&lt;/code&gt;可用于删除文件中的任意文本。和更改命令一样，删除命令也需要文本对象。&lt;/p&gt;
 &lt;p&gt;无论哪种形式的删除命令，都要先将光标移动到待删除文本的起始位置，然后输入删除命令&lt;code&gt;d&lt;/code&gt;和文本对象。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其实，文本对象指的就是像&lt;code&gt;w&lt;/code&gt;，&lt;code&gt;2w&lt;/code&gt;一类的东西，也可以是&lt;code&gt;l&lt;/code&gt;，&lt;code&gt;2l&lt;/code&gt;这种移动指令，这会向后删除两个字符。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;其实，文本对象指的就是像&lt;code&gt;w&lt;/code&gt;，&lt;code&gt;2w&lt;/code&gt;一类的东西，也可以是&lt;code&gt;l&lt;/code&gt;，&lt;code&gt;2l&lt;/code&gt;这种移动指令，这会向后删除两个字符。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;单词&#34;&gt;单词
 &lt;/h4&gt;&lt;p&gt;&lt;code&gt;dw&lt;/code&gt;删除从光标所在位置开始的第一个单词。注意，单词之后的空格也会被一并删除。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;若想保留单词之后的空格，可以使用&lt;code&gt;de&lt;/code&gt;而不是&lt;code&gt;dw&lt;/code&gt;。若想连带后面标点符号也删除，请使用&lt;code&gt;dE&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;e&lt;/code&gt;指令为到达下一个单词末尾，而&lt;code&gt;E&lt;/code&gt;则移动到下一个空格分隔的单词尾部。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;e&lt;/code&gt;指令为到达下一个单词末尾，而&lt;code&gt;E&lt;/code&gt;则移动到下一个空格分隔的单词尾部。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;行&#34;&gt;行
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
@@ -257,7 +319,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;请注意，以上操作仅限于在命令模式中删除（像&lt;code&gt;x&lt;/code&gt;、&lt;code&gt;dd&lt;/code&gt;）的情况，在插入模式中删除时，仅靠&lt;code&gt;u&lt;/code&gt;并不能实现，保持插入模式之后&lt;code&gt;Ctrl+Z&lt;/code&gt;就可以了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，以上操作仅限于在命令模式中删除（像&lt;code&gt;x&lt;/code&gt;、&lt;code&gt;dd&lt;/code&gt;）的情况，在插入模式中删除时，仅靠&lt;code&gt;u&lt;/code&gt;并不能实现，保持插入模式之后&lt;code&gt;Ctrl+Z&lt;/code&gt;就可以了。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;移动文本&#34;&gt;移动文本
 &lt;/h3&gt;&lt;p&gt;每次删除一个文本块，被删除的内容就会被保存在一个特殊的无名区域，称为&lt;strong&gt;删除寄存器&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;那么，在Vim中，剪切文本的操作就是删除-&amp;gt;选取位置-&amp;gt;用放置命令&lt;code&gt;p&lt;/code&gt;这样的流程实现的。&lt;/p&gt;
@@ -271,13 +334,15 @@
         <guid>https://deathofbrain.github.io/p/network-key-points/</guid>
         <description>&lt;h2 id=&#34;计算机网络体系结构&#34;&gt;计算机网络体系结构
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;本章内容重点：三种交换（计算）、OSI分层、TCP/IP分层（记忆）、各种指标与单位（计算）&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;概述&#34;&gt;▲概述
 &lt;/h3&gt;&lt;h4 id=&#34;概念&#34;&gt;▲概念
 &lt;/h4&gt;&lt;p&gt;定义：将地理位置不同，具有独立功能的多台计算机以及外部设备通过通信线路连接起来，实现&lt;strong&gt;资源共享&lt;/strong&gt;和信息传递的操作系统。&lt;/p&gt;
 &lt;h4 id=&#34;组成&#34;&gt;组成
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;需要知道哪些东西是哪个部分的就可以了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;需要知道哪些东西是哪个部分的就可以了&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;从组成部分看，计算机网络主要由&lt;strong&gt;硬件&lt;/strong&gt;、&lt;strong&gt;软件&lt;/strong&gt;、&lt;strong&gt;协议&lt;/strong&gt;三大部分组成。
 &lt;ul&gt;
@@ -317,10 +382,12 @@
 &lt;/ol&gt;
 &lt;h4 id=&#34;电路交换报文交换和分组交换&#34;&gt;🌟电路交换、报文交换和分组交换
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;计网计算题重点，可结合到多种题型&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;计网计算题重点，可结合到多种题型&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;路由器&lt;/strong&gt;这个&lt;strong&gt;网络层&lt;/strong&gt;设备在网络核心部分起到重要作用。它对收到的分组进行&lt;strong&gt;存储转发&lt;/strong&gt;实现&lt;strong&gt;分组交换&lt;/strong&gt;。分组交换是现代网络最常用的交换方式。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;从通信资源分配的角度看，交换就是按照某种方式动态地分配传输线路的资源。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;从通信资源分配的角度看，交换就是按照某种方式动态地分配传输线路的资源。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;分组交换由电路交换与报文交换发展而来。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;电路交换（典型：电话网）
@@ -336,7 +403,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2.png&#34;
 	width=&#34;1070&#34;
 	height=&#34;300&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_24dc96a343a3143.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_e500daeb0be2b7b3.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_538e06808c7d603b.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2_hu_e0d72aa5adea2d5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;电路交换&#34;
@@ -351,7 +418,8 @@
 &lt;li&gt;
 &lt;p&gt;整条电路上任何节点都不进行存储，直接转发，&lt;strong&gt;不存在存储转发所耗费的时间&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这一点需要记住。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这一点需要记住。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;优点：通信时延小、有序传输、没有冲突、实时性强。&lt;/p&gt;
@@ -360,7 +428,8 @@
 &lt;p&gt;缺点：建立连接时间长、线路利用率低、灵活性差、难以实现差错控制。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;灵活性差：物理通路中，任何一点出现故障，就必须重新建立连接。&lt;/p&gt;
-&lt;p&gt;难以实现差错控制：中间节点不具备存储和检验数据的能力，无法发现并纠正错误。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;难以实现差错控制：中间节点不具备存储和检验数据的能力，无法发现并纠正错误。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -376,14 +445,15 @@
 &lt;li&gt;
 &lt;p&gt;采用&lt;strong&gt;存储转发&lt;/strong&gt;技术，整个报文先传送到相邻的节点，&lt;strong&gt;全部存储&lt;/strong&gt;后查找转发表，转发到下一个节点，如此反复，直到报文到达目的节点。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;全部存储——报文交换被淘汰的原因&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;全部存储——报文交换被淘汰的原因&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;不同于电路交换，每个报文都可单独选择到达目的端的路径。示例图如下：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2.png&#34;
 	width=&#34;474&#34;
 	height=&#34;159&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_be782a12be3cef81.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_529dea2db951d3c8.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_d0d5b789dcdbe646.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2_hu_47397e86a17e6fc8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;报文交换&#34;
@@ -398,12 +468,14 @@
 &lt;li&gt;
 &lt;p&gt;优点：无建立连接时延、灵活分配线路、线路利用率高、支持差错控制。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这些也是存储转发本身的优点。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这些也是存储转发本身的优点。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;缺点：转发时延高、缓存开销大、错误处理低效。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;交换节点要把报文都存储完才能查找转发表转发到下一节点，若是报文太大，缓存开销也大，并且一旦丢包，重传代价也大。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;交换节点要把报文都存储完才能查找转发表转发到下一节点，若是报文太大，缓存开销也大，并且一旦丢包，重传代价也大。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -412,7 +484,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84.png&#34;
 	width=&#34;1070&#34;
 	height=&#34;384&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_fcdb989a9ab245d8.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_a6569516edf2d64d.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_5b9cbb43f3a62318.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%88%86%E7%BB%84_hu_e7b2481367b2da0d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;构成分组&#34;
@@ -431,17 +503,20 @@
 &lt;p&gt;流程&lt;/p&gt;
 &lt;p&gt;源主机发送分组，分组交换网中的交换机收到分组后，先缓存，然后从首部提取目的地址，借由转发表，发送给下一个交换机，周而复始，直到到达目的主机。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;本质上和报文交换一样&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;本质上和报文交换一样&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;优点：存储转发开销小、传输效率高、减少出错概率与代价。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;分组是逐个传输的，可以使后一个分组的存储操作与前一个分组的转发操作并行，形成&lt;strong&gt;流水线&lt;/strong&gt;，后面的图会详细表达。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;分组是逐个传输的，可以使后一个分组的存储操作与前一个分组的转发操作并行，形成&lt;strong&gt;流水线&lt;/strong&gt;，后面的图会详细表达。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;缺点：存在存储转发时延、需要传输额外信息、可能出现失序、丢失或重复分组的情况。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;失序丢包等问题是借由上层，或使用虚电路服务解决的，先不必深究。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;失序丢包等问题是借由上层，或使用虚电路服务解决的，先不必深究。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -451,7 +526,8 @@
 &lt;li&gt;
 &lt;p&gt;当要连续传输大量的数据，并且传送时间远大于连接建立时间时，采用电路交换更合适。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;然而，现时代，数据的传送时间肯定小于连接建立时间。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;然而，现时代，数据的传送时间肯定小于连接建立时间。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;从提高整个网络的信道利用率看，报文交换和分组交换更合适&lt;/p&gt;
@@ -464,7 +540,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE.png&#34;
 	width=&#34;1156&#34;
 	height=&#34;798&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_315c74c69a76b267.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_27fbf94784fabc84.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_83c1ffd99a2296b4.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%BC%A0%E8%BE%93%E6%97%B6%E5%BA%8F%E5%9B%BE_hu_84df9c09eafbb288.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;传输时序图&#34;
@@ -477,14 +553,16 @@
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这东西不会画就可以埋了，做计算题必须要画的图&lt;/p&gt;
-&lt;p&gt;为什么是斜的：电磁波在信道中传播需要花费时间（即使非常短），这部分时间也叫传播时延。有些题明确指出传播时延忽略不计时，那就必须要画平了。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;为什么是斜的：电磁波在信道中传播需要花费时间（即使非常短），这部分时间也叫传播时延。有些题明确指出传播时延忽略不计时，那就必须要画平了。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;分类&#34;&gt;分类
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;记一下拓扑结构就好了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;记一下拓扑结构就好了&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;分布范围：广域网、城域网、局域网、个人区域网&lt;/p&gt;
@@ -503,7 +581,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C.png&#34;
 	width=&#34;1386&#34;
 	height=&#34;308&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_2e5744d571e60a2f.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_775c8e69fdfc46b7.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_445f39328296c354.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%8B%93%E6%89%91%E7%BD%91%E7%BB%9C_hu_e568a98a65dd84f3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;四种拓扑网络&#34;
@@ -524,7 +602,8 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;性能指标&#34;&gt;🌟性能指标
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;这个不会就真埋了吧&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这个不会就真埋了吧&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;速率：节点在数字信道上传送数据的速率，也称&lt;em&gt;数据传输速率&lt;/em&gt;、&lt;em&gt;数据率&lt;/em&gt;或&lt;em&gt;比特率&lt;/em&gt;。&lt;/p&gt;
@@ -540,12 +619,14 @@
 &lt;li&gt;
 &lt;p&gt;在计网中，K=10^3，M=10^6，G=10^9，幂数每一级+3&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;带宽：在计网中，表示网络等通信线路所能传送数据的能力。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;也就是&lt;strong&gt;最高&lt;/strong&gt;数据传输速率&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;也就是&lt;strong&gt;最高&lt;/strong&gt;数据传输速率&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;单位：&lt;code&gt;bit/s&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -562,7 +643,8 @@
 &lt;ul&gt;
 &lt;li&gt;发送时延：又称&lt;strong&gt;传输时延&lt;/strong&gt;，节点将分组的所有比特推向链路所花的时间。
 &lt;blockquote&gt;
-&lt;p&gt;即从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所花的时间。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;即从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所花的时间。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;公式：&lt;code&gt;发送时延 = 分组长度 / 发送速率&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -574,14 +656,16 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;传输时延和传播时延一定要区分开，不然没分了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;传输时延和传播时延一定要区分开，不然没分了&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;处理时延：分组在交换节点为存储转发而进行的一些必要处理所花的时间。&lt;/li&gt;
 &lt;li&gt;排队时延：分组在路由器的输入队列或输出队列中排队等待所花时间。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;处理时延与排队时延一般忽略不计，或者题目直接给出时间。
-因此，&lt;code&gt;总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+因此，&lt;code&gt;总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;时延带宽积：指发送端发送的第一个比特即将到达终点时，发送端已经发送了多少比特。&lt;/p&gt;
@@ -594,7 +678,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93.png&#34;
 	width=&#34;872&#34;
 	height=&#34;212&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_c57d9d92aa3b7754.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_f04528a20c3241eb.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_21e15c454d585ef6.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E9%93%BE%E8%B7%AF%E7%AE%A1%E9%81%93_hu_1393b5a86a4288e8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;管道&#34;
@@ -611,11 +695,12 @@
 &lt;li&gt;
 &lt;p&gt;🌟往返时延（&lt;strong&gt;RTT&lt;/strong&gt;）：指从发送端发出一个短分组，到发送端收到&lt;strong&gt;来自接收端的确认&lt;/strong&gt;（接收端收到数据后立刻发送确认）总共经历的时间。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;RTT包括各中间节点的处理时延、排队时延以及转发数据时的发送时延。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;RTT包括各中间节点的处理时延、排队时延以及转发数据时的发送时延。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/RTT.png&#34;
 	width=&#34;1969&#34;
 	height=&#34;1141&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/RTT_hu_22cbac0eb0121898.png 480w, https://deathofbrain.github.io/p/network-key-points/images/RTT_hu_ece94b1afc84e8c3.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/RTT_hu_168b40db59a5ffcc.png 480w, https://deathofbrain.github.io/p/network-key-points/images/RTT_hu_956dc57406b6640a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;RTT&#34;
@@ -639,7 +724,8 @@
 &lt;/h3&gt;&lt;h4 id=&#34;概念-1&#34;&gt;概念
 &lt;/h4&gt;&lt;p&gt;计算机网络的各层及其协议的集合称为网络的&lt;strong&gt;体系结构&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;换言之，计算机网络的体系结构就是这个计算机网络及其所应完成的功能的精确定义。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;换言之，计算机网络的体系结构就是这个计算机网络及其所应完成的功能的精确定义。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;要注意，这些功能如何实现，是体系结构的&lt;strong&gt;实现&lt;/strong&gt;问题。体系结构是&lt;strong&gt;抽象&lt;/strong&gt;的，它不在乎如何去实现，实现问题是&lt;strong&gt;具体&lt;/strong&gt;的。&lt;/p&gt;
 &lt;h4 id=&#34;分层&#34;&gt;分层
 &lt;/h4&gt;&lt;p&gt;计网体系结构通常都是可分层的，它将复杂的大系统分成若干较容易实现的层次。&lt;/p&gt;
@@ -657,7 +743,8 @@
 &lt;p&gt;不同终端的同一层称为&lt;strong&gt;对等层&lt;/strong&gt;，同一层的实体称为&lt;strong&gt;对等实体&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;🌟&lt;strong&gt;第n层向第n+1层提供服务，这些服务也包括第n层及以下各层提供的服务。&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;就这一句话值得去背&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;就这一句话值得去背&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;第n层的实体称为&lt;strong&gt;服务提供者&lt;/strong&gt;，服务提供者上一层的实体称为&lt;strong&gt;服务用户&lt;/strong&gt;。&lt;/p&gt;
 &lt;h4 id=&#34;数据单元&#34;&gt;数据单元
 &lt;/h4&gt;&lt;ul&gt;
@@ -673,7 +760,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci.png&#34;
 	width=&#34;195&#34;
 	height=&#34;115&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci_hu_8f0ada956b3bd3b0.png 480w, https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci_hu_8de95bf00d5ea091.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci_hu_aa7ef8ae742dfe88.png 480w, https://deathofbrain.github.io/p/network-key-points/images/pdu_sdu_pci_hu_7115cb7ada287d40.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;三种数据单元关系&#34;
@@ -688,7 +775,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB.png&#34;
 	width=&#34;1570&#34;
 	height=&#34;946&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_631addc6284644e2.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_6feed396f1432bb.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_872c64a6a7ef19b8.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%90%84%E5%B1%82%E6%95%B0%E6%8D%AE%E5%8D%95%E5%85%83%E7%9A%84%E8%81%94%E7%B3%BB_hu_cabba95534771c7c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;各层数据单元的关系&#34;
@@ -701,7 +788,8 @@
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;横向上来看，各层之间在逻辑上有一个直接信道，表现为能直接将该层PDU传送给对方&lt;/p&gt;
-&lt;p&gt;纵向上来看，发送端高层PDU作为底层SDU不断封装，到接收端自底向上不断解包。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;纵向上来看，发送端高层PDU作为底层SDU不断封装，到接收端自底向上不断解包。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;层次结构的含义&#34;&gt;层次结构的含义
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;第n层实体不仅要使用下面一层（n-1层）的&lt;strong&gt;服务&lt;/strong&gt;来实现自身定义的功能，还要向上面一层（n+1层）提供本层的服务，并且该服务是&lt;strong&gt;第n层及其下面各层提供的服务总和&lt;/strong&gt;。&lt;/li&gt;
@@ -712,10 +800,12 @@
 &lt;h3 id=&#34;协议接口服务的概念&#34;&gt;🌟协议、接口、服务的概念
 &lt;/h3&gt;&lt;h4 id=&#34;协议&#34;&gt;🌟协议
 &lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;这个不会可以埋了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这个不会可以埋了&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;网络协议：为了在网络中进行数据交换而建立的通信规则、标准或约定，是控制在&lt;strong&gt;对等实体&lt;/strong&gt;之间进行通信规则的集合，是&lt;strong&gt;水平&lt;/strong&gt;的。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;自然，不对等实体之间是没有协议的。就像A的网络层和B的传输层之间就没有协议这一说法。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;自然，不对等实体之间是没有协议的。就像A的网络层和B的传输层之间就没有协议这一说法。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;🌟&lt;strong&gt;协议三要素：语法、语义、时序&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;语法：数据与控制信息的格式&lt;/li&gt;
@@ -740,7 +830,7 @@
 &lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1.png&#34;
 	width=&#34;1160&#34;
 	height=&#34;390&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_1678192e015098b6.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_a4792bfa9b1ecd13.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_6f89a792347c7b63.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1_hu_dd6725d1a33220fe.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;三者关系&#34;
@@ -776,7 +866,8 @@
 &lt;li&gt;可以由更高层来保障网络的正确与可靠&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;IP就是不可靠的网络层协议，但是TCP作为传输层的协议，可以借助这个不可靠的服务，向上层提供可靠的服务。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;IP就是不可靠的网络层协议，但是TCP作为传输层的协议，可以借助这个不可靠的服务，向上层提供可靠的服务。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -793,7 +884,8 @@
 &lt;li&gt;若需要应答，则需要高层实现&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;WWW服务，客户端收到服务器发送的页面文件后，不给出回答&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;WWW服务，客户端收到服务器发送的页面文件后，不给出回答&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -802,11 +894,12 @@
 &lt;/h3&gt;&lt;h4 id=&#34;osi模型&#34;&gt;OSI模型
 &lt;/h4&gt;&lt;p&gt;ISO提出的网络体系结构模型，称为OSI模型，有七层，自底向上依次为：物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;七层都有什么，要背下来，同样，接下来的四层TCP/IP模型也要背下来，当然还有特供五层折中模型更要背下来&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/OSI.png&#34;
 	width=&#34;1642&#34;
 	height=&#34;694&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/OSI_hu_21bf7207732a1fc3.png 480w, https://deathofbrain.github.io/p/network-key-points/images/OSI_hu_89b26122dc994c9a.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/OSI_hu_1116d9c9ddeebe97.png 480w, https://deathofbrain.github.io/p/network-key-points/images/OSI_hu_c1e119941968e174.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;OSI模型&#34;
@@ -818,7 +911,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;接下来的各层，在后续章节基本都要讲述，这里只是简单介绍&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;接下来的各层，在后续章节基本都要讲述，这里只是简单介绍&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;物理层&lt;/p&gt;
@@ -828,7 +922,8 @@
 &lt;li&gt;物理层规定了通信链路上所传输的信号的意义和电气特征。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;物理介质并不在物理层协议之中&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;物理介质并不在物理层协议之中&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;数据链路层&lt;/p&gt;
@@ -836,16 +931,19 @@
 &lt;li&gt;数据链路层的传输单位是&lt;strong&gt;帧&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;两台主机之间的数据传输总是在一段一段的链路上进行的，使用专门的链路层协议。
 &lt;blockquote&gt;
-&lt;p&gt;加强物理层功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;加强物理层功能，将物理层提供的可能出错的物理连接改造成逻辑上无差错的数据链路。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;数据链路层将网络层交付的IP分组封装成帧，可靠地传输到相邻节点的网络层，实现节点间&lt;strong&gt;差错控制&lt;/strong&gt;、&lt;strong&gt;流量控制&lt;/strong&gt;的功能。
 &lt;blockquote&gt;
 &lt;p&gt;差错控制：物理层传输时，可能会发生比特位翻转错误等。差错控制可以检测出这些差错（CRC算法等），将收到的错误信息丢弃。&lt;/p&gt;
-&lt;p&gt;流量控制：假设A的网速是千兆，B的网速是百兆，若不加以控制，则B会丢失许多来不及接收的数据，造成传输线路效率下降。流量控制可以协调两个节点的速率，使A与B之间的发送速率对上。当然，最终线路肯定是取决于速率低的一方。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;流量控制：假设A的网速是千兆，B的网速是百兆，若不加以控制，则B会丢失许多来不及接收的数据，造成传输线路效率下降。流量控制可以协调两个节点的速率，使A与B之间的发送速率对上。当然，最终线路肯定是取决于速率低的一方。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;广播式网络（例如Wi-Fi）在这一层还要处理诸如控制对共享信道的访问等新的问题。
 &lt;blockquote&gt;
-&lt;p&gt;后面有讲的，哈哈，还考呢&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;后面有讲的，哈哈，还考呢&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -860,7 +958,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE.png&#34;
 	width=&#34;650&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_26e9115f74d0fa4f.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_1c11027b3bf3d857.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_b4a42e652536fb1f.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E6%9F%90%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E5%9B%BE_hu_386403c5c5314c92.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;某网络结构图&#34;
@@ -871,11 +969,13 @@
 		data-flex-basis=&#34;513px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;拥塞控制：当上图的节点都来不及接收分组，会导致大量分组丢失，网络处于拥塞状态。此时网络层要采取措施来缓解这种拥塞，这就是拥塞控制。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;拥塞控制：当上图的节点都来不及接收分组，会导致大量分组丢失，网络处于拥塞状态。此时网络层要采取措施来缓解这种拥塞，这就是拥塞控制。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;在OSI中，网络层提供&lt;strong&gt;有连接可靠的虚电路服务&lt;/strong&gt;，也提供&lt;strong&gt;无连接不可靠的数据报服务&lt;/strong&gt;。
 &lt;blockquote&gt;
-&lt;p&gt;请注意，在TCP/IP模型中，网络层仅提供&lt;strong&gt;无连接不可靠的数据报服务&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;请注意，在TCP/IP模型中，网络层仅提供&lt;strong&gt;无连接不可靠的数据报服务&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -885,7 +985,8 @@
 &lt;li&gt;负责相互通信的主机中两个&lt;strong&gt;进程&lt;/strong&gt;之间的通信，提供的是&lt;strong&gt;端到端&lt;/strong&gt;服务，如流量控制、差错控制、连接建立与释放、可靠传输管理等服务。&lt;/li&gt;
 &lt;li&gt;在OSI模型中，传输层&lt;strong&gt;只提供有连接可靠的服务&lt;/strong&gt;。
 &lt;blockquote&gt;
-&lt;p&gt;同样，在TCP/IP模型中，传输层提供有连接可靠服务（TCP），也提供无连接不可靠服务（UDP）。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;同样，在TCP/IP模型中，传输层提供有连接可靠服务（TCP），也提供无连接不可靠服务（UDP）。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;点到点：主机和主机之间。&lt;/li&gt;
 &lt;li&gt;端到端：运行在不同主机之间&lt;strong&gt;两个进程&lt;/strong&gt;之间的通信，一个进程用&lt;strong&gt;一个端口&lt;/strong&gt;来标识。&lt;/li&gt;
@@ -913,7 +1014,8 @@
 &lt;li&gt;🌟&lt;strong&gt;数据压缩&lt;/strong&gt;、&lt;strong&gt;加密解密&lt;/strong&gt;也是表示层的功能。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;全书的会话层和表示层就这三个考点&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;全书的会话层和表示层就这三个考点&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;应用层&lt;/p&gt;
@@ -929,7 +1031,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B.png&#34;
 	width=&#34;934&#34;
 	height=&#34;522&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_57457a11c8573536.png 480w, https://deathofbrain.github.io/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_29544304d5d88a8a.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_8b9704c407feb2e5.png 480w, https://deathofbrain.github.io/p/network-key-points/images/TCPIP%E6%A8%A1%E5%9E%8B_hu_e732b945c362f59c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;TCP/IP模型&#34;
@@ -961,7 +1063,8 @@
 &lt;li&gt;提供两种服务：&lt;strong&gt;TCP&lt;/strong&gt;、&lt;strong&gt;UDP&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这一点与OSI不同，OSI传输层仅提供可靠服务，TCP/IP两种都提供&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这一点与OSI不同，OSI传输层仅提供可靠服务，TCP/IP两种都提供&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;TCP是&lt;strong&gt;面向连接的可靠服务&lt;/strong&gt;，要首先建立连接，传输单位是&lt;strong&gt;报文段&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;UDP是&lt;strong&gt;无连接的不可靠服务&lt;/strong&gt;，尽最大努力交付，传输单位是&lt;strong&gt;数据报&lt;/strong&gt;&lt;/li&gt;
@@ -977,7 +1080,7 @@
 &lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83.png&#34;
 	width=&#34;1122&#34;
 	height=&#34;502&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_64eee923f26d59fe.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_4ac2a8b6744fb6d1.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_113769b7136fa560.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83_hu_7db3339a4fb841cd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;两种模型比较&#34;
@@ -1010,7 +1113,7 @@
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png&#34;
 	width=&#34;1122&#34;
 	height=&#34;502&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_80f2c2cf5fb62e42.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_4b44750cc2631853.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_ac092f8c5d0ada02.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84_hu_e6fc2651c1bb455f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;五层协议体系结构&#34;
@@ -1022,13 +1125,14 @@
 	
 &gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其实就是把OSI的物理层和数据链路层搬过来，上面全是TCP/IP的层&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;其实就是把OSI的物理层和数据链路层搬过来，上面全是TCP/IP的层&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;协议栈数据传输过程&#34;&gt;协议栈数据传输过程
 &lt;/h4&gt;&lt;p&gt;一句话：上层PDU被每一层封装，传输过去再自底向上解包。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png&#34;
 	width=&#34;1376&#34;
 	height=&#34;660&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_5a8181a99daaf705.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_4307917b8417e00c.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_43994fcde5f4409b.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%8F%E8%AE%AE%E6%A0%88%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B_hu_5d2f4c5cf66ee318.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;协议栈通信过程&#34;
@@ -1042,7 +1146,8 @@
 &lt;p&gt;具体的内容参考PDU那一部分。&lt;/p&gt;
 &lt;h2 id=&#34;物理层&#34;&gt;物理层
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;主要考点：码元换算，香农定理，奈奎斯特定理，几种常见数字数据编码。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;主要考点：码元换算，香农定理，奈奎斯特定理，几种常见数字数据编码。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;通信基础&#34;&gt;通信基础
 &lt;/h3&gt;&lt;h4 id=&#34;基本概念&#34;&gt;基本概念
 &lt;/h4&gt;&lt;ul&gt;
@@ -1073,7 +1178,7 @@
 &lt;img src=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1376&#34;
 	height=&#34;254&#34;
-	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_633118d1cfeff399.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_e7dfc0d79ab4f4b3.png 1024w&#34;
+	srcset=&#34;https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_27573f82b54936f2.png 480w, https://deathofbrain.github.io/p/network-key-points/images/%E5%8D%95%E5%90%91%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F_hu_5a3304117b7f966a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;单向通信系统&#34;
@@ -1086,7 +1191,8 @@
 &gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图中的噪声源是信道上的噪声及分散在通信系统其它各处噪声的集中表示。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图中的噪声源是信道上的噪声及分散在通信系统其它各处噪声的集中表示。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;传输信号区分
 &lt;ul&gt;
@@ -1094,7 +1200,8 @@
 &lt;li&gt;宽带传输：将基带信号进行调制后，形成频分复用模拟信号，然后在信道上运输&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;基带信号：由信源发出的未经过调制的原始电信号&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;基带信号：由信源发出的未经过调制的原始电信号&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;传输方式区分
 &lt;ul&gt;
@@ -1109,7 +1216,8 @@
 &lt;li&gt;全双工通信：通信双方都可同时发送或接收消息（以太网）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;单向通信只需一个信道；半双工和全双工都需要两个信道，每个方向一个信道。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;单向通信只需一个信道；半双工和全双工都需要两个信道，每个方向一个信道。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1122,11 +1230,13 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;波特和比特完全不同，但波特率和比特率在数量上有关系。&lt;/p&gt;
-&lt;p&gt;若一个码元携带n比特信息，则&lt;code&gt;M Baud = Mn b/s&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;若一个码元携带n比特信息，则&lt;code&gt;M Baud = Mn b/s&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;带宽（频率带宽）表示某个信道所能传输信号的频率范围，即最高频率与最低频率之差。单位为赫兹（Hz）。
 &lt;blockquote&gt;
-&lt;p&gt;在计网中，带宽更常见用来描述网络通信线路所能传输数据的能力，即最高数据率，此时带宽的单位为&lt;code&gt;b/s&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;在计网中，带宽更常见用来描述网络通信线路所能传输数据的能力，即最高数据率，此时带宽的单位为&lt;code&gt;b/s&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1138,11 +1248,13 @@
 &lt;ul&gt;
 &lt;li&gt;🌟在&lt;strong&gt;理想低通信道&lt;/strong&gt;中（没有噪音、带宽有限），为了避免码间串扰，&lt;strong&gt;极限波特率&lt;/strong&gt;为&lt;strong&gt;2W波特&lt;/strong&gt;，其中&lt;code&gt;W&lt;/code&gt;是信道的频率带宽（单位Hz）
 &lt;blockquote&gt;
-&lt;p&gt;码间串扰：具体的信道所能通过的频率范围往往是有限的，信号中许多高频分量往往不能通过信道，否则在传输过程中就会衰减，导致接收端收到的信号波形失去码元之间的清晰界限，即发生码间串扰。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;码间串扰：具体的信道所能通过的频率范围往往是有限的，信号中许多高频分量往往不能通过信道，否则在传输过程中就会衰减，导致接收端收到的信号波形失去码元之间的清晰界限，即发生码间串扰。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;若此时有&lt;code&gt;V&lt;/code&gt;种不同码元，则&lt;strong&gt;极限数据传输速率&lt;/strong&gt;为$2Wlog_2V$&lt;code&gt;b/s&lt;/code&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意单位区分&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;注意单位区分&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;结论：
 &lt;ol&gt;
@@ -1152,7 +1264,8 @@
 &lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;若要提高数据传输速率，就要设法使每个码元携带更多比特信息量，此时需要采用多元制的调制方法。&lt;/p&gt;
-&lt;p&gt;事实上，香农定理表明，一个码元可以携带的比特数也是有限的，只是奈奎斯特定理没有体现出来。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;事实上，香农定理表明，一个码元可以携带的比特数也是有限的，只是奈奎斯特定理没有体现出来。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1182,7 +1295,8 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;⚠️当给定条件要求计算信道最大传输速率时，即使给出信噪比，两个公式也要同时用，并且奈奎斯特定理还要根据码元信号种数换算成极限传输速率，最后两个值比较，&lt;strong&gt;谁最小谁就是极限传输速率&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⚠️当给定条件要求计算信道最大传输速率时，即使给出信噪比，两个公式也要同时用，并且奈奎斯特定理还要根据码元信号种数换算成极限传输速率，最后两个值比较，&lt;strong&gt;谁最小谁就是极限传输速率&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h4 id=&#34;编码与调制&#34;&gt;🌟编码与调制
 &lt;/h4&gt;</description>
         </item>
@@ -1201,13 +1315,15 @@
 &lt;p&gt;&lt;em&gt;注意与存储结构之间做区分&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;逻辑结构分为&lt;strong&gt;线性结构&lt;/strong&gt;和&lt;strong&gt;非线性结构&lt;/strong&gt;，再细分为&lt;strong&gt;集合结构&lt;/strong&gt;、&lt;strong&gt;线性结构&lt;/strong&gt;、&lt;strong&gt;树形结构&lt;/strong&gt;和&lt;strong&gt;图形结构&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;基本上是判断一个数据结构是属于哪种逻辑结构，所以心中有数就好。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;基本上是判断一个数据结构是属于哪种逻辑结构，所以心中有数就好。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;存储结构&lt;/p&gt;
 &lt;p&gt;存储结构则是指数据对象中数据元素之间的&lt;strong&gt;存储关系&lt;/strong&gt;，即从&lt;strong&gt;物理上&lt;/strong&gt;描述数据元素之间的关系。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;逻辑结构是你看到的，存储结构是计算机看到的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;逻辑结构是你看到的，存储结构是计算机看到的。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;存储结构分为&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;顺序存储结构&lt;/strong&gt;：逻辑上相邻的元素在物理上也相邻&lt;/li&gt;
@@ -1220,7 +1336,8 @@
 &lt;p&gt;数据的运算
 数据的运算是指对数据对象进行的操作，包括&lt;strong&gt;运算的定义&lt;/strong&gt;和&lt;strong&gt;运算的实现&lt;/strong&gt;两个方面。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意：运算的定义是针对逻辑结构的（如树的遍历等），运算的实现是针对存储结构的（对树的遍历来说，顺序存储和链式存储算法实现一定不同）。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;注意：运算的定义是针对逻辑结构的（如树的遍历等），运算的实现是针对存储结构的（对树的遍历来说，顺序存储和链式存储算法实现一定不同）。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;注意点：&lt;/p&gt;
@@ -1228,7 +1345,8 @@
 &lt;li&gt;
 &lt;p&gt;数据的逻辑结构独立于存储结构&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图的邻接表和邻接矩阵都可以表示图这种逻辑结构。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图的邻接表和邻接矩阵都可以表示图这种逻辑结构。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在存储数据时，不仅要存储数据元素本身，还要存储数据元素之间的逻辑关系。&lt;/p&gt;
@@ -1245,7 +1363,8 @@
 &lt;li&gt;
 &lt;p&gt;加法规则：$T(n) = O(max(f(n),g(n)))$&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;两个算法串行执行时，时间复杂度取最大值&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;两个算法串行执行时，时间复杂度取最大值&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1266,20 +1385,21 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n^2)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// func的时间复杂度为O(n^2)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// func的时间复杂度为O(n^2)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;乘法规则：$T(n) = O(f(n) \times g(n))$&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;两个算法嵌套执行时，时间复杂度相乘&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;两个算法嵌套执行时，时间复杂度相乘&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1292,9 +1412,9 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;func2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;func1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n^2)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n) * O(n^2) = O(n^3)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// func2的时间复杂度为O(n^3)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;func1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n^2)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// O(n) * O(n^2) = O(n^3)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// func2的时间复杂度为O(n^3)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
@@ -1306,7 +1426,8 @@
 &lt;li&gt;单层嵌套&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;待续……&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;待续……&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </description>
